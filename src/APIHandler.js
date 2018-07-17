@@ -28,4 +28,13 @@ export default class APIHandler {
             body: JSON.stringify(body)
         })
     }
-}
+    static archiveTask = (id, body) => {
+        return fetch(`http://localhost:5002/tasks/${id}`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(body)
+        })
+    }
+} 

@@ -8,7 +8,7 @@ const News = ({ news, children }) => {
         <div className="card" style={{width: `18rem`}}>
             <div className="card-body">
                 <h5 className="card-title">
-                    {news.name}
+                    {news.title}
                 </h5>
                 <p className="card-text">{news.breed}</p>
                 {

@@ -50,17 +50,17 @@
   "news": [
     {
       "userId": "1",
-      "title": "Evan's News",
-      "url": "www.ewlusky.com",
-      "synopsis": "cubes",
+      "title": "Bezos's News",
+      "url": "www.amazon.com",
+      "synopsis": "On this day in history, Blue Origin tested a New Shepherd Rocket succesfully",
       "timestamp": "2018-07-09T01:24:19",
       "id": 1
     },
     {
       "userId": "2",
-      "title": "Second's News",
-      "url": "www.sldkf.com",
-      "synopsis": "some stuff happend",
+      "title": "SpaceX is Definately better than BO",
+      "url": "www.spaceX.com",
+      "synopsis": "SpaceX stuff actually goes into orbit and y'know launches real payloads.",
       "timestamp": "2018-07-09T01:26:33",
       "id": 2
     }
@@ -68,31 +68,22 @@
   "events": [
     {
       "userId": "1",
-      "name": "Evan's Event",
-      "location": "NSS",
-      "date": "2018-07-10T19:30",
+      "name": "Cookout",
+      "location": "Jenn's House",
+      "date": "2018-07-16T01:23",
       "id": 1
     },
     {
-      "userId": "1",
-      "name": "Go to bed at the correct time.",
-      "location": "Home",
-      "date": "2018-07-10T20:30",
-      "id": 11
+      "name": "Party",
+      "location": "At my House",
+      "date": "2018-07-20T16:16:41.000Z",
+      "id": 2
     },
     {
-      "userId": "5",
-      "name": "Dancing Swing",
-      "location": "Green park",
-      "date": "2018-07-25T19:30",
-      "id": 12
-    },
-    {
-      "userId": "8",
-      "name": "Presenting project",
-      "location": "nss",
-      "date": "2018-07-09T14:30",
-      "id": 13
+      "name": "Poop",
+      "location": "Potty",
+      "date": "2018-07-20T16:16:41.000Z",
+      "id": 3
     }
   ],
   "tasks": [
@@ -102,13 +93,6 @@
       "date": "2018-07-16T01:23",
       "completed": "false",
       "id": 21
-    },
-    {
-      "userId": "5",
-      "task": "...eat pizza",
-      "date": "2018-07-16T01:32",
-      "completed": "false",
-      "id": 22
     }
   ]
 }

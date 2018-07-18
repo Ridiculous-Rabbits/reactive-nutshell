@@ -1,99 +1,58 @@
 {
-    "users": [
-      {
-        "name": "Evan Lusky",
-        "password": "password",
-        "email": "ewlusky@gmail.com",
-        "id": 1
-      },
-      {
-        "name": "Second Person",
-        "password": "passwords",
-        "email": "person@gmail.com",
-        "id": 3
-      }
-    ],
-    "friends": [
-      {
-        "userId": "1",
-        "yourId": "2",
-        "id": 25
-      },
-      {
-        "userId": "2",
-        "yourId": "1",
-        "id": 26
-      }
-    ],
-    "messages": [
-      {
-        "userId": "1",
-        "message": "Hey this is Evan",
-        "id": 1
-      }
-    ],
-    "news": [
-      {
-        "userId": "1",
-        "title": "Evan's News",
-        "url": "www.ewlusky.com",
-        "synopsis": "cubes",
-        "timestamp": "2018-07-09T01:24:19",
-        "id": 1
-      },
-      {
-        "userId": "2",
-        "title": "Second's News",
-        "url": "www.sldkf.com",
-        "synopsis": "some stuff happend",
-        "timestamp": "2018-07-09T01:26:33",
-        "id": 2
-      }
-    ],
-    "events": [
-      {
-        "userId": "1",
-        "name": "Evan's Event",
-        "location": "NSS",
-        "date": "2018-07-10T19:30",
-        "id": 1
-      },
-      {
-        "userId": "1",
-        "name": "Go to bed at the correct time.",
-        "location": "Home",
-        "date": "2018-07-10T20:30",
-        "id": 11
-      },
-      {
-        "userId": "5",
-        "name": "Dancing Swing",
-        "location": "Green park",
-        "date": "2018-07-25T19:30",
-        "id": 12
-      },
-      {
-        "userId": "8",
-        "name": "Presenting project",
-        "location": "nss",
-        "date": "2018-07-09T14:30",
-        "id": 13
-      }
-    ],
-    "tasks": [
-      {
-        "userId": "1",
-        "task": "Evan's task",
-        "date": "2018-07-16T01:23",
-        "completed": "false",
-        "id": 21
-      },
-      {
-        "userId": "5",
-        "task": "...eat pizza",
-        "date": "2018-07-16T01:32",
-        "completed": "false",
-        "id": 22
-      }
-    ]
-  }
+  "users": [
+    {
+      "name": "Evan Lusky",
+      "password": "password",
+      "email": "ewlusky@gmail.com",
+      "id": 1
+    },
+    {
+      "name": "Second Person",
+      "password": "passwords",
+      "email": "person@gmail.com",
+      "id": 3
+    }
+  ],
+  "friends": [
+    {
+      "userId": "1",
+      "yourId": "2",
+      "id": 25
+    }
+  ],
+  "messages": [
+    {
+      "userId": "1",
+      "message": "Hey this is Evan",
+      "id": 1
+    }
+  ],
+  "news": [
+    {
+      "userId": "1",
+      "title": "Evan's News",
+      "url": "www.ewlusky.com",
+      "synopsis": "cubes",
+      "timestamp": "2018-07-09T01:24:19",
+      "id": 1
+    }
+  ],
+  "events": [
+    {
+      "userId": "1",
+      "name": "Cookout",
+      "location": "Jenn's House",
+      "date": "2018-07-16T01:23",
+      "id": 1
+    }
+  ],
+  "tasks": [
+    {
+      "userId": "1",
+      "task": "Evan's task",
+      "date": "2018-07-16T01:23",
+      "completed": "false",
+      "id": 21
+    }
+  ]
+}

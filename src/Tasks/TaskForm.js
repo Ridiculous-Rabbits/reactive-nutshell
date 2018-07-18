@@ -4,6 +4,7 @@ class TaskForm extends Component {
     render() {
         return (
             <React.Fragment>
+
                 <form>
                     {/* Name Input Field */}
                     <label htmlFor="taskNameVal">Name: </label>
@@ -20,7 +21,7 @@ class TaskForm extends Component {
                     id="taskDueDateVal"
                     name="taskDueDateVal"/>
                     {/* Submit Button */}
-                    <input 
+                    <input
                     type="submit"
                     id="taskSubmitBtn"
                     />

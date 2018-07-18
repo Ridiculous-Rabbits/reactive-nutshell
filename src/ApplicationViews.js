@@ -4,6 +4,7 @@ import Login from './Login'
 import EventList from  "./Events/EventList"
 import PrintFriends from "./Friends/PrintFriends"
 import News from "./News/News"
+import EventForm from "./Events/EventForm"
 
 export default class ApplicationViews extends Component {
 
@@ -34,6 +35,9 @@ sessionStorage.getItem("credentials") !== null
                     } else {
                         return <Login />
                     }
+                }} />
+                <Route exact path="/eventForm" render={(props) => {
+                    return <EventForm {...props}/>
                 }} />
 
             </React.Fragment>

@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom"
 
 const Event = ({event, children, deleteEvent, editEvent}) => {
     return (
@@ -11,7 +12,17 @@ const Event = ({event, children, deleteEvent, editEvent}) => {
                 <p className="card-text">
                 {children.date}</p>
                 <button onClick={() => deleteEvent(event.id)}>Delete</button>
-                <button onClick={() => editEvent(event.id)}>Edit</button>
+                {
+                    <button>
+                        <Link className="card-link"
+                            to={{
+                                pathname: "/eventForm",
+                                state: { event: event}
+                            }}>
+                            Edit Event
+                        </Link>
+                    </button>
+                }
             </div>
         </div>
     )

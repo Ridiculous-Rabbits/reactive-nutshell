@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import News from "./News";
+import NewsButton from "./NewNewsButton"
 
 export default class NewsList extends Component {
   state = {
@@ -18,12 +19,12 @@ export default class NewsList extends Component {
     fetch(`http://localhost:5002/news/${newsId}`, {
       method: "DELETE"
     })
-      // When DELETE is finished, retrieve the new list of animals
+      // When DELETE is finished, retrieve the new list of news
       .then(() => {
         // Remember you HAVE TO return this fetch to the subsequent `then()`
         return fetch("http://localhost:5002/news");
       })
-      // Once the new array of animals is retrieved, set the state
+      // Once the new array of news is retrieved, set the state
       .then(a => a.json())
       .then(newsList => {
         this.setState({
@@ -32,7 +33,8 @@ export default class NewsList extends Component {
       });
   };
 
-  addNewNews = () => {
+  addNewNews = (event) => {
+    event.preventDefault
     // Add new news to the API
     fetch(`http://localhost:5002/news`, {
       method: "POST",
@@ -46,12 +48,12 @@ export default class NewsList extends Component {
         synopsis: this.state.synopsis
       })
     })
-      // When POST is finished, retrieve the new list of animals
+      // When POST is finished, retrieve the new list of news
       .then(() => {
         // Remember you HAVE TO return this fetch to the subsequenet `then()`
         return fetch("http://localhost:5002/news");
       })
-      // Once the new array of animals is retrieved, set the state
+      // Once the new array of news is retrieved, set the state
       .then(a => a.json())
       .then(newsList => {
         this.setState({
@@ -68,28 +70,8 @@ export default class NewsList extends Component {
 
   render() {
     return (
-      <React.Fragment>
-        <form onSubmit={this.addNewNews}>
-          <input
-            type="text"
-            placeholder="Article Title"
-            id="title"
-            onChange={this.handleFieldChange}
-          />
-          <input
-            type="text"
-            placeholder="Synopsis"
-            id="synopsis"
-            onChange={this.handleFieldChange}
-          />
-          <input
-            type="url"
-            placeholder="Article URL"
-            id="url"
-            onChange={this.handleFieldChange}
-          />
-          <button type="submit">Save Article</button>
-        </form>
+      <React.Fragment >
+        <NewsButton addNewNews= {this.addNewNews} handleFieldChange={this.handleFieldChange}/>
         {this.state.news.map(news => (
           <News key={news.id} news={news} checkOutNews={this.checkOutNews} />
         ))}

@@ -4,6 +4,7 @@ import Login from "./Login";
 import PrintFriends from "./Friends/PrintFriends";
 import Events from "./Events/Events";
 import News from "./News/News";
+import NewsList from "./News/NewsList";
 
 export default class ApplicationViews extends Component {
   isAuthenticated = () =>
@@ -31,17 +32,6 @@ export default class ApplicationViews extends Component {
           render={props => {
             if (this.isAuthenticated()) {
               return <PrintFriends />;
-            } else {
-              return <Login />;
-            }
-          }}
-        />
-        <Route
-          exact
-          path="/News"
-          render={props => {
-            if (this.isAuthenticated()) {
-              return <News />;
             } else {
               return <Login />;
             }

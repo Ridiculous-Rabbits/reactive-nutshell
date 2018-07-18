@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const NewsButton = props => {
   // console.log(props)
-  if (props.buttonClicked === true) {
+  // if (props.buttonClicked === true) {
     return (
       <form onSubmit={props.addNewNews}>
         <input
@@ -29,7 +29,7 @@ const NewsButton = props => {
       </form>
     );
   }
-};
+// };
 
 // News.propTypes = {
 //   // This rule ensures that `news` is passed a property

@@ -12,15 +12,15 @@ export default class APIHandler {
             },
             body: JSON.stringify(body)
         })
-        
+
     }
     static deleteData = (section, id) => {
         return fetch(`http://localhost:5002/${section}/${id}`, {
             method: "DELETE"
         })
     }
-    static addData = (section, id, body) => {
-        return fetch(`http://localhost:5002/${section}/${id}`, {
+    static addData = (section, body) => {
+        return fetch(`http://localhost:5002/${section}`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json; charset=utf-8",
@@ -37,4 +37,4 @@ export default class APIHandler {
             body: JSON.stringify(body)
         })
     }
-} 
+}

@@ -1,7 +1,7 @@
 import { Route } from 'react-router-dom'
 import React, { Component } from 'react'
 import Login from './Login'
-import Events from  "./Events/Events"
+import EventList from  "./Events/EventList"
 import News from  "./News/News"
 
 export default class ApplicationViews extends Component {

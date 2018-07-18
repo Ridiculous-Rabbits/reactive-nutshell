@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 
 
 const News = (props) => {
-    console.log(props)
+    // console.log(props)
     return (
         <div className="card" style={{width: `18rem`}}>
             { <div className="card-body">
@@ -22,7 +22,7 @@ const News = (props) => {
                         Details
                     </Link>
                 }
-                <a href="#" onClick={() => this.props.checkOutNews(props.news.id)}>Delete</a>
+                <a href="#" onClick={() => props.checkOutNews(props.news.id)}>Delete</a>
             </div> }
         </div>
     )

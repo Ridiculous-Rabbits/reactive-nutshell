@@ -1,10 +1,13 @@
 import React, { Component } from "react";
 import News from "./News";
-import NewsButton from "./NewNewsButton";
+import NewsForm from "./NewNewsForm";
+import NewsButton from "./NewsButton";
+import NewsStuff from "./NewsStuff";
 
 export default class NewsList extends Component {
   state = {
-    news: []
+    news: [],
+    isPressed: ""
   };
 
   // Update state whenever an input field is edited
@@ -34,7 +37,7 @@ export default class NewsList extends Component {
   };
 
   addNewNews = event => {
-    event.preventDefault;
+    event.preventDefault();
     // Add new news to the API
     fetch(`http://localhost:5002/news`, {
       method: "POST",
@@ -68,13 +71,24 @@ export default class NewsList extends Component {
       .then(news => this.setState({ news: news }));
   }
 
+  changePressed = () => {
+    if (this.state.isPressed === "") {
+    this.setState({isPressed : <NewsForm
+      addNewNews={this.addNewNews}
+      handleFieldChange={this.handleFieldChange}
+    />
+    })
+  } else {this.setState({isPressed : ""
+  })}
+
+    console.log(this.state.isPressed)
+  };
+
   render() {
     return (
       <React.Fragment>
-        <NewsButton
-          addNewNews={this.addNewNews}
-          handleFieldChange={this.handleFieldChange}
-        />
+        <button onClick={this.changePressed}>Add New News Article</button>
+        {this.state.isPressed}
         {this.state.news.map(news => (
           <News key={news.id} news={news} checkOutNews={this.checkOutNews} />
         ))}

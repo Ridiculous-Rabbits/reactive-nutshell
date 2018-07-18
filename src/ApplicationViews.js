@@ -2,7 +2,7 @@ import { Route } from "react-router-dom";
 import React, { Component } from "react";
 import Login from "./Login";
 import PrintFriends from "./Friends/PrintFriends";
-import Events from "./Events/Events";
+import EventList from  "./Events/EventList"
 import News from "./News/News";
 import NewsList from "./News/NewsList";
 
@@ -19,7 +19,7 @@ export default class ApplicationViews extends Component {
           path="/"
           render={props => {
             if (this.isAuthenticated()) {
-              return <Events />;
+              return <EventList />;
             } else {
               return <Login />;
             }

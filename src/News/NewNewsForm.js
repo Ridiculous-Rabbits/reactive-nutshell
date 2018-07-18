@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-const NewsButton = props => {
+const NewsForm = props => {
   // console.log(props)
   // if (props.buttonClicked === true) {
     return (
@@ -39,4 +39,4 @@ const NewsButton = props => {
 //   name: PropTypes.string
 // }
 
-export default NewsButton;
+export default NewsForm;

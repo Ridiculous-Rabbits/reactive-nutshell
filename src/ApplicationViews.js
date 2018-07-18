@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import Login from './Login'
 import Events from  "./Events/Events"
 import News from  "./News/News"
+import NewsList from './News/NewsList';
 
 export default class ApplicationViews extends Component {
     
@@ -20,9 +21,9 @@ sessionStorage.getItem("credentials") !== null
                     }
                 }} />
                 <Route path="/login" component={Login} />
-                <Route exact path="/News" render={props =>{
+                <Route exact path="/news" render={props =>{
                     if(this.isAuthenticated()) {
-                        return <News />
+                        return <NewsList />
                     } else {
                         return <Login />
                     }

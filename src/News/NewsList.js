@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import News from "./News";
 import NewsForm from "./NewNewsForm";
-import NewsButton from "./NewsButton";
-import NewsStuff from "./NewsStuff";
+import Moment from 'moment';
 
 export default class NewsList extends Component {
   state = {
@@ -38,6 +37,8 @@ export default class NewsList extends Component {
 
   addNewNews = event => {
     event.preventDefault();
+    let timestamp = Moment().format("YYYY-MM-DD hh:mm:ss a")
+    console.log(timestamp)
     // Add new news to the API
     fetch(`http://localhost:5002/news`, {
       method: "POST",
@@ -48,7 +49,8 @@ export default class NewsList extends Component {
         title: this.state.title,
         url: this.state.url,
         userId: this.state.userId,
-        synopsis: this.state.synopsis
+        synopsis: this.state.synopsis,
+        timestamp: timestamp
       })
     })
       // When POST is finished, retrieve the new list of news
@@ -80,8 +82,6 @@ export default class NewsList extends Component {
     })
   } else {this.setState({isPressed : ""
   })}
-
-    console.log(this.state.isPressed)
   };
 
   render() {

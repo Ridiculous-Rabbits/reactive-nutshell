@@ -42,13 +42,16 @@ export default class EventList extends Component {
     render() {
         return(
             <React.Fragment>
-            {
-                this.state.events.map(event =>
-                    <Event key={event.id} event={event} deleteEvent={this.deleteEvent}>
-                        {event}
-                    </Event>
-                )
-            }
+                Event: <input id="name"/>
+                Location: <input id:"location"/>
+                Date: <
+                {
+                    this.state.events.map(event =>
+                        <Event key={event.id} event={event} deleteEvent={this.deleteEvent}>
+                            {event}
+                        </Event>
+                    )
+                }
             </React.Fragment>
         )
     }

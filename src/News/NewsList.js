@@ -1,9 +1,13 @@
 import React, { Component } from "react";
 import News from "./News";
+import NewsForm from "./NewNewsForm";
+import NewsButton from "./NewsButton";
+import NewsStuff from "./NewsStuff";
 
 export default class NewsList extends Component {
   state = {
-    news: []
+    news: [],
+    isPressed: ""
   };
 
   // Update state whenever an input field is edited
@@ -18,12 +22,12 @@ export default class NewsList extends Component {
     fetch(`http://localhost:5002/news/${newsId}`, {
       method: "DELETE"
     })
-      // When DELETE is finished, retrieve the new list of animals
+      // When DELETE is finished, retrieve the new list of news
       .then(() => {
-        // Remember you HAVE TO return this fetch to the subsequenet `then()`
+        // Remember you HAVE TO return this fetch to the subsequent `then()`
         return fetch("http://localhost:5002/news");
       })
-      // Once the new array of animals is retrieved, set the state
+      // Once the new array of news is retrieved, set the state
       .then(a => a.json())
       .then(newsList => {
         this.setState({
@@ -32,7 +36,8 @@ export default class NewsList extends Component {
       });
   };
 
-  addNewNews = () => {
+  addNewNews = event => {
+    event.preventDefault();
     // Add new news to the API
     fetch(`http://localhost:5002/news`, {
       method: "POST",
@@ -40,18 +45,18 @@ export default class NewsList extends Component {
         "Content-Type": "application/json; charset=utf-8"
       },
       body: JSON.stringify({
-        title: this.state.newsTitle,
+        title: this.state.title,
         url: this.state.url,
         userId: this.state.userId,
-        synopsis: this.state.synopsis,
+        synopsis: this.state.synopsis
       })
     })
-      // When POST is finished, retrieve the new list of animals
+      // When POST is finished, retrieve the new list of news
       .then(() => {
         // Remember you HAVE TO return this fetch to the subsequenet `then()`
         return fetch("http://localhost:5002/news");
       })
-      // Once the new array of animals is retrieved, set the state
+      // Once the new array of news is retrieved, set the state
       .then(a => a.json())
       .then(newsList => {
         this.setState({
@@ -66,30 +71,26 @@ export default class NewsList extends Component {
       .then(news => this.setState({ news: news }));
   }
 
+  changePressed = () => {
+    if (this.state.isPressed === "") {
+    this.setState({isPressed : <NewsForm
+      addNewNews={this.addNewNews}
+      handleFieldChange={this.handleFieldChange}
+    />
+    })
+  } else {this.setState({isPressed : ""
+  })}
+
+    console.log(this.state.isPressed)
+  };
+
   render() {
     return (
       <React.Fragment>
-        <form onSubmit={this.addNewNews}>
-          <input
-            type="text"
-            placeholder="New News Article Title"
-            id="title"
-            onChange={this.handleFieldChange}
-          />
-          <input
-            type="text"
-            placeholder="News Article Synopsis"
-            id="synopsis"
-            onChange={this.handleFieldChange}
-          />
-          <button type="submit">Submit New Article</button>
-        </form>
-        {this.state.news.map(News => (
-          <News
-            key={this.news.id}
-            news={this.news}
-            checkOutNews={this.checkOutNews}
-          />
+        <button onClick={this.changePressed}>Add New News Article</button>
+        {this.state.isPressed}
+        {this.state.news.map(news => (
+          <News key={news.id} news={news} checkOutNews={this.checkOutNews} />
         ))}
       </React.Fragment>
     );

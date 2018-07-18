@@ -6,11 +6,11 @@ import TaskCard from "./TaskCard";
 class Tasks extends Component {
     state = {
         tasks: []
-    }
+    };
 
     // gets data from database
     componentDidMount = () => {
-        APIHandler.getData(tasks)
+        APIHandler.getData("tasks")
         .then(tasks => this.setState(
             { tasks: tasks }
         ));
@@ -25,43 +25,53 @@ class Tasks extends Component {
 
     // onSubmit - add new task to Database and re-render DOM
     addNewTask = () => {
-        APIHandler.addData(tasks, tasks)
+        let newTask = {
+            task: this.state.taskNameVal,
+            date: this.state.taskDueDateVal
+        }
+
+        APIHandler.addData("tasks", newTask)
         .then(() => {
-            return APIHandler.getData(tasks);
+            return APIHandler.getData("tasks");
         })
 
-        .then(tasks => {
+        .then(taskList => {
             this.setState(
-                { tasks: tasks}
+                { tasks: taskList }
             )
         })
     }
 
     // onClick - delete a task from Database and re-render DOM
-    deleteTask = () => {
-        APIHandler.deleteData(tasks, id)
+    deleteTask = id => {
+        APIHandler.deleteData("tasks", id)
         .then(() => {
-            APIHandler.getData(tasks)
+            return APIHandler.getData("tasks")
         })
-        .then(tasks => {
-            console.log(tasks);
-            this.setState({
-              tasks: tasks
-            });
-          });
-    }
-
-    // onClick - edit a task, submit changes to database and re-render DOM
-    editTask = () => {
-        APIHandler.editData(tasks, id, tasks)
+        .then(taskList => {
+            console.log(taskList);
+            this.setState(
+                { tasks: taskList }
+            )
+        })
     }
 
     render() {
         return (
-            <TaskForm handleFieldChange={this.handleFieldChange} />
-
             <React.Fragment>
-                <TaskCard />
+
+                <TaskForm addNewTask={this.addNewTask} handleFieldChange={this.handleFieldChange} />
+                {
+                    this.state.tasks.map(task => (
+                        <TaskCard
+                        key={task.id}
+                        task={task}
+                        deleteTask={this.deleteTask}>
+                        {task.task}
+                        </TaskCard>
+                    ))
+                }
+
             </React.Fragment>
         )
     }

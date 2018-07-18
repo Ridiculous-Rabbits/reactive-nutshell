@@ -37,4 +37,4 @@ export default class APIHandler {
             body: JSON.stringify(body)
         })
     }
-} 
+}

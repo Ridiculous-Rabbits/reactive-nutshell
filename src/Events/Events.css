@@ -1,0 +1,12 @@
+.event-input {
+    display: block;
+    border: 1px black solid;
+}
+
+#eventInput {
+    border: 2px black solid;
+}
+
+.event {
+    border: 2px black solid;
+}

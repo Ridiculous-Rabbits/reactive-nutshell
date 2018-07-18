@@ -2,7 +2,8 @@ import { Route } from 'react-router-dom'
 import React, { Component } from 'react'
 import Login from './Login'
 import EventList from  "./Events/EventList"
-import News from  "./News/News"
+import PrintFriends from "./Friends/PrintFriends"
+import News from "./News/News"
 
 export default class ApplicationViews extends Component {
 
@@ -20,14 +21,21 @@ sessionStorage.getItem("credentials") !== null
                     }
                 }} />
                 <Route path="/login" component={Login} />
-                <Route exact path="/News" render={props =>{
-                    if(this.isAuthenticated()) {
+                <Route exact path="/friends" render={props => {
+                    if (this.isAuthenticated()) {
+                        return <PrintFriends />
+                    } else {
+                        return <Login />
+                    }
+                }} />
+                <Route exact path="/News" render={props => {
+                    if (this.isAuthenticated()) {
                         return <News />
                     } else {
                         return <Login />
                     }
                 }} />
-                <Route path="/login" component={Login} />
+
             </React.Fragment>
         )
     }

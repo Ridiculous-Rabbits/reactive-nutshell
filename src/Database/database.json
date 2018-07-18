@@ -10,7 +10,7 @@
       "name": "Second Person",
       "password": "passwords",
       "email": "person@gmail.com",
-      "id": 3
+      "id": 2
     }
   ],
   "friends": [
@@ -18,6 +18,11 @@
       "userId": "1",
       "yourId": "2",
       "id": 25
+    },
+    {
+      "userId": "2",
+      "yourId": "1",
+      "id": 26
     }
   ],
   "messages": [
@@ -35,6 +40,14 @@
       "synopsis": "cubes",
       "timestamp": "2018-07-09T01:24:19",
       "id": 1
+    },
+    {
+      "userId": "2",
+      "title": "Second's News",
+      "url": "www.sldkf.com",
+      "synopsis": "some stuff happend",
+      "timestamp": "2018-07-09T01:26:33",
+      "id": 2
     }
   ],
   "events": [

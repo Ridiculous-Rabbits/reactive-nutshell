@@ -1,8 +1,9 @@
 import { Route } from 'react-router-dom'
 import React, { Component } from 'react'
 import Login from './Login'
+import PrintFriends from "./Friends/PrintFriends"
 import Events from "./Events/Events"
-import Friends from "./Friends/Friends"
+import News from "./News/News"
 
 export default class ApplicationViews extends Component {
 
@@ -20,7 +21,21 @@ export default class ApplicationViews extends Component {
                     }
                 }} />
                 <Route path="/login" component={Login} />
-                <Route path="/friends" component={Friends} />
+                <Route exact path="/friends" render={props => {
+                    if (this.isAuthenticated()) {
+                        return <PrintFriends />
+                    } else {
+                        return <Login />
+                    }
+                }} />
+                <Route exact path="/News" render={props => {
+                    if (this.isAuthenticated()) {
+                        return <News />
+                    } else {
+                        return <Login />
+                    }
+                }} />
+
             </React.Fragment>
         )
     }

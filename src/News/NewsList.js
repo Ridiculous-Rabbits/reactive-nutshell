@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import News from "./News";
-import NewsButton from "./NewNewsButton"
+import NewsButton from "./NewNewsButton";
 
 export default class NewsList extends Component {
   state = {
@@ -33,8 +33,8 @@ export default class NewsList extends Component {
       });
   };
 
-  addNewNews = (event) => {
-    event.preventDefault
+  addNewNews = event => {
+    event.preventDefault;
     // Add new news to the API
     fetch(`http://localhost:5002/news`, {
       method: "POST",
@@ -70,8 +70,11 @@ export default class NewsList extends Component {
 
   render() {
     return (
-      <React.Fragment >
-        <NewsButton addNewNews= {this.addNewNews} handleFieldChange={this.handleFieldChange}/>
+      <React.Fragment>
+        <NewsButton
+          addNewNews={this.addNewNews}
+          handleFieldChange={this.handleFieldChange}
+        />
         {this.state.news.map(news => (
           <News key={news.id} news={news} checkOutNews={this.checkOutNews} />
         ))}

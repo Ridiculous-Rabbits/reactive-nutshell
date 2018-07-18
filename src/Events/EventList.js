@@ -59,16 +59,22 @@ export default class EventList extends Component {
         console.log(this.state.eventDate._d)
       }
 
+      editEvent = (id) => {
+        console.log("edit")
+      }
+
     render() {
         return(
             <React.Fragment>
-                Event: <input id="name" />
-                Location: <input id="location" />
-                Date: <DatePicker selected={this.state.eventDate} onChange={this.handleChange} />
-                <button onClick={this.addNewEvent}>Add New Event</button>
+                <div id="eventInput">
+                    Event: <input class="event-input" id="name" />
+                    Location: <input class="event-input" id="location" />
+                    Date: <DatePicker class="event-input" selected={this.state.eventDate} onChange={this.handleChange} />
+                    <button class="event-input" onClick={this.addNewEvent}>Add New Event</button>
+                </div>
                 {
                     this.state.events.map(event =>
-                        <Event key={event.id} event={event} deleteEvent={this.deleteEvent}>
+                        <Event key={event.id} event={event} deleteEvent={this.deleteEvent} editEvent={this.editEvent}>
                             {event}
                         </Event>
                     )

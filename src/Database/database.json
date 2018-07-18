@@ -50,6 +50,12 @@
       "location": "At my House",
       "date": "2018-07-20T16:16:41.000Z",
       "id": 2
+    },
+    {
+      "name": "Poop",
+      "location": "Potty",
+      "date": "2018-07-20T16:16:41.000Z",
+      "id": 3
     }
   ],
   "tasks": [

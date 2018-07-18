@@ -1,6 +1,6 @@
 import React from "react"
 
-const Event = ({event, children, deleteEvent}) => {
+const Event = ({event, children, deleteEvent, editEvent}) => {
     return (
         <div className="event" style={{width: `18rem`}}>
             <div className="card-body">
@@ -11,6 +11,7 @@ const Event = ({event, children, deleteEvent}) => {
                 <p className="card-text">
                 {children.date}</p>
                 <button onClick={() => deleteEvent(event.id)}>Delete</button>
+                <button onClick={() => editEvent(event.id)}>Edit</button>
             </div>
         </div>
     )

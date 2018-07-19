@@ -13,7 +13,8 @@ const News = props => {
         <div className="card-body">
           <h5 className="card-title">{props.news.title}</h5>
           <p className="card-text">{props.news.synopsis}</p>
-          <p className="card-text">{props.news.url}</p>
+          <a href={props.news.url} target="_blank" className="card-text">www.{props.news.url}</a>
+          {/* <Link to={props.news.url}>{props.news.url}</Link>  */}
           {
             <Link
               className="card-link"

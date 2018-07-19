@@ -40,7 +40,7 @@ export default class NewsList extends Component {
   addNewNews = event => {
     event.preventDefault();
     let timestamp = Moment().format("YYYY-MM-DD hh:mm:ss a");
-    console.log(timestamp);
+    // console.log(timestamp);
     // Add new news to the API
     fetch(`http://localhost:5002/news`, {
       method: "POST",

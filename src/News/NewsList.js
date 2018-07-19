@@ -79,6 +79,7 @@ export default class NewsList extends Component {
       .then(news => this.setState({ news: news }));
   }
 
+  //this function 
   changePressed = () => {
     if (this.state.newsForm === "") {
       this.setState({
@@ -96,7 +97,7 @@ export default class NewsList extends Component {
     }
   };
 
-  //renders the new news button, the form conditionally, and each news card sorted based on their
+  //renders the new news button, the form conditionally, and each news card sorted based on their timestamp
   render() {
     return (
       <React.Fragment>

@@ -1,8 +1,6 @@
 import { Route } from "react-router-dom";
 import React, { Component } from "react";
 import Login from "./Login";
-import Events from "./Events/Events";
-import News from "./News/News";
 import Tasks from "./Tasks/Tasks";
 import EditTask from "./Tasks/EditTask";
 import PrintFriends from "./Friends/PrintFriends";
@@ -20,10 +18,25 @@ export default class ApplicationViews extends Component {
       <React.Fragment>
         <Route
           exact
-          path="/"
+          path="/news"
           render={props => {
             if (this.isAuthenticated()) {
-              return <EventList />;
+              return <NewsList />;
+            } else {
+              return <Login />;
+            }
+          }}
+        />
+        <Route
+          exact
+          path="/news/:articleId"
+          render={props => {
+            if (this.isAuthenticated() || this.seshIsAuthenticated()) {
+              return (
+                <News news={props.location.state.news} {...props}>
+                  {props.location.state.news.title}
+                </News>
+              );
             } else {
               return <Login />;
             }
@@ -56,9 +69,18 @@ export default class ApplicationViews extends Component {
         <Route
           path="/tasks/:taskId/edit"
           render={props => {
-            return (
-              <EditTask task={props.location.state.task} {...props} />
-            );
+            return <EditTask task={props.location.state.task} {...props} />;
+          }}
+        />
+        <Route
+          exact
+          path="/"
+          render={props => {
+            if (this.isAuthenticated()) {
+              return <EventList />;
+            } else {
+              return <Login />;
+            }
           }}
         />
       </React.Fragment>

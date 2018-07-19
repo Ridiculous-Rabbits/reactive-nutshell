@@ -23,8 +23,8 @@ export default props => {
                 <br/>
                 <input
                 type="checkbox"
-                className="checkBox"
-                onClick={() => props.handleCheckBox(props.task.id)}
+                className="isChecked"
+                onClick={(event) => props.handleCheckBox(event, props.task.id)}
                 />
             </div>
         </div>

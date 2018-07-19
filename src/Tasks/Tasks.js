@@ -49,17 +49,26 @@ class Tasks extends Component {
       });
   };
 
-  handleCheckBox = id => {
+  handleCheckBox = (e, id) => {
 
-    let isChecked = document.querySelector(".checkBox");
+    let archiveTask = {
+      completed: true
+    }
 
-    if (isChecked === true) {
-      APIHandler.archiveTask(id).then(taskList => {
-        console.log(taskList);
-        this.setState(
-            { tasks: taskList }
-        )
+    let checkBox = e.target.checked
+
+    if (checkBox) {
+      console.log("checkbox WORKS");
+      APIHandler.archiveTask(id, archiveTask)
+      .then(() => {
+        return APIHandler.getData("tasks");
+      })
+      .then(taskList => {
+        console.log("data: ", taskList);
+        this.setState({ tasks: taskList });
       });
+    } else {
+      console.log("checkbox not checked");
     }
   };
 
@@ -70,7 +79,8 @@ class Tasks extends Component {
           addNewTask={this.addNewTask}
           handleFieldChange={this.handleFieldChange}
         />
-        {this.state.tasks.map(task => (
+        {
+          this.state.tasks.map(task => (
           <TaskCard
           key={task.id}
           task={task}
@@ -78,7 +88,8 @@ class Tasks extends Component {
           handleCheckBox={this.handleCheckBox}>
             {task.task}
           </TaskCard>
-        ))}
+        ))
+        }
       </React.Fragment>
     );
   }

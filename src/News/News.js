@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 import "./News.css";
 
 const News = props => {
-
   return (
     <div className="card" style={{ width: `18rem` }}>
       {

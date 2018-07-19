@@ -37,7 +37,8 @@
       "userId": "1",
       "title": "Bezos's News",
       "url": "http:/www.amazon.com",
-      "synopsis": "On this day in history, Blue Origin tested a New Shepherd Rocket succesfully",
+      "synopsis":
+        "On this day in history, Blue Origin tested a New Shepherd Rocket succesfully",
       "timeStamp": "2018-06-18 04:58:51 pm",
       "id": 1
     },
@@ -45,7 +46,8 @@
       "userId": "2",
       "title": "SpaceX is Definately better than BO",
       "url": "http:/www.spaceX.com",
-      "synopsis": "SpaceX stuff actually goes into orbit and y'know launches real payloads.",
+      "synopsis":
+        "SpaceX stuff actually goes into orbit and y'know launches real payloads.",
       "timeStamp": "2018-07-31 06:58:51 pm",
       "id": 2
     },
@@ -53,7 +55,8 @@
       "userId": "1",
       "title": "Buzz Aldrin on Mars",
       "url": "http:/www.space.com",
-      "synopsis": "“Mars has been flown by, orbited, smacked into, radar examined, and rocketed onto, as well as bounced upon, rolled over, shoveled, drilled into, baked and even blasted. Still to come: Mars being stepped on.”",
+      "synopsis":
+        "“Mars has been flown by, orbited, smacked into, radar examined, and rocketed onto, as well as bounced upon, rolled over, shoveled, drilled into, baked and even blasted. Still to come: Mars being stepped on.”",
       "timeStamp": "2018-07-18 03:58:51 pm",
       "id": 3
     }

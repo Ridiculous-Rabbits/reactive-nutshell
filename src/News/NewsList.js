@@ -9,7 +9,7 @@ export default class NewsList extends Component {
   state = {
     news: [],
     isPressed: "",
-    userId: 1
+    userId: "1"
   };
 
   // Update state whenever an input field is edited
@@ -92,7 +92,7 @@ export default class NewsList extends Component {
     }
   };
 
-  //renders the new news button, the form conditionally, and each news card sorted based on their timestamp
+  //renders the new news button, the form conditionally, and each news card sorted based on their
   render() {
     return (
       <React.Fragment>
@@ -101,6 +101,13 @@ export default class NewsList extends Component {
         {this.state.news
           .sort(function(left, right) {
             return Moment.utc(left.timeStamp).diff(Moment.utc(right.timeStamp));
+          })
+          .filter(itm => {
+            if (itm.userId === this.state.userId) {
+              return itm;
+            } else {
+              console.log("no match");
+            }
           })
           .map(news => (
             <News key={news.id} news={news} checkOutNews={this.checkOutNews} />

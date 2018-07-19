@@ -1,4 +1,4 @@
-// codded by Jenn
+// coded by Jenn
 import React, { Component } from "react"
 import APIHandler from "./../APIHandler"
 import DatePicker from "react-datepicker"

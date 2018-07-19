@@ -1,4 +1,4 @@
-// codded by Jenn
+// coded by Jenn
 import React, {Component} from "react"
 import Event from "./Event"
 import APIHandler from "./../APIHandler"

@@ -1,11 +1,10 @@
 import React, { Component } from "react"
 import APIHandler from "../APIHandler.js"
-export default class AddFriend extends Component {
+
+export default class AddFriendForm extends Component {
 
     //Set initial state
-    state = {
-        FriendName: ""
-    }
+    state = {}
 
     //Update state whenever and input field is changed
     handleInputChange = (e) => {
@@ -18,22 +17,26 @@ export default class AddFriend extends Component {
     handleAddFriend = (e) => {
         //function goes here
         e.preventDefault()
-        APIHandler.addData("friends", this.state.FriendName)
+        // if (document.getElementById("add-friend-input") === "") {
+        //     alert("Please enter a valid friend name.")
+        // } else {
+        //     APIHandler.addData("friends", this.state.FriendName)
+        // }
     }
 
     render() {
         return (
             <form onSubmit={this.handleAddFriend}>
                 <input onChange={this.handleInputChange} type="text"
+                    id="add-friend-input"
                     placeholder="Friend"
-                    required=""
+                    required="true"
                     autoFocus=""
                 />
                 <button type="submit">
-                    Add Friend
+                    Save
                 </button>
             </form>
         )
     }
 }
-

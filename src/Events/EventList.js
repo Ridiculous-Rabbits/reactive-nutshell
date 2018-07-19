@@ -1,10 +1,10 @@
-import React, {Component} from "react"
+import React, { Component } from "react"
 import Event from "./Event"
 import APIHandler from "./../APIHandler"
 import DatePicker from "react-datepicker"
 import moment from "moment"
 
-import 'react-datepicker/dist/react-datepicker.css';
+// import 'react-datepicker/dist/react-datepicker.css';
 
 export default class EventList extends Component {
     state = {
@@ -12,7 +12,7 @@ export default class EventList extends Component {
         eventDate: moment()
     }
 
-    componentDidMount=() => {
+    componentDidMount = () => {
         APIHandler.getData("events")
             .then(events => this.setState({
                 events: events
@@ -21,14 +21,14 @@ export default class EventList extends Component {
 
     deleteEvent = (id) => {
         APIHandler.deleteData("events", id)
-        .then(()=>{
-            return APIHandler.getData("events")
-        })
-        .then(eventList => {
-            this.setState({
-                events: eventList
+            .then(() => {
+                return APIHandler.getData("events")
             })
-        })
+            .then(eventList => {
+                this.setState({
+                    events: eventList
+                })
+            })
     }
 
     addNewEvent = () => {
@@ -42,29 +42,29 @@ export default class EventList extends Component {
         }
         console.log(eventDate)
         APIHandler.addData("events", body)
-        .then(()=>{
-            return APIHandler.getData("events")
-        })
-        .then(eventList =>{
-            this.setState({
-                events: eventList
+            .then(() => {
+                return APIHandler.getData("events")
             })
-        })
+            .then(eventList => {
+                this.setState({
+                    events: eventList
+                })
+            })
     }
 
     handleChange = (date) => {
         this.setState({
-          eventDate: date
+            eventDate: date
         });
         console.log(this.state.eventDate._d)
-      }
+    }
 
-      editEvent = (id) => {
+    editEvent = (id) => {
         console.log("edit")
-      }
+    }
 
     render() {
-        return(
+        return (
             <React.Fragment>
                 <div id="eventInput">
                     Event: <input class="event-input" id="name" />

@@ -23,6 +23,9 @@
       "userId": "2",
       "yourId": "1",
       "id": 26
+    },
+    {
+      "id": 27
     }
   ],
   "messages": [
@@ -53,22 +56,17 @@
   "events": [
     {
       "userId": "1",
-      "name": "Cookout",
-      "location": "Jenn's House",
-      "date": "2018-07-16T01:23",
+      "name": "Evan's Event",
+      "location": "NSS",
+      "date": "2018-07-10T19:30",
       "id": 1
     },
     {
-      "name": "Party",
-      "location": "At my House",
-      "date": "2018-07-20T16:16:41.000Z",
-      "id": 2
-    },
-    {
-      "name": "Poop",
-      "location": "Potty",
-      "date": "2018-07-20T16:16:41.000Z",
-      "id": 3
+      "userId": "1",
+      "name": "Go to bed at the correct time.",
+      "location": "Home",
+      "date": "2018-07-10T20:30",
+      "id": 11
     }
   ],
   "tasks": [

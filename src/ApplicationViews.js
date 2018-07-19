@@ -3,7 +3,7 @@ import { Route } from "react-router-dom";
 import React, { Component } from "react";
 import Login from "./Login";
 import PrintFriends from "./Friends/PrintFriends";
-import EventList from  "./Events/EventList"
+import EventList from "./Events/EventList";
 import News from "./News/News";
 import NewsList from "./News/NewsList";
 import ChatList from './Chat/ChatList'

@@ -18,7 +18,7 @@ export default class Chat extends Component {
        //Stops default action of form reloading
         event.preventDefault()
 
-        let newMessage = document.getElementById("chat-text-input").value
+        let newMessage = document.getElementById("message").value
         
         const newChatMsg = {
             userId: 1,

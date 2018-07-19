@@ -1,11 +1,11 @@
 import React, { Component } from "react"
 import APIHandler from "../APIHandler"
+
 export default class AddFriendForm extends Component {
 
     //Set initial state
     state = {
-        yourId: "1",
-        userExists: false
+        userId: "1"
     }
 
     //Update state whenever and input field is changed
@@ -21,7 +21,10 @@ export default class AddFriendForm extends Component {
         e.preventDefault()
         APIHandler.getData("users")
             .then((userArray) => {
+                console.log(userArray)
                 userArray.forEach(userObject => {
+                    console.log(userObject.id)
+
                     if (userObject.name === this.state.newFriend) {
                         fetch(`http://localhost:5002/friends`, {
                             method: "POST",
@@ -29,34 +32,44 @@ export default class AddFriendForm extends Component {
                                 "Content-Type": "application/json; charset=utf-8"
                             },
                             body: JSON.stringify({
-                                userId: this.state.newFriend,
-                                yourId: 1,
-                                userExists: true
+                                userId: userObject.id,
+                                yourId: 1
                             })
+                        }).then(() => {
+                            return APIHandler.getData(`friends?_expand=user&yourId=1`)
+                        }).then(() => {
+                            this.props.history.push("/friends")
                         })
                     }
                 })
             })
-        if (this.state.userExists !== true) {
-            alert("Please enter a valid User Name")
-        }
     }
 
     render() {
         return (
-            <form onSubmit={this.handleAddFriend}>
-                <input
-                    onChange={this.handleInputChange}
-                    type="text"
-                    id="newFriend"
-                    placeholder="Friend"
-                    required="true"
-                    autoFocus=""
-                />
-                <button type="submit">
-                    Save
-                </button>
-            </form>
+
+            <React.Fragment>
+                {
+                    <form onSubmit={this.handleAddFriend}>
+                        <input
+                            onChange={this.handleInputChange}
+                            type="text"
+                            id="newFriend"
+                            placeholder="Friend"
+                            required="true"
+                            autoFocus=""
+                        />
+
+
+                        <button type="submit">
+                            Save
+                        </button>
+                    </form>
+                }
+
+
+            </React.Fragment>
+
         )
     }
 }

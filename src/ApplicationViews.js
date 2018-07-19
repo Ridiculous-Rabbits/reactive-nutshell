@@ -3,18 +3,20 @@ import { Route } from "react-router-dom";
 import React, { Component } from "react";
 import Login from "./Login";
 import PrintFriends from "./Friends/PrintFriends";
-import EventList from  "./Events/EventList"
+import EventList from "./Events/EventList"
+import FriendList from "./Friends/FriendList"
+import News from "./News/News"
+import AddFriendForm from './Friends/AddFriendForm';
 import EventForm from "./Events/EventForm"
-import News from "./News/News";
 import NewsList from "./News/NewsList";
 import ChatList from './Chat/ChatList'
 import EditChat from "./Chat/EditChat";
 import ChatMsg from './Chat/ChatMsg'
 
 export default class ApplicationViews extends Component {
-  isAuthenticated = () =>
-    localStorage.getItem("credentials") !== null ||
-    sessionStorage.getItem("credentials") !== null;
+    isAuthenticated = () =>
+        localStorage.getItem("credentials") !== null ||
+        sessionStorage.getItem("credentials") !== null;
 
    
                                
@@ -90,3 +92,4 @@ export default class ApplicationViews extends Component {
     );
   }
 }
+

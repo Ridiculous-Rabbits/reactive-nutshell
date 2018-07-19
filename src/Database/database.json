@@ -23,7 +23,7 @@
   "messages": [
     {
       "message": "Hey, this is Natasha",
-      "userId": 1,
+      "userId": 2,
       "id": 1
     },
     {
@@ -37,11 +37,11 @@
     },
     {
       "message": "llofldijs",
-      "userId": 1,
+      "userId": 2,
       "id": 4
     },
     {
-      "message": "boobs",
+      "message": "boo",
       "userId": 1,
       "id": 5
     },

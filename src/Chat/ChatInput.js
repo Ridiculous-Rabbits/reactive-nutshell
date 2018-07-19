@@ -19,9 +19,10 @@ export default class Chat extends Component {
         event.preventDefault()
 
         let newMessage = document.getElementById("message").value
+        let currentUser = APIHandler.getData("users", id)
         
         const newChatMsg = {
-            userId: 1,
+            userId: currentUser,
             message: newMessage
         }
 

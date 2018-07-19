@@ -4,3 +4,8 @@ This file styles the news component */
 a {
   margin-left: 3%;
 }
+
+.card {
+  max-width: 60%;
+  align-content: center;
+}

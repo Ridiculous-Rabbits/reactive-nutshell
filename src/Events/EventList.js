@@ -1,18 +1,19 @@
+
 // coded by Jenn
-import React, {Component} from "react"
+import React, { Component } from "react"
 import Event from "./Event"
 import APIHandler from "./../APIHandler"
 import EventForm from "./EventForm"
 import { Link } from "react-router-dom"
 
-import 'react-datepicker/dist/react-datepicker.css';
+// import 'react-datepicker/dist/react-datepicker.css';
 
 export default class EventList extends Component {
     state = {
         events: []
     }
 
-    componentDidMount=() => {
+    componentDidMount = () => {
         APIHandler.getData("events")
             .then(events => this.setState({
                 events: events
@@ -21,19 +22,19 @@ export default class EventList extends Component {
 
     deleteEvent = (id) => {
         APIHandler.deleteData("events", id)
-        .then(()=>{
-            return APIHandler.getData("events")
-        })
-        .then(eventList => {
-            this.setState({
-                events: eventList
+            .then(() => {
+                return APIHandler.getData("events")
             })
-        })
+            .then(eventList => {
+                this.setState({
+                    events: eventList
+                })
+            })
     }
 
 
     render() {
-        return(
+        return (
             <React.Fragment>
                 {
                     <button>

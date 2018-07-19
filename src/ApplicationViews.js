@@ -2,7 +2,8 @@ import { Route } from "react-router-dom";
 import React, { Component } from "react";
 import Login from "./Login";
 import PrintFriends from "./Friends/PrintFriends";
-import EventList from "./Events/EventList";
+import EventList from  "./Events/EventList"
+import EventForm from "./Events/EventForm"
 import News from "./News/News";
 import NewsList from "./News/NewsList";
 
@@ -63,6 +64,9 @@ export default class ApplicationViews extends Component {
             }
           }}
         />
+        <Route exact path="/eventForm" render={(props) => {
+            return <EventForm {...props}/>
+        }} />
       </React.Fragment>
     );
   }

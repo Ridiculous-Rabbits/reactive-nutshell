@@ -11,6 +11,18 @@
       "password": "passwords",
       "email": "person@gmail.com",
       "id": 2
+    },
+    {
+      "name": "Third Person",
+      "password": "pass",
+      "email": "other@gmail.com",
+      "id": 3
+    },
+    {
+      "name": "Person",
+      "password": "pass",
+      "email": "other@gmail.com",
+      "id": 4
     }
   ],
   "friends": [
@@ -23,6 +35,54 @@
       "userId": "2",
       "yourId": "1",
       "id": 26
+    },
+    {
+      "userId": "3",
+      "yourId": "1",
+      "id": 27
+    },
+    {
+      "userId": "Person",
+      "yourId": 1,
+      "id": 28
+    },
+    {
+      "userId": "Person",
+      "yourId": 1,
+      "id": 29
+    },
+    {
+      "userId": "Person",
+      "yourId": 1,
+      "id": 30
+    },
+    {
+      "userId": "Person",
+      "yourId": 1,
+      "id": 31
+    },
+    {
+      "userId": "Person",
+      "yourId": 1,
+      "id": 32
+    },
+    {
+      "userId": "Person",
+      "yourId": 1,
+      "userExists": true,
+      "id": 33
+    },
+    {
+      "userId": "Person",
+      "yourId": 1,
+      "userExists": true,
+      "id": 34
+    },
+    {
+      "userId": "Person",
+      "yourId": 1,
+      "userExists": true,
+      "id": 35
     }
   ],
   "messages": [
@@ -35,56 +95,54 @@
   "news": [
     {
       "userId": "1",
-      "title": "Bezos's News",
-      "url": "http:/www.amazon.com",
-      "synopsis": "On this day in history, Blue Origin tested a New Shepherd Rocket succesfully",
-      "timeStamp": "2018-06-18 04:58:51 pm",
+      "title": "Evan's News",
+      "url": "www.ewlusky.com",
+      "synopsis": "cubes",
+      "timestamp": "2018-07-09T01:24:19",
       "id": 1
     },
     {
       "userId": "2",
-      "title": "SpaceX is Definately better than BO",
-      "url": "http:/www.spaceX.com",
-      "synopsis": "SpaceX stuff actually goes into orbit and y'know launches real payloads.",
-      "timeStamp": "2018-07-31 06:58:51 pm",
+      "title": "Second's News",
+      "url": "www.sldkf.com",
+      "synopsis": "some stuff happend",
+      "timestamp": "2018-07-09T01:26:33",
       "id": 2
     },
     {
-      "userId": "1",
-      "title": "Buzz Aldrin on Mars",
-      "url": "http:/www.space.com",
-      "synopsis": "“Mars has been flown by, orbited, smacked into, radar examined, and rocketed onto, as well as bounced upon, rolled over, shoveled, drilled into, baked and even blasted. Still to come: Mars being stepped on.”",
-      "timeStamp": "2018-07-18 03:58:51 pm",
-      "id": 3
-    },
-    {
-      "title": "More Space Stuff",
-      "url": "http:/www.space.com",
-      "userId": "1",
-      "synopsis": ";lkjas;lkdj;alskdjf;alksdj;alksdf;alksdf",
-      "timeStamp": "2018-07-19 09:05:37 am",
-      "id": 4
+      "title": "Bezos's News",
+      "url": "www.amazon.com",
+      "synopsis": "On this day in history, Blue Origin tested a New Shepherd Rocket succesfully",
+      "timestamp": "2018-07-09T01:24:19",
+      "id": 1
     }
   ],
   "events": [
     {
       "userId": "1",
-      "name": "Cookout",
+      "name": "Evan's Event",
+      "location": "NSS",
+      "date": "2018-07-10T19:30",
+      "id": 1
+    },
+    {
+      "userId": "1",
+      "name": "Go to bed at the correct time.",
+      "location": "Home",
+      "date": "2018-07-10T20:30",
+      "id": 11
+    },
+    {
+      "name": "Cookout2",
       "location": "Jenn's House",
-      "date": "2018-07-16T01:23",
+      "date": "2018-07-20T18:13:19.000Z",
       "id": 1
     },
     {
       "name": "Party",
       "location": "At my House",
-      "date": "2018-07-20T16:16:41.000Z",
+      "date": "2018-07-19T14:50:29.958Z",
       "id": 2
-    },
-    {
-      "name": "Poop",
-      "location": "Potty",
-      "date": "2018-07-20T16:16:41.000Z",
-      "id": 3
     }
   ],
   "tasks": [

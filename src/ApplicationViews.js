@@ -6,6 +6,9 @@ import EditTask from "./Tasks/EditTask";
 import PrintFriends from "./Friends/PrintFriends";
 import EventList from "./Events/EventList";
 import News from "./News/News";
+import FriendList from "./Friends/FriendList";
+import AddFriendForm from "./Friends/AddFriendForm";
+import EventForm from "./Events/EventForm";
 import NewsList from "./News/NewsList";
 
 export default class ApplicationViews extends Component {
@@ -13,9 +16,42 @@ export default class ApplicationViews extends Component {
     localStorage.getItem("credentials") !== null ||
     sessionStorage.getItem("credentials") !== null;
 
+  isAuthenticated = () =>
+    localStorage.getItem("credentials") !== null ||
+    sessionStorage.getItem("credentials") !== null;
+
   render() {
     return (
       <React.Fragment>
+        <Route
+          exact
+          path="/"
+          render={props => {
+            if (this.isAuthenticated()) {
+              return <EventList />;
+            } else {
+              return <Login />;
+            }
+          }}
+        />
+        <Route path="/login" component={Login} />
+        <Route
+          exact
+          path="/friends"
+          render={props => {
+            if (this.isAuthenticated()) {
+              return <FriendList />;
+            } else {
+              return <Login />;
+            }
+          }}
+        />
+        <Route
+          path="/friends/AddFriendForm"
+          render={props => {
+            return <AddFriendForm {...props} />;
+          }}
+        />
         <Route
           exact
           path="/news"
@@ -42,19 +78,13 @@ export default class ApplicationViews extends Component {
             }
           }}
         />
-        <Route path="/login" component={Login} />
         <Route
           exact
-          path="/friends"
+          path="/eventForm"
           render={props => {
-            if (this.isAuthenticated()) {
-              return <PrintFriends />;
-            } else {
-              return <Login />;
-            }
+            return <EventForm {...props} />;
           }}
         />
-        <Route path="/login" component={Login} />
         <Route
           exact
           path="/Tasks"
@@ -70,17 +100,6 @@ export default class ApplicationViews extends Component {
           path="/tasks/:taskId/edit"
           render={props => {
             return <EditTask task={props.location.state.task} {...props} />;
-          }}
-        />
-        <Route
-          exact
-          path="/"
-          render={props => {
-            if (this.isAuthenticated()) {
-              return <EventList />;
-            } else {
-              return <Login />;
-            }
           }}
         />
       </React.Fragment>

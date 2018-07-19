@@ -19,7 +19,13 @@ export default props => {
                         Edit
                     </Link>
                 }
-                <button onClick={() => props.deleteTask (props.task.id)}>Delete</button>
+                <button onClick={() => props.deleteTask(props.task.id)}>Delete</button>
+                <br/>
+                <input
+                type="checkbox"
+                className="checkBox"
+                onClick={() => props.handleCheckBox(props.task.id)}
+                />
             </div>
         </div>
     )

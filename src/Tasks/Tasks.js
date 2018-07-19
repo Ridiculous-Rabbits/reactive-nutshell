@@ -4,77 +4,84 @@ import TaskForm from "./TaskForm";
 import TaskCard from "./TaskCard";
 
 class Tasks extends Component {
-    state = {
-        tasks: []
+  state = {
+    tasks: []
+  };
+
+  // gets data from database
+  componentDidMount = () => {
+    APIHandler.getData("tasks").then(tasks => this.setState({ tasks: tasks }));
+  };
+
+  // onChange - capture change in data user is entering in input fields
+  handleFieldChange = e => {
+    const stateToChange = {};
+    stateToChange[e.target.id] = e.target.value;
+    this.setState(stateToChange);
+  };
+
+  // onSubmit - add new task to Database and re-render DOM
+  addNewTask = () => {
+    let newTask = {
+      task: this.state.taskNameVal,
+      date: this.state.taskDueDateVal
     };
 
-    // gets data from database
-    componentDidMount = () => {
-        APIHandler.getData("tasks")
-        .then(tasks => this.setState(
-            { tasks: tasks }
-        ));
-    }
+    APIHandler.addData("tasks", newTask)
+      .then(() => {
+        return APIHandler.getData("tasks");
+      })
 
-    // onChange - capture change in data user is entering in input fields
-    handleFieldChange = e => {
-        const stateToChange = {};
-        stateToChange[e.target.id] = e.target.value;
-        this.setState(stateToChange);
-    }
+      .then(taskList => {
+        this.setState({ tasks: taskList });
+      });
+  };
 
-    // onSubmit - add new task to Database and re-render DOM
-    addNewTask = () => {
-        let newTask = {
-            task: this.state.taskNameVal,
-            date: this.state.taskDueDateVal
-        }
+  // onClick - delete a task from Database and re-render DOM
+  deleteTask = id => {
+    APIHandler.deleteData("tasks", id)
+      .then(() => {
+        return APIHandler.getData("tasks");
+      })
+      .then(taskList => {
+        console.log(taskList);
+        this.setState({ tasks: taskList });
+      });
+  };
 
-        APIHandler.addData("tasks", newTask)
-        .then(() => {
-            return APIHandler.getData("tasks");
-        })
+  handleCheckBox = id => {
 
-        .then(taskList => {
-            this.setState(
-                { tasks: taskList }
-            )
-        })
-    }
+    let isChecked = document.querySelector(".checkBox");
 
-    // onClick - delete a task from Database and re-render DOM
-    deleteTask = id => {
-        APIHandler.deleteData("tasks", id)
-        .then(() => {
-            return APIHandler.getData("tasks")
-        })
-        .then(taskList => {
-            console.log(taskList);
-            this.setState(
-                { tasks: taskList }
-            )
-        })
-    }
-
-    render() {
-        return (
-            <React.Fragment>
-
-                <TaskForm addNewTask={this.addNewTask} handleFieldChange={this.handleFieldChange} />
-                {
-                    this.state.tasks.map(task => (
-                        <TaskCard
-                        key={task.id}
-                        task={task}
-                        deleteTask={this.deleteTask}>
-                        {task.task}
-                        </TaskCard>
-                    ))
-                }
-
-            </React.Fragment>
+    if (isChecked === true) {
+      APIHandler.archiveTask(id).then(taskList => {
+        console.log(taskList);
+        this.setState(
+            { tasks: taskList }
         )
+      });
     }
+  };
+
+  render() {
+    return (
+      <React.Fragment>
+        <TaskForm
+          addNewTask={this.addNewTask}
+          handleFieldChange={this.handleFieldChange}
+        />
+        {this.state.tasks.map(task => (
+          <TaskCard
+          key={task.id}
+          task={task}
+          deleteTask={this.deleteTask}
+          handleCheckBox={this.handleCheckBox}>
+            {task.task}
+          </TaskCard>
+        ))}
+      </React.Fragment>
+    );
+  }
 }
 
 export default Tasks; // exports to ApplicationViews.js

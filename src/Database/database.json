@@ -31,41 +31,17 @@
     {
       "userId": "1",
       "title": "Bezos's News",
-      "url": "http:/www.amazon.com",
+      "url": "www.amazon.com",
       "synopsis": "On this day in history, Blue Origin tested a New Shepherd Rocket succesfully",
-      "timeStamp": "2018-06-18 04:58:51 pm",
+      "timestamp": "2018-07-09T01:24:19",
       "id": 1
-    },
-    {
-      "userId": "2",
-      "title": "SpaceX is Definately better than BO",
-      "url": "http:/www.spaceX.com",
-      "synopsis": "SpaceX stuff actually goes into orbit and y'know launches real payloads.",
-      "timeStamp": "2018-07-31 06:58:51 pm",
-      "id": 2
-    },
-    {
-      "userId": "1",
-      "title": "Buzz Aldrin on Mars",
-      "url": "http:/www.space.com",
-      "synopsis": "“Mars has been flown by, orbited, smacked into, radar examined, and rocketed onto, as well as bounced upon, rolled over, shoveled, drilled into, baked and even blasted. Still to come: Mars being stepped on.”",
-      "timeStamp": "2018-07-18 03:58:51 pm",
-      "id": 3
-    },
-    {
-      "title": "More Space Stuff",
-      "url": "http:/www.space.com",
-      "userId": "1",
-      "synopsis": ";lkjas;lkdj;alskdjf;alksdj;alksdf;alksdf",
-      "timeStamp": "2018-07-19 09:05:37 am",
-      "id": 4
     }
   ],
   "events": [
     {
       "name": "Cookout",
       "location": "Jenn's House",
-      "date": "2018-07-19T14:59:04.594Z",
+      "date": "2018-07-20T16:58:15.000Z",
       "id": 1
     },
     {
@@ -73,12 +49,6 @@
       "location": "At my House",
       "date": "2018-07-19T14:50:29.958Z",
       "id": 2
-    },
-    {
-      "name": "dancing_cat",
-      "location": "TESTING",
-      "date": "2018-07-21T14:09:26.000Z",
-      "id": 3
     }
   ],
   "tasks": [

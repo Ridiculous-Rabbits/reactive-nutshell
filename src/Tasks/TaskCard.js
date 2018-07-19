@@ -4,25 +4,28 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 export default props => {
         return (
-        <div className="card" style={{width: `18rem`}}>
+        <div className="card bg-warning" style={{width: `18rem`}}>
             <div className="card-body">
                 <h5 className="card-title">
-                    {props.children}
+                    <u>{props.children}</u>
                 </h5>
-                <p className="card-text">{props.task.date}</p>
+                <p className="card-text"><b>Due Date: </b>{props.task.date}</p>
                 {
-                    <Link className="card-link"
+                    <button><Link className="card-link"
                     to={{
                         pathname: `/tasks/${props.task.id}/edit`,
                         state: { task: props.task }
                     }}>
                         Edit
-                    </Link>
+                    </Link></button>
                 }
                 <button onClick={() => props.deleteTask(props.task.id)}>Delete</button>
                 <br/>
+                <label htmlFor="checkBox">Complete:</label>
+                <br/>
                 <input
                 type="checkbox"
+                name="checkBox"
                 className="isChecked"
                 onClick={(event) => props.handleCheckBox(event, props.task.id)}
                 />

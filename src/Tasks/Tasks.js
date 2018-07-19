@@ -8,9 +8,9 @@ class Tasks extends Component {
     tasks: []
   };
 
-  archiveTaskAndReRenderDOM = () => {
+  archiveTaskAndReRenderDOM = (arr) => {
       let updatedData = [];
-      taskList.forEach(i => {
+      arr.forEach(i => {
         if (i.completed !== true) {
           updatedData.push(i);
           console.log(updatedData);
@@ -21,16 +21,8 @@ class Tasks extends Component {
 
   // gets data from database
   componentDidMount = () => {
-    APIHandler.getData("tasks").then(tasks => {
-      let updatedData = [];
-      tasks.forEach(i => {
-        if (i.completed !== true) {
-          console.log(i);
-          updatedData.push(i);
-          console.log(updatedData);
-        }
-      })
-      this.setState({ tasks: updatedData });
+    APIHandler.getData("tasks").then(taskList => {
+      this.archiveTaskAndReRenderDOM(taskList);
     })
   };
 
@@ -85,14 +77,7 @@ class Tasks extends Component {
         return APIHandler.getData("tasks");
       })
       .then(taskList => {
-        let updatedData = [];
-        taskList.forEach(i => {
-          if (i.completed !== true) {
-            updatedData.push(i);
-            console.log(updatedData);
-          }
-        })
-        this.setState({ tasks: updatedData });
+        this.archiveTaskAndReRenderDOM(taskList);
       });
     } else {
       console.log("checkbox not checked");

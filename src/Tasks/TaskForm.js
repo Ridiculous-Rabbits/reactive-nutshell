@@ -4,7 +4,10 @@ class TaskForm extends Component {
   render() {
     return (
       <React.Fragment>
-        <form onSubmit={this.props.addNewTask}>
+        <form
+          id="taskForm"
+          onSubmit={this.props.addNewTask}
+        >
           <h1>Add Task: </h1>
           {/* Name Input Field */}
           <label htmlFor="taskNameVal">Name: </label>

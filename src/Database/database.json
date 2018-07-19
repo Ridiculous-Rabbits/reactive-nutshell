@@ -31,50 +31,34 @@
     {
       "userId": "1",
       "title": "Bezos's News",
-      "url": "http:/www.amazon.com",
+      "url": "https://www.amazon.com",
       "synopsis": "On this day in history, Blue Origin tested a New Shepherd Rocket succesfully",
       "timeStamp": "2018-06-18 04:58:51 pm",
       "id": 1
     },
     {
-      "userId": "2",
-      "title": "SpaceX is Definately better than BO",
-      "url": "http:/www.spaceX.com",
-      "synopsis": "SpaceX stuff actually goes into orbit and y'know launches real payloads.",
-      "timeStamp": "2018-07-31 06:58:51 pm",
-      "id": 2
-    },
-    {
       "userId": "1",
       "title": "Buzz Aldrin on Mars",
-      "url": "http:/www.space.com",
+      "url": "https://www.space.com",
       "synopsis": "“Mars has been flown by, orbited, smacked into, radar examined, and rocketed onto, as well as bounced upon, rolled over, shoveled, drilled into, baked and even blasted. Still to come: Mars being stepped on.”",
       "timeStamp": "2018-07-18 03:58:51 pm",
       "id": 3
     },
     {
-      "title": "More Space Stuff",
-      "url": "http:/www.space.com",
+      "title": "SpaceX Preps For Quick Landings",
+      "url": "https://www.teslarati.com/spacex-falcon-9-block-5-fleet-dual-drone-ship-booster-recoveries/",
       "userId": "1",
-      "synopsis": ";lkjas;lkdj;alskdjf;alksdj;alksdf;alksdf",
-      "timeStamp": "2018-07-19 09:05:37 am",
+      "synopsis": "These imminent back to back launches will mark the effective beginning of the highly-reusable Block 5 era now that all older versions have flown for the last time.",
+      "timeStamp": "2018-07-19 11:30:06 am",
       "id": 4
     },
     {
-      "title": "sDF",
-      "url": "//google.com",
+      "title": "Mr. Steven's arms",
+      "url": "https://www.teslarati.com/spacex-mr-steven-spotted-sea-trialing-net-fairing-catch-debut/",
       "userId": "1",
-      "synopsis": "saDFS",
-      "timeStamp": "2018-07-19 10:03:40 am",
+      "synopsis": "Mr. Steven Gets Bigger Arms",
+      "timeStamp": "2018-07-19 12:57:19 pm",
       "id": 5
-    },
-    {
-      "title": "sDF",
-      "url": "//google.com",
-      "userId": "1",
-      "synopsis": "saDFS",
-      "timeStamp": "2018-07-19 10:03:41 am",
-      "id": 6
     }
   ],
   "events": [

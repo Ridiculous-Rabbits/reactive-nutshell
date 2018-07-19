@@ -5,6 +5,10 @@ import Events from "./Events/Events";
 import News from "./News/News";
 import Tasks from "./Tasks/Tasks";
 import EditTask from "./Tasks/EditTask";
+import PrintFriends from "./Friends/PrintFriends";
+import EventList from "./Events/EventList";
+import News from "./News/News";
+import NewsList from "./News/NewsList";
 
 export default class ApplicationViews extends Component {
   isAuthenticated = () =>
@@ -19,7 +23,7 @@ export default class ApplicationViews extends Component {
           path="/"
           render={props => {
             if (this.isAuthenticated()) {
-              return <Events />;
+              return <EventList />;
             } else {
               return <Login />;
             }
@@ -28,10 +32,10 @@ export default class ApplicationViews extends Component {
         <Route path="/login" component={Login} />
         <Route
           exact
-          path="/News"
+          path="/friends"
           render={props => {
             if (this.isAuthenticated()) {
-              return <News />;
+              return <PrintFriends />;
             } else {
               return <Login />;
             }

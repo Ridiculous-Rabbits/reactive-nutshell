@@ -10,7 +10,7 @@
       "name": "Second Person",
       "password": "passwords",
       "email": "person@gmail.com",
-      "id": 2
+      "id": 3
     }
   ],
   "friends": [
@@ -18,11 +18,6 @@
       "userId": "1",
       "yourId": "2",
       "id": 25
-    },
-    {
-      "userId": "2",
-      "yourId": "1",
-      "id": 26
     }
   ],
   "messages": [
@@ -84,22 +79,21 @@
   ],
   "events": [
     {
-      "userId": "1",
       "name": "Cookout",
       "location": "Jenn's House",
-      "date": "2018-07-16T01:23",
+      "date": "2018-07-19T14:59:04.594Z",
       "id": 1
     },
     {
       "name": "Party",
       "location": "At my House",
-      "date": "2018-07-20T16:16:41.000Z",
+      "date": "2018-07-19T14:50:29.958Z",
       "id": 2
     },
     {
-      "name": "Poop",
-      "location": "Potty",
-      "date": "2018-07-20T16:16:41.000Z",
+      "name": "dancing_cat",
+      "location": "TESTING",
+      "date": "2018-07-21T14:09:26.000Z",
       "id": 3
     },
     {

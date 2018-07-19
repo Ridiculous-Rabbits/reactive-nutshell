@@ -9,24 +9,31 @@ export default class EventForm extends Component {
 
     constructor(props) {
         super(props)
-        console.log(props)
-        if (this.props.location.state.hasOwnProperty("event")) {
-            this.state = {event:this.props.location.state.event, eventDate: moment()}
+        if (props.eventObject.hasOwnProperty("event")) {
+            console.log(props.event)
+            let event = this.props.eventObject.event
+            this.state = {event: event, eventDate: moment()}
         } else {
-            this.state = {event: {}, eventDate: moment()}
+            let event = {
+                name: "",
+                location: "",
+                date: ""
+            }
+            this.state = {event: event, eventDate: moment()}
         }
     }
 
 
 
 
+
       eventFunction = () => {
-          if (this.props.location.state.hasOwnProperty("event")) {
+          if (this.props.eventObject.hasOwnProperty("event")) {
 
               console.log("edit")
               let eventName = this.state.event.name
               let eventLocation = this.state.event.location
-              let eventDate = this.state.eventDate._d
+              let eventDate = this.state.eventDate
               let eventId = this.state.event.id
               let body = {
                   name: eventName,
@@ -46,9 +53,9 @@ export default class EventForm extends Component {
         } else {
 
             console.log("add")
-            let eventName = document.getElementById("name").value()
-            let eventLocation = document.getElementById("location").value()
-            let eventDate = this.state.eventDate._d
+            let eventName = this.state.event.name
+              let eventLocation = this.state.event.location
+              let eventDate = this.state.eventDate
             let body = {
                 name: eventName,
                 location: eventLocation,
@@ -70,9 +77,10 @@ export default class EventForm extends Component {
     }
 
     handleFieldChange = (evt) => {
-        const stateToChange = {}
+        const stateToChange = Object.assign({}, this.state.event)
+
         stateToChange[evt.target.id] = evt.target.value
-        this.setState(stateToChange)
+        this.setState({event: stateToChange})
         console.log(stateToChange)
     }
 
@@ -81,7 +89,8 @@ export default class EventForm extends Component {
         this.setState({
           eventDate: date
         });
-        console.log(this.state.eventDate._d)
+
+        console.log(this.state.eventDate)
       }
 
     render() {
@@ -92,7 +101,7 @@ export default class EventForm extends Component {
 
                     Location: <input class="event-input" onChange={this.handleFieldChange} id="location" value={this.state.event.location}/>
 
-                    Date: <DatePicker class="event-input" selected={this.state.eventDate} onChange={this.handleChange} id="datePicker" value={this.state.event.date} />
+                    Date: <DatePicker class="event-input" selected={this.state.eventDate} onChange={this.handleChange} id="datePicker" value={this.state.event.eventDate} />
 
                     <button onClick={this.eventFunction}>
                        Submit

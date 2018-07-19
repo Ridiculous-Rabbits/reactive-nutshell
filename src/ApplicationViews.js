@@ -3,7 +3,8 @@ import { Route } from "react-router-dom";
 import React, { Component } from "react";
 import Login from "./Login";
 import PrintFriends from "./Friends/PrintFriends";
-import EventList from "./Events/EventList";
+import EventList from  "./Events/EventList"
+import EventForm from "./Events/EventForm"
 import News from "./News/News";
 import NewsList from "./News/NewsList";
 import ChatList from './Chat/ChatList'
@@ -82,6 +83,9 @@ export default class ApplicationViews extends Component {
         <Route path="/chatMsg/`${props.chatMsg.id}`/EditChat" render={(props) => {
             return (<EditChat chatMsg={props.location.state.chatMsg} {...props} />)
         }}/>
+        <Route exact path="/eventForm" render={(props) => {
+            return <EventForm {...props}/>
+        }} />
       </React.Fragment>
     );
   }

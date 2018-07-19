@@ -30,7 +30,7 @@ export default class ChatList extends Component {
                         </ChatMsg>
                     )
                 }
-                <ChatInput refresh={this.refreshz} />
+                <ChatInput refresh={this.refresh} />
             </React.Fragment>
         )
     }

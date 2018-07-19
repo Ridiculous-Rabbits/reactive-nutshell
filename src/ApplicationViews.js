@@ -80,7 +80,7 @@ export default class ApplicationViews extends Component {
                         return <Login />
                     }
                 }} />
-        <Route path="/chatMsg/`${props.chatMsg.id}`/EditChat" render={(props) => {
+        <Route path="/chatMsg/:chatMsgId/EditChat" render={(props) => {
             return (<EditChat chatMsg={props.location.state.chatMsg} {...props} />)
         }}/>
         <Route exact path="/eventForm" render={(props) => {

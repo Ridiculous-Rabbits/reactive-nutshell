@@ -22,23 +22,22 @@
   ],
   "messages": [
     {
-      "userId": "1",
-      "message": "Hey this is Evan",
+      "message": "Hey, this is Natasha",
+      "userId": 1,
       "id": 1
     },
     {
+      "message": "stuff is working!!!! WOOHOO",
       "userId": 1,
-      "message": "hi",
       "id": 2
     },
     {
-      "userId": 1,
-      "message": "what's up",
+      "message": "dlfidjj",
       "id": 3
     },
     {
+      "message": "llofldijs",
       "userId": 1,
-      "message": "llo",
       "id": 4
     }
   ],

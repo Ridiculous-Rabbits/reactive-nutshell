@@ -3,7 +3,7 @@ import APIHandler from '../APIHandler'
 
 export default class EditChat extends Component {
     state = {
-        message: this.props.message
+        message: this.props.chatMsg.message
     };
 
     handleFieldChange = event => {
@@ -15,8 +15,11 @@ export default class EditChat extends Component {
     handleEdit = event => {
         event.preventDefault();
 
-        const editedMsg = { message: this.state.message }
-        APIHandler.editData("messages", this.props.message.id, editedMsg)
+        const editedMsg = { message: this.state.message,
+        userId: this.props.chatMsg.userId }
+        // console.log(editedMsg)
+        // console.log(this.props.chatMsg.id)
+        APIHandler.editData("messages", this.props.chatMsg.id, editedMsg)
             .then(() => {
                 this.props.history.push("/messages")
             })
@@ -32,7 +35,7 @@ export default class EditChat extends Component {
                     value={this.state.message}
                     onChange={this.handleFieldChange} 
                     type="text" 
-                    id="chat-text-input"
+                    id="message"
                     placeholder="Type Message"
                     required=""
                     autoFocus="" />

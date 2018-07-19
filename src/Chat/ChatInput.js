@@ -38,7 +38,7 @@ export default class Chat extends Component {
                 <form onSubmit={this.handleChat}>
                     <label htmlFor="type message">
                     </label>
-                    <input onChange={this.handleFieldChange} type="text" id="chat-text-input" 
+                    <input onChange={this.handleFieldChange} type="text" id="message" 
                     placeholder="Type Message" 
                     required=""
                     autoFocus=""/>

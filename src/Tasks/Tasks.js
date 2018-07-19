@@ -8,9 +8,30 @@ class Tasks extends Component {
     tasks: []
   };
 
+  archiveTaskAndReRenderDOM = () => {
+      let updatedData = [];
+      taskList.forEach(i => {
+        if (i.completed !== true) {
+          updatedData.push(i);
+          console.log(updatedData);
+        }
+      })
+      this.setState({ tasks: updatedData });
+  }
+
   // gets data from database
   componentDidMount = () => {
-    APIHandler.getData("tasks").then(tasks => this.setState({ tasks: tasks }));
+    APIHandler.getData("tasks").then(tasks => {
+      let updatedData = [];
+      tasks.forEach(i => {
+        if (i.completed !== true) {
+          console.log(i);
+          updatedData.push(i);
+          console.log(updatedData);
+        }
+      })
+      this.setState({ tasks: updatedData });
+    })
   };
 
   // onChange - capture change in data user is entering in input fields
@@ -55,7 +76,7 @@ class Tasks extends Component {
       completed: true
     }
 
-    let checkBox = e.target.checked
+    let checkBox = e.target.checked;
 
     if (checkBox) {
       console.log("checkbox WORKS");
@@ -64,8 +85,14 @@ class Tasks extends Component {
         return APIHandler.getData("tasks");
       })
       .then(taskList => {
-        console.log("data: ", taskList);
-        this.setState({ tasks: taskList });
+        let updatedData = [];
+        taskList.forEach(i => {
+          if (i.completed !== true) {
+            updatedData.push(i);
+            console.log(updatedData);
+          }
+        })
+        this.setState({ tasks: updatedData });
       });
     } else {
       console.log("checkbox not checked");

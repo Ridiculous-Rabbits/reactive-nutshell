@@ -12,3 +12,8 @@
     margin: 10px auto;
     text-align: center;
 }
+
+#cardContainer {
+    border: 1px solid black;
+}
+

@@ -71,7 +71,6 @@ class Tasks extends Component {
     let checkBox = e.target.checked;
 
     if (checkBox) {
-      console.log("checkbox WORKS");
       APIHandler.archiveTask(id, archiveTask)
       .then(() => {
         return APIHandler.getData("tasks");
@@ -79,8 +78,6 @@ class Tasks extends Component {
       .then(taskList => {
         this.archiveTaskAndReRenderDOM(taskList);
       });
-    } else {
-      console.log("checkbox not checked");
     }
   };
 

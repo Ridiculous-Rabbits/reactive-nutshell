@@ -3,7 +3,6 @@ import React, { Component } from "react";
 import Login from "./Login";
 import Tasks from "./Tasks/Tasks";
 import EditTask from "./Tasks/EditTask";
-import PrintFriends from "./Friends/PrintFriends";
 import EventList from "./Events/EventList";
 import News from "./News/News";
 import FriendList from "./Friends/FriendList";
@@ -12,10 +11,6 @@ import EventForm from "./Events/EventForm";
 import NewsList from "./News/NewsList";
 
 export default class ApplicationViews extends Component {
-  isAuthenticated = () =>
-    localStorage.getItem("credentials") !== null ||
-    sessionStorage.getItem("credentials") !== null;
-
   isAuthenticated = () =>
     localStorage.getItem("credentials") !== null ||
     sessionStorage.getItem("credentials") !== null;

@@ -128,113 +128,20 @@
   ],
   "tasks": [
     {
-      "task": "Projectz",
-      "date": "2018-11-22",
-      "id": 23,
-      "completed": true
-    },
-    {
-      "task": "Study",
-      "date": "2018-10-23",
-      "id": 24,
-      "completed": true
-    },
-    {
       "task": "Homework",
-      "date": "2018-11-15",
-      "id": 25,
-      "completed": true
-    },
-    {
-      "task": "hi",
-      "date": "2018-07-26",
-      "id": 26,
-      "completed": true
-    },
-    {
-      "task": "Game",
-      "date": "2018-07-31",
-      "id": 27,
-      "completed": true
-    },
-    {
-      "task": "adfs",
-      "date": "2018-07-17",
-      "id": 28,
-      "completed": true
-    },
-    {
-      "task": "hi",
-      "id": 29,
-      "completed": true
-    },
-    {
-      "task": "fdas",
-      "date": "2018-07-17",
-      "id": 30,
-      "completed": true
-    },
-    {
-      "task": "fdsa",
-      "date": "2018-07-23",
-      "id": 31,
-      "completed": true
-    },
-    {
-      "task": "party",
-      "date": "2018-07-11",
-      "id": 32,
-      "completed": true
-    },
-    {
-      "task": "somethijg",
-      "date": "2018-07-31",
-      "id": 33,
-      "completed": true
-    },
-    {
-      "task": "af",
-      "id": 34,
-      "completed": true
-    },
-    {
-      "task": "more",
-      "date": "2018-08-02",
-      "id": 35,
-      "completed": true
-    },
-    {
-      "task": "one more",
-      "date": "2018-08-16",
-      "id": 36,
-      "completed": true
-    },
-    {
-      "task": "even more",
-      "date": "2018-07-31",
-      "id": 37,
-      "completed": true
-    },
-    {
-      "task": "Homework",
-      "date": "2018-08-21",
-      "id": 38
+      "date": "2019-02-08",
+      "id": 1
     },
     {
       "task": "Project",
-      "date": "2018-07-31",
-      "id": 39,
+      "date": "2018-08-15",
+      "id": 2,
       "completed": true
     },
     {
       "task": "Study",
-      "date": "2018-07-31",
-      "id": 40
-    },
-    {
-      "task": "Party",
-      "date": "2018-07-16",
-      "id": 41
+      "date": "2018-09-11",
+      "id": 3
     }
   ]
 }

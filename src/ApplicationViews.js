@@ -7,6 +7,8 @@ import EventList from "./Events/EventList";
 import News from "./News/News";
 import NewsList from "./News/NewsList";
 import ChatList from './Chat/ChatList'
+import EditChat from "./Chat/EditChat";
+import ChatMsg from './Chat/ChatMsg'
 
 export default class ApplicationViews extends Component {
   isAuthenticated = () =>
@@ -77,6 +79,9 @@ export default class ApplicationViews extends Component {
                         return <Login />
                     }
                 }} />
+        <Route path="/chatMsg/`${props.chatMsg.id}`/EditChat" render={(props) => {
+            return (<EditChat chatMsg={props.location.state.chatMsg} {...props} />)
+        }}/>
       </React.Fragment>
     );
   }

@@ -23,7 +23,7 @@ if (props.hasOwnProperty("chatMsg")) {
                 {
                 <Link className="card-link"
                 to={{
-                    pathname: `/chatMsg/${props.chatMsg.id}/edit`,
+                    pathname: `/chatMsg/${props.chatMsg.id}/EditChat`,
                     state: { chatMsg: props.chatMsg }
                 }}>
                 Edit

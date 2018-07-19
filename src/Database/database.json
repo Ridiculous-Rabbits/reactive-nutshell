@@ -39,16 +39,18 @@
   ],
   "events": [
     {
-      "name": "Cookout2",
-      "location": "Jenn's House",
-      "date": "2018-07-20T18:13:19.000Z",
-      "id": 1
+      "name": "Cookout",
+      "location": "My House",
+      "date": "2018-07-19T19:35:02.709Z",
+      "userId": 1,
+      "id": 3
     },
     {
       "name": "Party",
-      "location": "At my House",
-      "date": "2018-07-19T14:50:29.958Z",
-      "id": 2
+      "location": "Your House",
+      "date": "2018-07-19T19:35:15.537Z",
+      "userId": 1,
+      "id": 4
     }
   ],
   "tasks": [

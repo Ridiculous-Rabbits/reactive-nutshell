@@ -13,7 +13,7 @@ export default class EventList extends Component {
     }
 
     componentDidMount=() => {
-        APIHandler.getData("events")
+        APIHandler.getData("events?_sort=date&_order=asc")
             .then(events => this.setState({
                 events: events
             }))
@@ -22,7 +22,7 @@ export default class EventList extends Component {
     deleteEvent = (id) => {
         APIHandler.deleteData("events", id)
         .then(()=>{
-            return APIHandler.getData("events")
+            return APIHandler.getData("events?_sort=date&_order=asc")
         })
         .then(eventList => {
             this.setState({

@@ -17,7 +17,8 @@ export default class EventForm extends Component {
             let event = {
                 name: "",
                 location: "",
-                date: ""
+                date: "",
+                userId: ""
             }
             this.state = {event: event, eventDate: moment()}
         }
@@ -38,17 +39,21 @@ export default class EventForm extends Component {
               let body = {
                   name: eventName,
                   location: eventLocation,
-                  date: eventDate
+                  date: eventDate,
+                  userId: 1
               }
               console.log(body)
               APIHandler.editData("events", eventId, body)
                 .then(()=> {
-                    return APIHandler.getData("events")
+                    return APIHandler.getData("events?_sort=date&_order=asc")
                     })
                 .then(eventList =>{
                     this.setState({
                         events: eventList
                     })
+                })
+                .then(()=>{
+                    this.props.history.push("/")
                 })
         } else {
 
@@ -59,17 +64,21 @@ export default class EventForm extends Component {
             let body = {
                 name: eventName,
                 location: eventLocation,
-                date: eventDate
+                date: eventDate,
+                userId: 1
             }
             console.log(eventDate)
             APIHandler.addData("events", body)
             .then(()=>{
-                return APIHandler.getData("events")
+                return APIHandler.getData("events?_sort=date&_order=asc")
             })
             .then(eventList =>{
                 this.setState({
                     events: eventList
                 })
+            })
+            .then(()=>{
+                this.props.history.push("/")
             })
 
         }

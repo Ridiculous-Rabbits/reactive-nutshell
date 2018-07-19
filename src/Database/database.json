@@ -10,7 +10,19 @@
       "name": "Second Person",
       "password": "passwords",
       "email": "person@gmail.com",
+      "id": 2
+    },
+    {
+      "name": "Third Person",
+      "password": "pass",
+      "email": "other@gmail.com",
       "id": 3
+    },
+    {
+      "name": "Person",
+      "password": "pass",
+      "email": "other@gmail.com",
+      "id": 4
     }
   ],
   "friends": [
@@ -18,6 +30,16 @@
       "userId": "1",
       "yourId": "2",
       "id": 25
+    },
+    {
+      "userId": "2",
+      "yourId": "1",
+      "id": 26
+    },
+    {
+      "userId": "3",
+      "yourId": "1",
+      "id": 27
     }
   ],
   "messages": [
@@ -30,6 +52,21 @@
   "news": [
     {
       "userId": "1",
+      "title": "Evan's News",
+      "url": "www.ewlusky.com",
+      "synopsis": "cubes",
+      "timestamp": "2018-07-09T01:24:19",
+      "id": 1
+    },
+    {
+      "userId": "2",
+      "title": "Second's News",
+      "url": "www.sldkf.com",
+      "synopsis": "some stuff happend",
+      "timestamp": "2018-07-09T01:26:33",
+      "id": 2
+    },
+    {
       "title": "Bezos's News",
       "url": "www.amazon.com",
       "synopsis": "On this day in history, Blue Origin tested a New Shepherd Rocket succesfully",

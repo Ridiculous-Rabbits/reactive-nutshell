@@ -1,3 +1,6 @@
+//William Kimball 2018
+//This file builds an input form for adding a new news item
+
 import React from "react";
 
 

@@ -1,12 +1,15 @@
+//William Kimball 2018
+//This file handles the functions for adding news items, state for the overall news component, deleting news items (for now), and rendering each card based off its time stamp//
 import React, { Component } from "react";
 import News from "./News";
 import NewsForm from "./NewNewsForm";
-import Moment from 'moment';
+import Moment from "moment";
 
 export default class NewsList extends Component {
   state = {
     news: [],
-    isPressed: ""
+    isPressed: "",
+    userId: 1
   };
 
   // Update state whenever an input field is edited
@@ -23,7 +26,6 @@ export default class NewsList extends Component {
     })
       // When DELETE is finished, retrieve the new list of news
       .then(() => {
-        // Remember you HAVE TO return this fetch to the subsequent `then()`
         return fetch("http://localhost:5002/news");
       })
       // Once the new array of news is retrieved, set the state
@@ -37,8 +39,8 @@ export default class NewsList extends Component {
 
   addNewNews = event => {
     event.preventDefault();
-    let timestamp = Moment().format("YYYY-MM-DD hh:mm:ss a")
-    console.log(timestamp)
+    let timestamp = Moment().format("YYYY-MM-DD hh:mm:ss a");
+    console.log(timestamp);
     // Add new news to the API
     fetch(`http://localhost:5002/news`, {
       method: "POST",
@@ -50,7 +52,7 @@ export default class NewsList extends Component {
         url: this.state.url,
         userId: this.state.userId,
         synopsis: this.state.synopsis,
-        timestamp: timestamp
+        timeStamp: timestamp
       })
     })
       // When POST is finished, retrieve the new list of news
@@ -75,23 +77,34 @@ export default class NewsList extends Component {
 
   changePressed = () => {
     if (this.state.isPressed === "") {
-    this.setState({isPressed : <NewsForm
-      addNewNews={this.addNewNews}
-      handleFieldChange={this.handleFieldChange}
-    />
-    })
-  } else {this.setState({isPressed : ""
-  })}
+      this.setState({
+        isPressed: (
+          <NewsForm
+            addNewNews={this.addNewNews}
+            handleFieldChange={this.handleFieldChange}
+          />
+        )
+      });
+    } else {
+      this.setState({
+        isPressed: ""
+      });
+    }
   };
 
+  //renders the new news button, the form conditionally, and each news card sorted based on their timestamp
   render() {
     return (
       <React.Fragment>
         <button onClick={this.changePressed}>Add New News Article</button>
         {this.state.isPressed}
-        {this.state.news.map(news => (
-          <News key={news.id} news={news} checkOutNews={this.checkOutNews} />
-        ))}
+        {this.state.news
+          .sort(function(left, right) {
+            return Moment.utc(left.timeStamp).diff(Moment.utc(right.timeStamp));
+          })
+          .map(news => (
+            <News key={news.id} news={news} checkOutNews={this.checkOutNews} />
+          ))}
       </React.Fragment>
     );
   }

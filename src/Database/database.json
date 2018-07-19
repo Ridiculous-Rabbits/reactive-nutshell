@@ -36,24 +36,25 @@
     {
       "userId": "1",
       "title": "Bezos's News",
-      "url": "www.amazon.com",
+      "url": "http:/www.amazon.com",
       "synopsis": "On this day in history, Blue Origin tested a New Shepherd Rocket succesfully",
-      "timestamp": "2018-07-09T01:24:19",
+      "timeStamp": "2018-06-18 04:58:51 pm",
       "id": 1
     },
     {
       "userId": "2",
       "title": "SpaceX is Definately better than BO",
-      "url": "www.spaceX.com",
+      "url": "http:/www.spaceX.com",
       "synopsis": "SpaceX stuff actually goes into orbit and y'know launches real payloads.",
-      "timestamp": "2018-07-09T01:26:33",
+      "timeStamp": "2018-07-31 06:58:51 pm",
       "id": 2
     },
     {
-      "title": "asdf",
+      "userId": "1",
+      "title": "Buzz Aldrin on Mars",
       "url": "http:/www.space.com",
-      "synopsis": "asdf",
-      "timestamp": "2018-07-18 03:58:51 pm",
+      "synopsis": "“Mars has been flown by, orbited, smacked into, radar examined, and rocketed onto, as well as bounced upon, rolled over, shoveled, drilled into, baked and even blasted. Still to come: Mars being stepped on.”",
+      "timeStamp": "2018-07-18 03:58:51 pm",
       "id": 3
     }
   ],

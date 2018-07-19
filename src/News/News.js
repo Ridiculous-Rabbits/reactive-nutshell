@@ -1,6 +1,10 @@
+//William Kimball 2018
+//This file builds each news item card
+
 import React from "react";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import "./News.css";
 
 const News = props => {
 

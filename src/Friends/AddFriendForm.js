@@ -1,5 +1,4 @@
 import React, { Component } from "react"
-import APIHandler from "../APIHandler.js"
 
 export default class AddFriendForm extends Component {
 

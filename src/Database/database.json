@@ -11,6 +11,12 @@
       "password": "passwords",
       "email": "person@gmail.com",
       "id": 2
+    },
+    {
+      "name": "Third Person",
+      "password": "pass",
+      "email": "other@gmail.com",
+      "id": 3
     }
   ],
   "friends": [
@@ -25,6 +31,8 @@
       "id": 26
     },
     {
+      "userId": "3",
+      "yourId": "1",
       "id": 27
     }
   ],

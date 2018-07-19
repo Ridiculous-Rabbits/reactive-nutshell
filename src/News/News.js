@@ -8,7 +8,7 @@ import "./News.css";
 
 const News = props => {
   return (
-    <div className="card" style={{ width: `18rem` }}>
+    <div className="card" >
       {
         <div className="card-body">
           <h5 className="card-title">{props.news.title}</h5>

@@ -80,14 +80,6 @@
   ],
   "news": [
     {
-      "userId": "1",
-      "title": "Evan's News",
-      "url": "www.ewlusky.com",
-      "synopsis": "cubes",
-      "timestamp": "2018-07-09T01:24:19",
-      "id": 1
-    },
-    {
       "userId": "2",
       "title": "Second's News",
       "url": "www.sldkf.com",

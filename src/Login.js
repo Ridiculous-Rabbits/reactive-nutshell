@@ -1,57 +1,58 @@
-import React, { Component } from 'react'
-import APIHandler from "./APIHandler"
-import { Redirect } from "react-router-dom"
+import React, { Component } from "react";
+import APIHandler from "./APIHandler";
+import { Redirect, Link } from "react-router-dom";
 
 export default class Login extends Component {
+  state = {
+    email: "",
+    password: ""
+    // dashboard: false
+  };
 
-    state = {
-        email: "",
-        password: "",
-        // dashboard: false
-    }
+  handleFieldChange = event => {
+    const stateToChange = {};
+    stateToChange[event.target.id] = event.target.value;
+    this.setState(stateToChange);
+  };
 
-    handleFieldChange = (event) => {
-        const stateToChange = {}
-        stateToChange[event.target.id] = event.target.value
-        this.setState(stateToChange)
-    }
+  handleLogin = event => {
+    //Stops default action of form reloading
+    // event.preventDefault()
 
-    handleLogin = (event) => {
-       //Stops default action of form reloading
-        // event.preventDefault()
-
-            APIHandler.getData(`users?email=${this.state.email}`)
-                .then(user => {
-                    // console.log(user[0].password);
-                    if (user.length > 0 && this.state.password == user[0].password) {
-                        this.setState({userId: user[0].id})
-                    } else {
-                        alert("We're Sorry, it looks like you may have mistyped your email address or password.")
-                    }
-                }).then(()=>{
-
-        const checkbox = document.getElementById('checkbox')
-        console.log(checkbox)
-        if (checkbox.checked) {
-            localStorage.setItem(
-                "credentials",
-                JSON.stringify({
-                    email: this.state.email,
-                    password: this.state.password,
-                    userId: this.state.userId
-                })
-            )
+    APIHandler.getData(`users?email=${this.state.email}`)
+      .then(user => {
+        // console.log(user[0].password);
+        if (user.length > 0 && this.state.password == user[0].password) {
+          this.setState({ userId: user[0].id });
         } else {
-            sessionStorage.setItem(
-                "credentials",
-                JSON.stringify({
-                    email: this.state.email,
-                    password: this.state.password,
-                    userId: this.state.userId
-                })
-            )
+          alert(
+            "We're Sorry, it looks like you may have mistyped your email address or password."
+          );
         }
-    })
+      })
+      .then(() => {
+        const checkbox = document.getElementById("checkbox");
+        console.log(checkbox);
+        if (checkbox.checked) {
+          localStorage.setItem(
+            "credentials",
+            JSON.stringify({
+              email: this.state.email,
+              password: this.state.password,
+              userId: this.state.userId
+            })
+          );
+        } else {
+          sessionStorage.setItem(
+            "credentials",
+            JSON.stringify({
+              email: this.state.email,
+              password: this.state.password,
+              userId: this.state.userId
+            })
+          );
+        }
+      });
     // .then(()=> {return <Redirect to= {{
     //     pathname: "/"
     // }} />})
@@ -66,37 +67,44 @@ export default class Login extends Component {
     // componentDidUpdate() {
     //     if (this.state.dashboard === true) {
     //         this.searchComplete()
-            
+
     //     }
+  };
+  render() {
+    return (
+      <React.Fragment>
+        <form onSubmit={this.handleLogin}>
+          <h1 className="h3 mb-3 font-weight-normal">Please Sign-In</h1>
+          <label htmlFor="inputEmail">Email Address</label>
+          <input
+            onChange={this.handleFieldChange}
+            type="email"
+            id="email"
+            placeholder="Email Address"
+            required=""
+            autoFocus=""
+          />
+          <label htmlFor="inputPassword">password</label>
+          <input
+            onChange={this.handleFieldChange}
+            type="password"
+            id="password"
+            placeholder="Password"
+            required=""
+          />
+          <label>Remember Me</label>
+          <input type="checkbox" id="checkbox" />
+          <button type="submit">Submit</button>
+        </form>
 
+        <div>
+          <button id="linkToRegisterForm">
+            <Link to={{ pathname: "/register" }}>
+              Register
+            </Link>
+          </button>
+        </div>
+      </React.Fragment>
+    );
+  }
 }
-    render() {
-        
-            return(
-                <form onSubmit={this.handleLogin}>
-                    <h1 className="h3 mb-3 font-weight-normal">Please Sign-In</h1>
-                    <label htmlFor="inputEmail">
-                        Email Address
-                    </label>
-                    <input onChange={this.handleFieldChange} type="email" id="email" 
-                    placeholder="Email Address" 
-                    required=""
-                    autoFocus=""/>
-                    <label htmlFor="inputPassword">
-                        password
-                    </label>
-                    <input onChange={this.handleFieldChange} type="password" id="password"
-                    placeholder="Password"
-                    required=""/>
-                    <label>
-                        Remember Me
-                    </label>
-                    <input type="checkbox" id="checkbox"/>
-                    <button type="submit">
-                    Submit
-                    </button>
-                </form>
-            )
-        }
-    }
-

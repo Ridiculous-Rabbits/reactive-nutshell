@@ -22,9 +22,34 @@
   ],
   "messages": [
     {
-      "userId": "1",
-      "message": "Hey this is Evan",
+      "message": "Hey this is Natasha",
+      "userId": "2",
       "id": 1
+    },
+    {
+      "userId": 1,
+      "message": "None of my classNames work",
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "message": "this is bullshit",
+      "id": 3
+    },
+    {
+      "userId": 1,
+      "message": "and the field doesn't clear",
+      "id": 4
+    },
+    {
+      "userId": 1,
+      "message": "poop",
+      "id": 5
+    },
+    {
+      "userId": 1,
+      "message": "whhhyyyyy",
+      "id": 6
     }
   ],
   "news": [

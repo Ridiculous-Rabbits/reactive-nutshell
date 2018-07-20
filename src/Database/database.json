@@ -22,38 +22,9 @@
   ],
   "messages": [
     {
-      "message": "Hey, this is Natasha",
-      "userId": 2,
+      "userId": "1",
+      "message": "Hey this is Evan",
       "id": 1
-    },
-    {
-      "message": "stuff is working!!!! WOOHOO",
-      "userId": 1,
-      "id": 2
-    },
-    {
-      "message": "dlfidjj",
-      "id": 3
-    },
-    {
-      "message": "llofldijs",
-      "userId": 2,
-      "id": 4
-    },
-    {
-      "message": "boo",
-      "userId": 1,
-      "id": 5
-    },
-    {
-      "message": "hi folks",
-      "userId": 1,
-      "id": 6
-    },
-    {
-      "userId": 1,
-      "message": "whatss up",
-      "id": 7
     }
   ],
   "news": [
@@ -68,20 +39,6 @@
   ],
   "events": [
     {
-      "name": "Party",
-      "location": "Your House",
-      "date": "2018-07-19T19:35:15.537Z",
-      "userId": 1,
-      "id": 4
-    },
-    {
-      "name": "Getting Triggered",
-      "location": "The Bedroom",
-      "date": "2018-07-20T01:55:03.635Z",
-      "userId": 1,
-      "id": 5
-    },
-    {
       "name": "Hit with a Candle Stick",
       "location": "The Library",
       "date": "2018-07-20T01:55:14.563Z",
@@ -91,21 +48,11 @@
   ],
   "tasks": [
     {
-      "task": "Homework",
-      "date": "2019-02-08",
-      "id": 1
-    },
-    {
-      "task": "Project",
-      "date": "2018-08-15",
-      "id": 2,
-      "completed": true
-    },
-    {
-      "task": "Study",
-      "date": "2018-09-11",
-      "id": 3,
-      "completed": true
+      "userId": "1",
+      "task": "Evan's task",
+      "date": "2018-07-16T01:23",
+      "completed": "false",
+      "id": 21
     }
   ]
 }

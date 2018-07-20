@@ -76,9 +76,9 @@ export default class ApplicationViews extends Component {
             }
           }}
         />
-        <Route 
-        exact 
-        path='/messages' 
+        <Route
+        exact
+        path='/messages'
         render={props => {
                     if(this.isAuthenticated()) {
                         return <ChatList />

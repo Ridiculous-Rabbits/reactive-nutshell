@@ -8,6 +8,7 @@ import { Link } from "react-router-dom"
 export default class EventForm extends Component {
 
     constructor(props) {
+        console.log(props)
         super(props)
         if (props.eventObject.hasOwnProperty("event")) {
             console.log(props.event)

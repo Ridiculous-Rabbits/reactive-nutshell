@@ -24,7 +24,7 @@ export default class GetFriendList extends Component {
     deleteFriend = (friendId) => {
         APIHandler.deleteData("friends", friendId)
             .then(() => {
-                return APIHandler.getData("friends")
+                return APIHandler.getData(`friends?_expand=user&yourId=1`)
                     .then(friendList => {
                         this.setState({
                             friends: friendList

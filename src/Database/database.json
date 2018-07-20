@@ -71,6 +71,11 @@
       "message": "hi folks",
       "userId": 1,
       "id": 6
+    },
+    {
+      "userId": 1,
+      "message": "whatss up",
+      "id": 7
     }
   ],
   "news": [
@@ -153,7 +158,8 @@
     {
       "task": "Study",
       "date": "2018-09-11",
-      "id": 3
+      "id": 3,
+      "completed": true
     }
   ]
 }

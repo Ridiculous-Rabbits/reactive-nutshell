@@ -13,8 +13,8 @@ const News = props => {
         <div className="card-body">
           <h5 className="card-title">{props.news.title}</h5>
           <p className="card-text">{props.news.synopsis}</p>
-          <p className="card-text">{props.news.url}</p>
-          {
+          <a className="card-text" target="_blank" href={props.news.url}>Go To Article</a>
+          {/* {
             <Link
               className="card-link"
               to={{
@@ -24,7 +24,7 @@ const News = props => {
             >
               Details
             </Link>
-          }
+          } */}
           <a href="#" onClick={() => props.checkOutNews(props.news.id)}>
             Delete
           </a>

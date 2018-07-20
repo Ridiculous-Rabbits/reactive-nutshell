@@ -39,14 +39,6 @@
   ],
   "news": [
     {
-      "userId": "2",
-      "title": "Second's News",
-      "url": "www.sldkf.com",
-      "synopsis": "some stuff happend",
-      "timestamp": "2018-07-09T01:26:33",
-      "id": 2
-    },
-    {
       "title": "Bezos's News",
       "url": "www.amazon.com",
       "synopsis": "On this day in history, Blue Origin tested a New Shepherd Rocket succesfully",
@@ -63,5 +55,27 @@
       "id": 6
     }
   ],
-  "tasks": []
+  "tasks": [
+    {
+      "task": "Study",
+      "date": "2018-07-30",
+      "id": 3,
+      "completed": true
+    },
+    {
+      "task": "Study",
+      "date": "2018-07-26",
+      "id": 4
+    },
+    {
+      "task": "Project",
+      "date": "2018-08-21",
+      "id": 5
+    },
+    {
+      "task": "Homework",
+      "date": "2018-07-31",
+      "id": 6
+    }
+  ]
 }

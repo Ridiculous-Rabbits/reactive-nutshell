@@ -47,6 +47,7 @@ export default class NavBar extends Component {
         <Link to="/news">News</Link>
         <Link to="/tasks">Tasks</Link>
         <Link to="/friends">Friends</Link>
+        <Link to="/messages">Messages</Link>
       </nav>
     );
   }

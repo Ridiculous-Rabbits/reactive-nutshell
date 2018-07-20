@@ -6,7 +6,7 @@ import APIHandler from "./../APIHandler"
 import EventForm from "./EventForm"
 import { Link } from "react-router-dom"
 
-// import 'react-datepicker/dist/react-datepicker.css';
+import 'react-datepicker/dist/react-datepicker.css';
 
 export default class EventList extends Component {
     state = {

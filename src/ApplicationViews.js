@@ -9,6 +9,9 @@ import FriendList from "./Friends/FriendList";
 import AddFriendForm from "./Friends/AddFriendForm";
 import EventForm from "./Events/EventForm";
 import NewsList from "./News/NewsList";
+import ChatList from './Chat/ChatList'
+import EditChat from "./Chat/EditChat";
+import ChatMsg from './Chat/ChatMsg'
 
 export default class ApplicationViews extends Component {
   isAuthenticated = () =>
@@ -73,6 +76,22 @@ export default class ApplicationViews extends Component {
             }
           }}
         />
+        <Route 
+        exact 
+        path='/messages' 
+        render={props => {
+                    if(this.isAuthenticated()) {
+                        return <ChatList />
+                    } else {
+                        return <Login />
+                    }
+                }} />
+        <Route path="/chatMsg/:chatMsgId/EditChat" render={(props) => {
+            return (<EditChat chatMsg={props.location.state.chatMsg} {...props} />)
+        }}/>
+        <Route exact path="/eventForm" render={(props) => {
+            return <EventForm {...props}/>
+        }} />
         <Route
           exact
           path="/eventForm"

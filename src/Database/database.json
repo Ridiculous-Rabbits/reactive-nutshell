@@ -22,9 +22,38 @@
   ],
   "messages": [
     {
-      "userId": "1",
-      "message": "Hey this is Evan",
+      "message": "Hey, this is Natasha",
+      "userId": 2,
       "id": 1
+    },
+    {
+      "message": "stuff is working!!!! WOOHOO",
+      "userId": 1,
+      "id": 2
+    },
+    {
+      "message": "dlfidjj",
+      "id": 3
+    },
+    {
+      "message": "llofldijs",
+      "userId": 2,
+      "id": 4
+    },
+    {
+      "message": "boo",
+      "userId": 1,
+      "id": 5
+    },
+    {
+      "message": "hi folks",
+      "userId": 1,
+      "id": 6
+    },
+    {
+      "userId": 1,
+      "message": "whatss up",
+      "id": 7
     }
   ],
   "news": [
@@ -75,7 +104,8 @@
     {
       "task": "Study",
       "date": "2018-09-11",
-      "id": 3
+      "id": 3,
+      "completed": true
     }
   ]
 }

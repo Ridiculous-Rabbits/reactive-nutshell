@@ -12,7 +12,6 @@ export default class APIHandler {
             },
             body: JSON.stringify(body)
         })
-
     }
     static deleteData = (section, id) => {
         return fetch(`http://localhost:5002/${section}/${id}`, {

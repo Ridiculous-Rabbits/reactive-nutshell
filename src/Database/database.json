@@ -116,11 +116,20 @@
   ],
   "tasks": [
     {
-      "userId": "1",
-      "task": "Evan's task",
-      "date": "2018-07-16T01:23",
-      "completed": "false",
-      "id": 21
+      "task": "Homework",
+      "date": "2019-02-08",
+      "id": 1
+    },
+    {
+      "task": "Project",
+      "date": "2018-08-15",
+      "id": 2,
+      "completed": true
+    },
+    {
+      "task": "Study",
+      "date": "2018-09-11",
+      "id": 3
     }
   ]
 }

@@ -65,7 +65,7 @@ export default class ApplicationViews extends Component {
                     }}
                 />
                 <Route exact path="/eventForm" render={(props) => {
-                    return <EventForm {...props} />
+                    return <EventForm eventObject={props.location.state} {...props} />
                 }} />
             </React.Fragment>
         );

@@ -9,6 +9,7 @@ export default class EventForm extends Component {
 
     constructor(props) {
         super(props)
+        console.log(props)
         if (props.eventObject.hasOwnProperty("event")) {
             console.log(props.event)
             let event = this.props.eventObject.event

@@ -10,19 +10,7 @@
       "name": "Second Person",
       "password": "passwords",
       "email": "person@gmail.com",
-      "id": 2
-    },
-    {
-      "name": "Third Person",
-      "password": "pass",
-      "email": "other@gmail.com",
       "id": 3
-    },
-    {
-      "name": "Person",
-      "password": "pass",
-      "email": "other@gmail.com",
-      "id": 4
     }
   ],
   "friends": [
@@ -30,52 +18,13 @@
       "userId": "1",
       "yourId": "2",
       "id": 25
-    },
-    {
-      "userId": "2",
-      "yourId": "1",
-      "id": 26
-    },
-    {
-      "userId": "3",
-      "yourId": "1",
-      "id": 27
     }
   ],
   "messages": [
     {
-      "message": "Hey, this is Natasha",
-      "userId": 2,
+      "userId": "1",
+      "message": "Hey this is Evan",
       "id": 1
-    },
-    {
-      "message": "stuff is working!!!! WOOHOO",
-      "userId": 1,
-      "id": 2
-    },
-    {
-      "message": "dlfidjj",
-      "id": 3
-    },
-    {
-      "message": "llofldijs",
-      "userId": 2,
-      "id": 4
-    },
-    {
-      "message": "boo",
-      "userId": 1,
-      "id": 5
-    },
-    {
-      "message": "hi folks",
-      "userId": 1,
-      "id": 6
-    },
-    {
-      "userId": 1,
-      "message": "whatss up",
-      "id": 7
     }
   ],
   "news": [
@@ -89,69 +38,28 @@
     },
     {
       "title": "Bezos's News",
-      "url": "https://www.amazon.com",
+      "url": "www.amazon.com",
       "synopsis": "On this day in history, Blue Origin tested a New Shepherd Rocket succesfully",
       "timestamp": "2018-07-09T01:24:19",
       "id": 1
-    },
-    {
-      "userId": "1",
-      "title": "Buzz Aldrin on Mars",
-      "url": "https://www.space.com",
-      "synopsis": "“Mars has been flown by, orbited, smacked into, radar examined, and rocketed onto, as well as bounced upon, rolled over, shoveled, drilled into, baked and even blasted. Still to come: Mars being stepped on.”",
-      "timeStamp": "2018-07-18 03:58:51 pm",
-      "id": 3
-    },
-    {
-      "title": "SpaceX Preps For Quick Landings",
-      "url": "https://www.teslarati.com/spacex-falcon-9-block-5-fleet-dual-drone-ship-booster-recoveries/",
-      "userId": "1",
-      "synopsis": "These imminent back to back launches will mark the effective beginning of the highly-reusable Block 5 era now that all older versions have flown for the last time.",
-      "timeStamp": "2018-07-19 11:30:06 am",
-      "id": 4
-    },
-    {
-      "title": "Mr. Steven's arms",
-      "url": "https://www.teslarati.com/spacex-mr-steven-spotted-sea-trialing-net-fairing-catch-debut/",
-      "userId": "1",
-      "synopsis": "Mr. Steven Gets Bigger Arms",
-      "timeStamp": "2018-07-19 12:57:19 pm",
-      "id": 5
     }
   ],
   "events": [
     {
-      "name": "Cookout",
-      "location": "My House",
-      "date": "2018-07-19T19:35:02.709Z",
+      "name": "Hit with a Candle Stick",
+      "location": "The Library",
+      "date": "2018-07-20T14:46:34.340Z",
       "userId": 1,
-      "id": 3
-    },
-    {
-      "name": "Party",
-      "location": "Your House",
-      "date": "2018-07-19T19:35:15.537Z",
-      "userId": 1,
-      "id": 4
+      "id": 6
     }
   ],
   "tasks": [
     {
-      "task": "Homework",
-      "date": "2019-02-08",
-      "id": 1
-    },
-    {
-      "task": "Project",
-      "date": "2018-08-15",
-      "id": 2,
-      "completed": true
-    },
-    {
-      "task": "Study",
-      "date": "2018-09-11",
-      "id": 3,
-      "completed": true
+      "userId": "1",
+      "task": "Evan's task",
+      "date": "2018-07-16T01:23",
+      "completed": "false",
+      "id": 21
     }
   ]
 }

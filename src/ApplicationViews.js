@@ -76,9 +76,9 @@ export default class ApplicationViews extends Component {
             }
           }}
         />
-        <Route 
-        exact 
-        path='/messages' 
+        <Route
+        exact
+        path='/messages'
         render={props => {
                     if(this.isAuthenticated()) {
                         return <ChatList />
@@ -89,14 +89,11 @@ export default class ApplicationViews extends Component {
         <Route path="/chatMsg/:chatMsgId/EditChat" render={(props) => {
             return (<EditChat chatMsg={props.location.state.chatMsg} {...props} />)
         }}/>
-        <Route exact path="/eventForm" render={(props) => {
-            return <EventForm {...props}/>
-        }} />
         <Route
           exact
           path="/eventForm"
           render={props => {
-            return <EventForm {...props} />;
+            return <EventForm eventObject={props.location.state} {...props} />;
           }}
         />
         <Route

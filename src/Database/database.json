@@ -11,6 +11,24 @@
       "password": "passwords",
       "email": "person@gmail.com",
       "id": 3
+    },
+    {
+      "username": "sathvikreddy",
+      "email": "sathvik@gmail.com",
+      "password": "123",
+      "id": 4
+    },
+    {
+      "username": "jennlawson",
+      "email": "jenn@yahoo.com",
+      "password": "123",
+      "id": 5
+    },
+    {
+      "username": "natashacox",
+      "email": "natasha@gmail.com",
+      "password": "poopy",
+      "id": 6
     }
   ],
   "friends": [

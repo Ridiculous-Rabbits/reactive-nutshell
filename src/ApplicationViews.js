@@ -11,7 +11,7 @@ import EventForm from "./Events/EventForm";
 import NewsList from "./News/NewsList";
 import ChatList from './Chat/ChatList'
 import EditChat from "./Chat/EditChat";
-import ChatMsg from './Chat/ChatMsg'
+import Register from "./register";
 
 export default class ApplicationViews extends Component {
   isAuthenticated = () =>
@@ -32,6 +32,7 @@ export default class ApplicationViews extends Component {
             }
           }}
         />
+        <Route path="/Register" component={Register} />
         <Route path="/login" component={Login} />
         <Route
           exact

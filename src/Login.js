@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
+import APIHandler from "./APIHandler"
+import { Redirect } from "react-router-dom"
 
 export default class Login extends Component {
 
     state = {
         email: "",
-        password: ""
+        password: "",
+        // dashboard: false
     }
 
     handleFieldChange = (event) => {
@@ -15,15 +18,27 @@ export default class Login extends Component {
 
     handleLogin = (event) => {
        //Stops default action of form reloading
-        event.preventDefault()
+        // event.preventDefault()
+
+            APIHandler.getData(`users?email=${this.state.email}`)
+                .then(user => {
+                    // console.log(user[0].password);
+                    if (user.length > 0 && this.state.password == user[0].password) {
+                        this.setState({userId: user[0].id})
+                    } else {
+                        alert("We're Sorry, it looks like you may have mistyped your email address or password.")
+                    }
+                }).then(()=>{
 
         const checkbox = document.getElementById('checkbox')
+        console.log(checkbox)
         if (checkbox.checked) {
             localStorage.setItem(
                 "credentials",
                 JSON.stringify({
                     email: this.state.email,
-                    password: this.state.password
+                    password: this.state.password,
+                    userId: this.state.userId
                 })
             )
         } else {
@@ -31,12 +46,32 @@ export default class Login extends Component {
                 "credentials",
                 JSON.stringify({
                     email: this.state.email,
-                    password: this.state.password
+                    password: this.state.password,
+                    userId: this.state.userId
                 })
             )
         }
-    }
-        render() {
+    })
+    // .then(()=> {return <Redirect to= {{
+    //     pathname: "/"
+    // }} />})
+    // }
+
+    // searchComplete = () => {
+    //     this.setState({
+    //         dashboard: false
+    //     })
+    // }
+
+    // componentDidUpdate() {
+    //     if (this.state.dashboard === true) {
+    //         this.searchComplete()
+            
+    //     }
+
+}
+    render() {
+        
             return(
                 <form onSubmit={this.handleLogin}>
                     <h1 className="h3 mb-3 font-weight-normal">Please Sign-In</h1>
@@ -64,3 +99,4 @@ export default class Login extends Component {
             )
         }
     }
+

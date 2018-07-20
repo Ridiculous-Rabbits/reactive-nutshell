@@ -35,6 +35,11 @@
       "userId": 1,
       "message": "Hey whats up!",
       "id": 2
+    },
+    {
+      "message": "Yo",
+      "userId": 1,
+      "id": 3
     }
   ],
   "news": [

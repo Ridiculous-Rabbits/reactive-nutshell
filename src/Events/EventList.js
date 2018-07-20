@@ -13,8 +13,8 @@ export default class EventList extends Component {
         events: []
     }
 
-    componentDidMount = () => {
-        APIHandler.getData("events")
+    componentDidMount=() => {
+        APIHandler.getData("events?_sort=date&_order=asc")
             .then(events => this.setState({
                 events: events
             }))
@@ -22,16 +22,15 @@ export default class EventList extends Component {
 
     deleteEvent = (id) => {
         APIHandler.deleteData("events", id)
-            .then(() => {
-                return APIHandler.getData("events")
+        .then(()=>{
+            return APIHandler.getData("events?_sort=date&_order=asc")
+        })
+        .then(eventList => {
+            this.setState({
+                events: eventList
             })
-            .then(eventList => {
-                this.setState({
-                    events: eventList
-                })
-            })
+        })
     }
-
 
     render() {
         return (

@@ -19,7 +19,7 @@ const NewsForm = props => {
         onChange={props.handleFieldChange}
       />
       <input
-        type="url"
+        type="text"
         placeholder="Article URL"
         id="url"
         onChange={props.handleFieldChange}

@@ -10,3 +10,7 @@
 .event {
     border: 2px black solid;
 }
+
+.event:first-of-type {
+    font-weight: 900;
+}

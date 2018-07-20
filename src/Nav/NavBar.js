@@ -43,6 +43,7 @@ export default class NavBar extends Component {
     // }
     return (
       <nav>
+        <img src="http://christypresler.com/assets/images/blog/2013/11/rabbit-line.jpg" height="40px" width="40px"/>
         <Link to="/">Events</Link>
         <Link to="/news">News</Link>
         <Link to="/tasks">Tasks</Link>

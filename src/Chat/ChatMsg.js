@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import "./ChatStyle.css"
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 
@@ -15,10 +16,16 @@ if (props.hasOwnProperty("chatMsg")) {
 } else {
     message = props.location.state.chatMsg
 }
+let currentUser = 1;
+if (message.userId == currentUser) {
+    message.className = "message"
+} else {
+    message.className = "friendmessage"
+}
    return (
         <div className="card" style={{width: `18rem`}}>
             <div className="card-body">
-                <h6 className="card-title">
+                <h6 className={message.className}>
                     {message.message}
                 </h6>
                 {

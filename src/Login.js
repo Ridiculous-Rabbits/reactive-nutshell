@@ -18,7 +18,7 @@ export default class Login extends Component {
 
     handleLogin = (event) => {
        //Stops default action of form reloading
-        event.preventDefault()
+        // event.preventDefault()
 
             APIHandler.getData(`users?email=${this.state.email}`)
                 .then(user => {

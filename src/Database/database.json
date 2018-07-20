@@ -124,39 +124,36 @@
   ],
   "events": [
     {
-      "userId": "1",
-      "name": "Evan's Event",
-      "location": "NSS",
-      "date": "2018-07-10T19:30",
-      "id": 1
-    },
-    {
-      "userId": "1",
-      "name": "Go to bed at the correct time.",
-      "location": "Home",
-      "date": "2018-07-10T20:30",
-      "id": 11
-    },
-    {
-      "name": "Cookout2",
-      "location": "Jenn's House",
-      "date": "2018-07-20T18:13:19.000Z",
-      "id": 1
+      "name": "Cookout",
+      "location": "My House",
+      "date": "2018-07-19T19:35:02.709Z",
+      "userId": 1,
+      "id": 3
     },
     {
       "name": "Party",
-      "location": "At my House",
-      "date": "2018-07-19T14:50:29.958Z",
-      "id": 2
+      "location": "Your House",
+      "date": "2018-07-19T19:35:15.537Z",
+      "userId": 1,
+      "id": 4
     }
   ],
   "tasks": [
     {
-      "userId": "1",
-      "task": "Evan's task",
-      "date": "2018-07-16T01:23",
-      "completed": "false",
-      "id": 21
+      "task": "Homework",
+      "date": "2019-02-08",
+      "id": 1
+    },
+    {
+      "task": "Project",
+      "date": "2018-08-15",
+      "id": 2,
+      "completed": true
+    },
+    {
+      "task": "Study",
+      "date": "2018-09-11",
+      "id": 3
     }
   ]
 }

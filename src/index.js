@@ -7,6 +7,8 @@ import registerServiceWorker from "./registerServiceWorker";
 import NavBar from "./Nav/NavBar";
 import "./Events/Events.css";
 
+import "./Tasks/Task.css";
+
 ReactDOM.render(
   <Router>
     <React.Fragment>

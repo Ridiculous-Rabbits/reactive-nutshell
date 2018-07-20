@@ -16,7 +16,10 @@ if (props.hasOwnProperty("chatMsg")) {
 } else {
     message = props.location.state.chatMsg
 }
-let currentUser = 1;
+
+let usersId = message.userId
+
+let currentUser = 1
 if (message.userId == currentUser) {
     message.className = "message"
 } else {

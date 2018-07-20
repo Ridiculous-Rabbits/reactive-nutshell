@@ -23,7 +23,7 @@
   "messages": [
     {
       "message": "Hey this is Natasha",
-      "userId": "2",
+      "userId": 2,
       "id": 1
     },
     {

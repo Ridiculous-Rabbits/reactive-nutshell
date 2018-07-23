@@ -58,6 +58,16 @@
       "userId": 4,
       "yourId": 7,
       "id": 28
+    },
+    {
+      "userId": 4,
+      "yourId": 8,
+      "id": 29
+    },
+    {
+      "userId": 6,
+      "yourId": 8,
+      "id": 30
     }
   ],
   "messages": [
@@ -115,6 +125,11 @@
       "userId": 6,
       "message": "WHAYYYYY",
       "id": 12
+    },
+    {
+      "userId": 8,
+      "message": "herrroo",
+      "id": 13
     }
   ],
   "news": [

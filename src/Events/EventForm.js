@@ -13,7 +13,8 @@ export default class EventForm extends Component {
         if (props.eventObject.hasOwnProperty("event")) {
             console.log(props.event)
             let event = this.props.eventObject.event
-            this.state = {event: event, eventDate: moment()}
+            let fList = this.props.eventObject.fList
+            this.state = {event: event, eventDate: moment(), fList: fList, currentUser: []}
         } else {
             let event = {
                 name: "",
@@ -21,13 +22,44 @@ export default class EventForm extends Component {
                 date: "",
                 userId: ""
             }
-            this.state = {event: event, eventDate: moment()}
+            this.state = {event: event, eventDate: moment(), fList: this.props.eventObject.fList, currentUser: []}
         }
     }
 
+    printEvents = () => {
+        APIHandler.getData("events?_sort=date&_order=asc")
+        .then(unfilterdEvents => {
+                unfilterdEvents.forEach(event => {
+                    console.log(event.userId)
+                    if (this.state.fList.includes(event.userId)) {
+                        let filteredEvents = []
+                        filteredEvents.push(event)
+                        this.setState({
+                            events: filteredEvents
+                        })
+                    } else {
+                        this.setState({
+                            events: []
+                        })
+                    }
 
+                })
+            })
+    }
 
-
+    componentDidMount = () => {
+        let currentUser
+        let sessionUser = JSON.parse(sessionStorage.getItem("credentials"))
+        let localUser = JSON.parse(localStorage.getItem("credentials"))
+        if (sessionUser !== null) {
+            currentUser=  sessionUser.userId
+        } else {
+            currentUser= localUser.userId
+        }
+        this.setState({
+            currentUser: currentUser
+        })
+    }
 
       eventFunction = () => {
           if (this.props.eventObject.hasOwnProperty("event")) {
@@ -37,22 +69,18 @@ export default class EventForm extends Component {
               let eventLocation = this.state.event.location
               let eventDate = this.state.eventDate
               let eventId = this.state.event.id
+              let eventUser = this.state.currentUser
               let body = {
                   name: eventName,
                   location: eventLocation,
                   date: eventDate,
-                  userId: 1
+                  userId: eventUser
               }
               console.log(body)
               APIHandler.editData("events", eventId, body)
                 .then(()=> {
-                    return APIHandler.getData("events?_sort=date&_order=asc")
+                    this.printEvents()
                     })
-                .then(eventList =>{
-                    this.setState({
-                        events: eventList
-                    })
-                })
                 .then(()=>{
                     this.props.history.push("/")
                 })
@@ -62,21 +90,17 @@ export default class EventForm extends Component {
             let eventName = this.state.event.name
               let eventLocation = this.state.event.location
               let eventDate = this.state.eventDate
+              let eventUser = this.state.currentUser
             let body = {
                 name: eventName,
                 location: eventLocation,
                 date: eventDate,
-                userId: 1
+                userId: eventUser
             }
             console.log(eventDate)
             APIHandler.addData("events", body)
             .then(()=>{
-                return APIHandler.getData("events?_sort=date&_order=asc")
-            })
-            .then(eventList =>{
-                this.setState({
-                    events: eventList
-                })
+                this.printEvents()
             })
             .then(()=>{
                 this.props.history.push("/")

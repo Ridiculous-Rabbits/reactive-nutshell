@@ -19,9 +19,21 @@
       "id": 3
     },
     {
+<<<<<<< HEAD
       "name": "Person",
       "password": "pass",
       "email": "other@gmail.com",
+=======
+      "name": "Jenn",
+      "email": "jenn@jenn.com",
+      "password": "123",
+      "id": 2
+    },
+    {
+      "name": "sathvikreddy",
+      "email": "sathvik@gmail.com",
+      "password": "123",
+>>>>>>> master
       "id": 4
     },
     {
@@ -43,12 +55,23 @@
       "id": 1
     },
     {
+<<<<<<< HEAD
       "userId": 3,
       "id": 2
     },
     {
       "userId": 1,
       "id": 3
+=======
+      "userId": "1",
+      "yourId": "2",
+      "id": 26
+    },
+    {
+      "userId": "4",
+      "yourId": "2",
+      "id": 27
+>>>>>>> master
     }
   ],
   "messages": [
@@ -70,11 +93,19 @@
   ],
   "news": [
     {
+<<<<<<< HEAD
       "userId": "1",
       "title": "Evan's News",
       "url": "www.ewlusky.com",
       "synopsis": "cubes",
       "timestamp": "2018-07-09T01:24:19",
+=======
+      "userId": 1,
+      "title": "Bezos's News",
+      "url": "www.amazon.com",
+      "synopsis": "On this day in history, Blue Origin tested a New Shepherd Rocket succesfully",
+      "timeStamp": "2018-07-20 10:23:40 am",
+>>>>>>> master
       "id": 1
     },
     {
@@ -88,6 +119,7 @@
   ],
   "events": [
     {
+<<<<<<< HEAD
       "userId": "1",
       "name": "Evan's Event",
       "location": "NSS",
@@ -100,6 +132,27 @@
       "location": "Home",
       "date": "2018-07-10T20:30",
       "id": 11
+=======
+      "name": "Hit with a Candle Stick",
+      "location": "The Library",
+      "date": "2018-07-24T19:20:31.000Z",
+      "userId": 1,
+      "id": 6
+    },
+    {
+      "name": "dancing_cat",
+      "location": "whats up",
+      "date": "2018-07-23T20:26:03.726Z",
+      "userId": 2,
+      "id": 7
+    },
+    {
+      "name": "aww yeah",
+      "location": "please",
+      "date": "2018-07-23T19:22:49.546Z",
+      "userId": 4,
+      "id": 8
+>>>>>>> master
     }
   ],
   "tasks": [

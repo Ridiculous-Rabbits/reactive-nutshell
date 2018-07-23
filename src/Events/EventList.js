@@ -10,15 +10,53 @@ import 'react-datepicker/dist/react-datepicker.css';
 
 export default class EventList extends Component {
     state = {
-        events: []
+        events: [],
+        fList: []
+    }
+
+    componentWillMount = () => {
+        let currentUser
+        let sessionUser = JSON.parse(sessionStorage.getItem("credentials"))
+        let localUser = JSON.parse(localStorage.getItem("credentials"))
+        if (sessionUser !== null) {
+            currentUser=  sessionUser.userId
+        } else {
+            currentUser= localUser.userId
+        }
+
+        APIHandler.allFriends()
+        .then(fList => {
+            fList.push(currentUser)
+            fList = fList.map(friend => {
+                return parseInt(friend)
+            })
+            this.setState({
+                fList: fList
+            })
+        })
     }
 
     componentDidMount=() => {
         APIHandler.getData("events?_sort=date&_order=asc")
-            .then(events => this.setState({
-                events: events
-            }))
-    }
+        .then(unfilterdEvents => {
+            let filteredEvents = []
+            unfilterdEvents.forEach(event => {
+                console.log(this.state.fList)
+                console.log(event.userId)
+                    if (this.state.fList.includes(event.userId)) {
+                        filteredEvents.push(event)
+                        this.setState({
+                            events: filteredEvents
+                        })
+                    } else {
+                        this.setState({
+                            events: []
+                        })
+                    }
+                })
+                console.log(this.state.events)
+            })
+        }
 
     deleteEvent = (id) => {
         APIHandler.deleteData("events", id)
@@ -40,7 +78,7 @@ export default class EventList extends Component {
                         <Link className="card-link"
                             to={{
                                 pathname: "/eventForm",
-                                state: {}
+                                state: {fList: this.state.fList}
                             }}>
                             New Event
                         </Link>
@@ -48,7 +86,7 @@ export default class EventList extends Component {
                 }
                 {
                     this.state.events.map(event =>
-                        <Event key={event.id} event={event} deleteEvent={this.deleteEvent} editEvent={this.editEvent}>
+                        <Event key={event.id} event={event} fList={this.state.fList} deleteEvent={this.deleteEvent} editEvent={this.editEvent} getUser={this.getUser}>
                             {event}
                         </Event>
                     )

@@ -14,7 +14,7 @@ const News = props => {
       {
         <div className="card-body">
           <h5 className="card-title">{props.news.title}</h5>
-          <h6 className="card-text">{props.news.timestamp}</h6>
+          <h6 className="card-text">{props.news.timeStamp}</h6>
           <p className="card-text">Added by: {props.news.user.name}</p>
           <p className="card-text">Synopsis: {props.news.synopsis}</p>
           <a className="card-text" target="_blank" href={props.news.url}>Go To Article</a>

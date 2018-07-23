@@ -51,11 +51,6 @@
   ],
   "messages": [
     {
-      "message": "Hey this is Natasha",
-      "userId": "2",
-      "id": 1
-    },
-    {
       "userId": 1,
       "message": "None of my classNames work",
       "id": 2
@@ -110,24 +105,37 @@
   ],
   "tasks": [
     {
-      "task": "Study",
-      "date": "2018-07-30",
-      "id": 3,
-      "completed": true
+      "task": "Play tennis",
+      "date": "2018-07-31",
+      "userId": 4,
+      "completed": true,
+      "id": 1
     },
     {
-      "task": "Study",
-      "date": "2018-07-26",
-      "id": 4
-    },
-    {
-      "task": "Project",
-      "date": "2018-08-21",
-      "id": 5
+      "task": "Projects",
+      "date": "2018-07-31",
+      "userId": 5,
+      "completed": false,
+      "id": 3
     },
     {
       "task": "Homework",
+      "userId": 5,
+      "completed": true,
+      "id": 4
+    },
+    {
+      "task": "Play soccer",
       "date": "2018-07-31",
+      "userId": 4,
+      "completed": false,
+      "id": 5
+    },
+    {
+      "task": "pooop",
+      "date": "2018-08-09",
+      "userId": 4,
+      "completed": false,
       "id": 6
     }
   ]

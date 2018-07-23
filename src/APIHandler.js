@@ -36,10 +36,11 @@ export default class APIHandler {
             body: JSON.stringify(body)
         })
     }
-
-    allFriends(){
-        return $.ajax(`http://localhost:3000/friends`)
+    static allFriends = () => {
+        return fetch(`http://localhost:5002/friends`)
+            .then(e => e.json())
             .then(friends => {
+                console.log(friends)
                 const fList = [];
                 const User = sessionStorage.getItem("User");
                 friends.forEach(friend => {
@@ -49,5 +50,9 @@ export default class APIHandler {
                 });
                 return fList;
             })
+    }
+    static getTaskUserId = (idNumber) => {
+        return fetch(`http://localhost:5002/tasks?userId=${idNumber}&completed=false`)
+        .then(e => e.json())
     }
 }

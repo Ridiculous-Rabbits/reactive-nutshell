@@ -2,6 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import "./ChatStyle.css"
 import 'bootstrap/dist/css/bootstrap.min.css'
+import APIHandler from "../APIHandler"
+
+
 
 
 export default props => {
@@ -17,20 +20,23 @@ if (props.hasOwnProperty("chatMsg")) {
     message = props.location.state.chatMsg
 }
 
-let usersId = message.userId
-
-let currentUser = 1
-if (message.userId == currentUser) {
+let currentUser = JSON.parse(sessionStorage.getItem("credentials"))
+console.log("message.userId", message.userId)
+console.log(currentUser.userId)
+if (message.userId == currentUser.userId) {
     message.className = "message"
 } else {
     message.className = "friendmessage"
 }
-   return (
+return (
         <div className="card" style={{width: `18rem`}}>
             <div className="card-body">
-                <h6 className={message.className}>
+                <button className={message.user.name}>
+                {message.user.name}:
+                </button>
+                <h3 className={message.className}>
                     {message.message}
-                </h6>
+                </h3>
                 {
                 <Link className="card-link"
                 to={{

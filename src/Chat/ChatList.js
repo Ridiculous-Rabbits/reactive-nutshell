@@ -10,7 +10,7 @@ export default class ChatList extends Component {
     }
 
     refresh = () => {
-        APIHandler.getData("messages")
+        APIHandler.getData("messages?_expand=user")
             .then(chatMsgs => {
                 // console.log(chatMsgs)
                 this.setState({ chatMsgs: chatMsgs })

@@ -1,7 +1,6 @@
 //Natasha Cox 
 import React, { Component } from 'react'
 import APIHandler from '../APIHandler';
-import ChatList from './ChatList'
 
 export default class Chat extends Component {
 
@@ -20,12 +19,11 @@ export default class Chat extends Component {
         event.preventDefault()
 
         let newMessage = document.getElementById("message").value
-        let currentUser = 1;
+        let signedInUser = JSON.parse(sessionStorage.getItem("credentials"))
 
-
-        
+       
         const newChatMsg = {
-            userId: currentUser,
+            userId: signedInUser.userId,
             message: newMessage
         }
 

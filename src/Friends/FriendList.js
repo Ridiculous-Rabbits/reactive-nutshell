@@ -9,11 +9,14 @@ import "bootstrap/dist/css/bootstrap.min.css"
 export default class GetFriendList extends Component {
     state = {
         friends: [],
-        users: []
+        userId: ""
     }
 
     componentDidMount() {
-        APIHandler.getData(`friends?_expand=user&yourId=1`)
+        let signedInUser = JSON.parse(sessionStorage.getItem("credentials"))
+        let yourId = signedInUser.userId
+
+        APIHandler.getData(`friends?_expand=user&yourId=${yourId}`)
             .then(friends => this.setState({
                 friends: friends
             }))
@@ -22,9 +25,11 @@ export default class GetFriendList extends Component {
 
 
     deleteFriend = (friendId) => {
+        let signedInUser = JSON.parse(sessionStorage.getItem("credentials"))
+        let yourId = signedInUser.userId
         APIHandler.deleteData("friends", friendId)
             .then(() => {
-                return APIHandler.getData(`friends?_expand=user&yourId=1`)
+                return APIHandler.getData(`friends?_expand=user&yourId=${yourId}`)
                     .then(friendList => {
                         this.setState({
                             friends: friendList

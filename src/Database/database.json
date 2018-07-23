@@ -13,51 +13,68 @@
       "id": 3
     },
     {
-      "username": "sathvikreddy",
+      "name": "Jenn",
+      "email": "jenn@jenn.com",
+      "password": "123",
+      "id": 2
+    },
+    {
+      "name": "sathvikreddy",
       "email": "sathvik@gmail.com",
       "password": "123",
       "id": 4
     },
     {
-      "username": "jennlawson",
+      "name": "jennlawson",
       "email": "jenn@yahoo.com",
       "password": "123",
       "id": 5
     },
     {
-      "username": "natashacox",
+      "name": "natashacox",
       "email": "natasha@gmail.com",
       "password": "poopy",
       "id": 6
     },
     {
-      "username": "William Kimball",
+      "name": "William Kimball",
       "email": "wkkimball043@gmail.com",
       "password": "password",
       "id": 7
+    },
+    {
+      "name": "nc",
+      "email": "nc@gmail.com",
+      "password": "123",
+      "id": 8
     }
   ],
   "friends": [
     {
       "userId": "1",
-      "yourId": "2",
-      "id": 25
+      "yourId": "7",
+      "id": 26
     },
     {
-      "userId": 3,
-      "yourId": 1,
+      "userId": "1",
+      "yourId": "2",
       "id": 26
+    },
+    {
+      "userId": "4",
+      "yourId": "2",
+      "id": 27
     }
   ],
   "messages": [
     {
-      "userId": 1,
-      "message": "None of my classNames work",
-      "id": 2
+      "message": "Hey this is Natasha",
+      "userId": 3,
+      "id": 1
     },
     {
+      "message": "this stinks",
       "userId": 1,
-      "message": "this is bullshit",
       "id": 3
     },
     {
@@ -74,23 +91,56 @@
       "userId": 1,
       "message": "whhhyyyyy",
       "id": 6
+    },
+    {
+      "userId": 1,
+      "message": "it works!!!!",
+      "id": 7
+    },
+    {
+      "message": "evannnnnnn",
+      "userId": 1,
+      "id": 8
+    },
+    {
+      "userId": 3,
+      "message": "works?",
+      "id": 9
+    },
+    {
+      "userId": 3,
+      "message": "bloops",
+      "id": 10
+    },
+    {
+      "userId": 8,
+      "message": "hello",
+      "id": 11
     }
   ],
   "news": [
     {
+      "userId": 1,
       "title": "Bezos's News",
       "url": "www.amazon.com",
       "synopsis": "On this day in history, Blue Origin tested a New Shepherd Rocket succesfully",
-      "timestamp": "2018-07-09T01:24:19",
-      "id": 1,
-      "userId": "1"
+      "timeStamp": "2018-07-20 10:23:40 am",
+      "id": 1
     },
     {
       "title": "Build DOM-Chat",
       "url": "https://www.teslarati.com/spacex-falcon-9-block-5-fleet-dual-drone-ship-booster-recoveries/",
-      "userId": "1",
+      "userId": 7,
       "synopsis": "some stuff happened in the space insustry",
       "timeStamp": "2018-07-20 10:23:40 am",
+      "id": 2
+    },
+    {
+      "title": "As the SpaceX steamroller surges, European rocket industry vows to resist",
+      "url": "https://www.teslarati.com/spacex-mr-steven-spotted-sea-trialing-net-fairing-catch-debut/",
+      "userId": 4,
+      "synopsis": "some stuff happened in the space insustry",
+      "timeStamp": "2018-07-23 10:59:43 am",
       "id": 3
     }
   ],
@@ -98,7 +148,7 @@
     {
       "name": "Hit with a Candle Stick",
       "location": "The Library",
-      "date": "2018-07-20T14:46:34.340Z",
+      "date": "2018-07-24T19:20:31.000Z",
       "userId": 1,
       "id": 6
     }

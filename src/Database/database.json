@@ -39,11 +39,6 @@
   ],
   "friends": [
     {
-      "userId": "3",
-      "yourId": "7",
-      "id": 25
-    },
-    {
       "userId": "1",
       "yourId": "7",
       "id": 26
@@ -52,6 +47,11 @@
       "userId": "4",
       "yourId": "7",
       "id": 27
+    },
+    {
+      "userId": 4,
+      "yourId": 7,
+      "id": 28
     }
   ],
   "messages": [
@@ -101,7 +101,7 @@
     {
       "title": "As the SpaceX steamroller surges, European rocket industry vows to resist",
       "url": "https://www.teslarati.com/spacex-mr-steven-spotted-sea-trialing-net-fairing-catch-debut/",
-      "userId": 7,
+      "userId": 4,
       "synopsis": "some stuff happened in the space insustry",
       "timeStamp": "2018-07-23 10:59:43 am",
       "id": 3

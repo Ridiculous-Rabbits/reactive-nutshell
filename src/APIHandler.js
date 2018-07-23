@@ -36,18 +36,4 @@ export default class APIHandler {
             body: JSON.stringify(body)
         })
     }
-
-    allFriends(){
-        return $.ajax(`http://localhost:3000/friends`)
-            .then(friends => {
-                const fList = [];
-                const User = sessionStorage.getItem("User");
-                friends.forEach(friend => {
-                    if (friend.yourId == User){
-                        fList.push(friend.userId);
-                    }
-                });
-                return fList;
-            })
-    }
 }

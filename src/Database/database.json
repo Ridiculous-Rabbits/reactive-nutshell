@@ -105,6 +105,11 @@
       "userId": 8,
       "message": "hello",
       "id": 11
+    },
+    {
+      "userId": 6,
+      "message": "WHAYYYYY",
+      "id": 12
     }
   ],
   "news": [

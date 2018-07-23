@@ -36,8 +36,6 @@ export default class APIHandler {
             body: JSON.stringify(body)
         })
     }
-<<<<<<< HEAD
-=======
 
     static allFriends = () => {
         return fetch(`http://localhost:5002/friends`)
@@ -47,12 +45,11 @@ export default class APIHandler {
                 const fList = [];
                 const User = sessionStorage.getItem("User");
                 friends.forEach(friend => {
-                    if (friend.yourId == User){
+                    if (friend.yourId == User) {
                         fList.push(friend.userId);
                     }
                 });
                 return fList;
             })
     }
->>>>>>> master
 }

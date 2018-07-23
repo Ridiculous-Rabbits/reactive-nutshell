@@ -78,4 +78,9 @@ export default class APIHandler {
                 return fList;
             });
     };
+    static getTaskUserId = idNumber => {
+        return fetch(
+          `http://localhost:5002/tasks?userId=${idNumber}&completed=false`
+        ).then(e => e.json());
+      };
 }

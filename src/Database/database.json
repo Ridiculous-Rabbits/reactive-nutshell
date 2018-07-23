@@ -13,6 +13,12 @@
       "id": 3
     },
     {
+      "name": "Jenn",
+      "email": "jenn@jenn.com",
+      "password": "123",
+      "id": 2
+    },
+    {
       "name": "sathvikreddy",
       "email": "sathvik@gmail.com",
       "password": "123",
@@ -50,14 +56,14 @@
       "id": 26
     },
     {
-      "userId": "4",
-      "yourId": "7",
-      "id": 27
+      "userId": "1",
+      "yourId": "2",
+      "id": 26
     },
     {
-      "userId": 4,
-      "yourId": 7,
-      "id": 28
+      "userId": "4",
+      "yourId": "2",
+      "id": 27
     }
   ],
   "messages": [
@@ -114,12 +120,12 @@
   ],
   "news": [
     {
+      "userId": 1,
       "title": "Bezos's News",
       "url": "www.amazon.com",
       "synopsis": "On this day in history, Blue Origin tested a New Shepherd Rocket succesfully",
       "timeStamp": "2018-07-20 10:23:40 am",
-      "id": 1,
-      "userId": 1
+      "id": 1
     },
     {
       "title": "Build DOM-Chat",
@@ -142,32 +148,32 @@
     {
       "name": "Hit with a Candle Stick",
       "location": "The Library",
-      "date": "2018-07-20T14:46:34.340Z",
+      "date": "2018-07-24T19:20:31.000Z",
       "userId": 1,
       "id": 6
+    },
+    {
+      "name": "dancing_cat",
+      "location": "whats up",
+      "date": "2018-07-23T20:26:03.726Z",
+      "userId": 2,
+      "id": 7
+    },
+    {
+      "name": "aww yeah",
+      "location": "please",
+      "date": "2018-07-23T19:22:49.546Z",
+      "userId": 4,
+      "id": 8
     }
   ],
   "tasks": [
     {
-      "task": "Study",
-      "date": "2018-07-30",
-      "id": 3,
-      "completed": true
-    },
-    {
-      "task": "Study",
-      "date": "2018-07-26",
-      "id": 4
-    },
-    {
-      "task": "Project",
-      "date": "2018-08-21",
-      "id": 5
-    },
-    {
-      "task": "Homework",
-      "date": "2018-07-31",
-      "id": 6
+      "userId": "1",
+      "task": "Evan's task",
+      "date": "2018-07-16T01:23",
+      "completed": "false",
+      "id": 21
     }
   ]
 }

@@ -14,3 +14,8 @@
 .event:first-of-type {
     font-weight: 900;
 }
+
+.theirEvent {
+    font-style: italic;
+    background-color: cornsilk;
+}

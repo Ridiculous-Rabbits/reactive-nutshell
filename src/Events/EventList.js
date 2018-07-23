@@ -11,7 +11,8 @@ import 'react-datepicker/dist/react-datepicker.css';
 export default class EventList extends Component {
     state = {
         events: [],
-        fList: []
+        fList: [],
+        currentUser: []
     }
 
     componentWillMount = () => {
@@ -31,7 +32,8 @@ export default class EventList extends Component {
                 return parseInt(friend)
             })
             this.setState({
-                fList: fList
+                fList: fList,
+                currentUser: currentUser
             })
         })
     }
@@ -86,7 +88,7 @@ export default class EventList extends Component {
                 }
                 {
                     this.state.events.map(event =>
-                        <Event key={event.id} event={event} fList={this.state.fList} deleteEvent={this.deleteEvent} editEvent={this.editEvent} getUser={this.getUser}>
+                        <Event key={event.id} event={event} fList={this.state.fList} currentUser={this.state.currentUser} deleteEvent={this.deleteEvent} editEvent={this.editEvent} getUser={this.getUser}>
                             {event}
                         </Event>
                     )

@@ -3,7 +3,7 @@ import APIHandler from "./APIHandler";
 
 export default class Register extends Component {
     state = {
-        username: "",
+        name: "",
         email: "",
         password: ""
     }
@@ -18,15 +18,15 @@ export default class Register extends Component {
         e.preventDefault();
 
         let registerData = {
-            username: this.state.username,
+            name: this.state.name,
             email: this.state.email,
             password: this.state.password
         }
 
         APIHandler.addData("users", registerData)
-        .then(() => {
-            this.props.history.push("/login");
-        })
+            .then(() => {
+                this.props.history.push("/login");
+            })
     }
 
     render() {
@@ -37,7 +37,7 @@ export default class Register extends Component {
                 {/* Field to register username */}
                 <label htmlFor="registerUsername">Username:</label>
                 <input
-                    id="username"
+                    id="name"
                     name="registerUsername"
                     type="text"
                     onChange={this.handleFieldChange}
@@ -61,7 +61,7 @@ export default class Register extends Component {
                     onChange={this.handleFieldChange}
                 />
 
-                <input type="submit"/>
+                <input type="submit" />
 
             </form>
         )

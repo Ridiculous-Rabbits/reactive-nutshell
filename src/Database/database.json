@@ -13,28 +13,10 @@
       "id": 3
     },
     {
-      "username": "sathvikreddy",
-      "email": "sathvik@gmail.com",
+      "username": "Jenn",
+      "email": "jenn@jenn.com",
       "password": "123",
       "id": 4
-    },
-    {
-      "username": "jennlawson",
-      "email": "jenn@yahoo.com",
-      "password": "123",
-      "id": 5
-    },
-    {
-      "username": "natashacox",
-      "email": "natasha@gmail.com",
-      "password": "poopy",
-      "id": 6
-    },
-    {
-      "username": "William Kimball",
-      "email": "wkkimball043@gmail.com",
-      "password": "password",
-      "id": 7
     }
   ],
   "friends": [
@@ -42,61 +24,28 @@
       "userId": "1",
       "yourId": "2",
       "id": 25
-    },
-    {
-      "userId": 3,
-      "yourId": 1,
-      "id": 26
     }
   ],
   "messages": [
     {
-      "message": "Hey this is Natasha",
-      "userId": "2",
+      "userId": "1",
+      "message": "Hey this is Evan",
       "id": 1
     },
     {
       "userId": 1,
-      "message": "None of my classNames work",
+      "message": "Hi whats up",
       "id": 2
-    },
-    {
-      "userId": 1,
-      "message": "this is bullshit",
-      "id": 3
-    },
-    {
-      "userId": 1,
-      "message": "and the field doesn't clear",
-      "id": 4
-    },
-    {
-      "userId": 1,
-      "message": "poop",
-      "id": 5
-    },
-    {
-      "userId": 1,
-      "message": "whhhyyyyy",
-      "id": 6
     }
   ],
   "news": [
     {
+      "userId": "1",
       "title": "Bezos's News",
       "url": "www.amazon.com",
       "synopsis": "On this day in history, Blue Origin tested a New Shepherd Rocket succesfully",
       "timestamp": "2018-07-09T01:24:19",
-      "id": 1,
-      "userId": "1"
-    },
-    {
-      "title": "Build DOM-Chat",
-      "url": "https://www.teslarati.com/spacex-falcon-9-block-5-fleet-dual-drone-ship-booster-recoveries/",
-      "userId": "1",
-      "synopsis": "some stuff happened in the space insustry",
-      "timeStamp": "2018-07-20 10:23:40 am",
-      "id": 3
+      "id": 1
     }
   ],
   "events": [
@@ -110,25 +59,11 @@
   ],
   "tasks": [
     {
-      "task": "Study",
-      "date": "2018-07-30",
-      "id": 3,
-      "completed": true
-    },
-    {
-      "task": "Study",
-      "date": "2018-07-26",
-      "id": 4
-    },
-    {
-      "task": "Project",
-      "date": "2018-08-21",
-      "id": 5
-    },
-    {
-      "task": "Homework",
-      "date": "2018-07-31",
-      "id": 6
+      "userId": "1",
+      "task": "Evan's task",
+      "date": "2018-07-16T01:23",
+      "completed": "false",
+      "id": 21
     }
   ]
 }

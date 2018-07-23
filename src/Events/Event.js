@@ -3,7 +3,7 @@
 import React from "react"
 import { Link } from "react-router-dom"
 
-const Event = ({event, children, deleteEvent, editEvent}) => {
+const Event = ({event, children, deleteEvent, editEvent, fList}) => {
     return (
         <div className="event" style={{width: `18rem`}}>
             <div className="card-body">
@@ -19,7 +19,7 @@ const Event = ({event, children, deleteEvent, editEvent}) => {
                         <Link className="card-link"
                             to={{
                                 pathname: "/eventForm",
-                                state: { event: event}
+                                state: { event: event, fList: fList}
                             }}>
                             Edit Event
                         </Link>

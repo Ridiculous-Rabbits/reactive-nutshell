@@ -13,7 +13,7 @@
       "id": 3
     },
     {
-      "username": "Jenn",
+      "name": "Jenn",
       "email": "jenn@jenn.com",
       "password": "123",
       "id": 4
@@ -24,6 +24,11 @@
       "userId": "1",
       "yourId": "2",
       "id": 25
+    },
+    {
+      "userId": "1",
+      "yourId": "4",
+      "id": 26
     }
   ],
   "messages": [
@@ -52,9 +57,23 @@
     {
       "name": "Hit with a Candle Stick",
       "location": "The Library",
-      "date": "2018-07-20T14:46:34.340Z",
+      "date": "2018-07-24T19:20:31.000Z",
       "userId": 1,
       "id": 6
+    },
+    {
+      "name": "dancing_cat1",
+      "location": "whats up",
+      "date": "2018-07-23T19:22:26.351Z",
+      "userId": 1,
+      "id": 7
+    },
+    {
+      "name": "aww yeah",
+      "location": "please",
+      "date": "2018-07-23T19:22:49.546Z",
+      "userId": 1,
+      "id": 8
     }
   ],
   "tasks": [

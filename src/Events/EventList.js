@@ -14,7 +14,7 @@ export default class EventList extends Component {
         fList: []
     }
 
-    getUser = () => {
+    componentWillMount = () => {
         let currentUser
         let sessionUser = JSON.parse(sessionStorage.getItem("credentials"))
         let localUser = JSON.parse(localStorage.getItem("credentials"))
@@ -33,7 +33,6 @@ export default class EventList extends Component {
     }
 
     componentDidMount=() => {
-        this.getUser()
         APIHandler.getData("events?_sort=date&_order=asc")
         .then(unfilterdEvents => {
             let filteredEvents = []

@@ -19,8 +19,7 @@ export default class AddFriendForm extends Component {
     handleAddFriend = (e) => {
         //function goes here
         e.preventDefault()
-        let signedInUser
-        let sessionUser = JSON.parse(sessionStorage.getItem("credentials"))
+        let signedInUser= JSON.parse(sessionStorage.getItem("credentials"))
 
         let yourId = signedInUser.userId
 

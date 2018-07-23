@@ -57,12 +57,12 @@
     },
     {
       "userId": "1",
-      "yourId": "4",
+      "yourId": "2",
       "id": 26
     },
     {
       "userId": "4",
-      "yourId": "7",
+      "yourId": "2",
       "id": 27
     }
   ],
@@ -120,13 +120,12 @@
   ],
   "news": [
     {
-      "userId": "1",
+      "userId": 1,
       "title": "Bezos's News",
       "url": "www.amazon.com",
       "synopsis": "On this day in history, Blue Origin tested a New Shepherd Rocket succesfully",
       "timeStamp": "2018-07-20 10:23:40 am",
-      "id": 1,
-      "userId": 1
+      "id": 1
     },
     {
       "title": "Build DOM-Chat",
@@ -154,17 +153,17 @@
       "id": 6
     },
     {
-      "name": "dancing_cat1",
+      "name": "dancing_cat",
       "location": "whats up",
-      "date": "2018-07-23T19:22:26.351Z",
-      "userId": 1,
+      "date": "2018-07-23T20:26:03.726Z",
+      "userId": 2,
       "id": 7
     },
     {
       "name": "aww yeah",
       "location": "please",
       "date": "2018-07-23T19:22:49.546Z",
-      "userId": 2,
+      "userId": 4,
       "id": 8
     }
   ],

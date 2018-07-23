@@ -23,9 +23,13 @@ export default class EventList extends Component {
         } else {
             currentUser= localUser.userId
         }
+
         APIHandler.allFriends()
         .then(fList => {
             fList.push(currentUser)
+            fList = fList.map(friend => {
+                return parseInt(friend)
+            })
             this.setState({
                 fList: fList
             })
@@ -36,7 +40,9 @@ export default class EventList extends Component {
         APIHandler.getData("events?_sort=date&_order=asc")
         .then(unfilterdEvents => {
             let filteredEvents = []
-                unfilterdEvents.forEach(event => {
+            unfilterdEvents.forEach(event => {
+                console.log(this.state.fList)
+                console.log(event.userId)
                     if (this.state.fList.includes(event.userId)) {
                         filteredEvents.push(event)
                         this.setState({
@@ -47,8 +53,8 @@ export default class EventList extends Component {
                             events: []
                         })
                     }
-
                 })
+                console.log(this.state.events)
             })
         }
 

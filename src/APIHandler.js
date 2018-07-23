@@ -37,9 +37,11 @@ export default class APIHandler {
         })
     }
 
-    allFriends(){
-        return $.ajax(`http://localhost:3000/friends`)
+    static allFriends = () => {
+        return fetch(`http://localhost:5002/friends`)
+            .then(e => e.json())
             .then(friends => {
+                console.log(friends)
                 const fList = [];
                 const User = sessionStorage.getItem("User");
                 friends.forEach(friend => {

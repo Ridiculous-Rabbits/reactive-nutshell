@@ -4,6 +4,7 @@ import React, { Component } from "react";
 import News from "./News";
 import NewsForm from "./NewNewsForm";
 import Moment from "moment";
+import APIHandler from "./../APIHandler"
 
 export default class NewsList extends Component {
   state = {
@@ -99,6 +100,7 @@ export default class NewsList extends Component {
 
   //renders the new news button, the form conditionally, and each news card sorted based on their timestamp
   render() {
+    console.log(APIHandler.allFriends())
     return (
       <React.Fragment>
         <button onClick={this.changePressed}>Add New News Article</button>

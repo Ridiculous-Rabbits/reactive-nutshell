@@ -27,7 +27,7 @@ export default class AddFriendForm extends Component {
         }
         // let signedInUser = JSON.parse(sessionStorage.getItem("credentials"))
 
-        let yourId = signedInUser.userId
+        let yourId = signedInUser
 
         APIHandler.getData("users")
             .then((userArray) => {

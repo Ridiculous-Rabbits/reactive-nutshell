@@ -21,7 +21,7 @@ export default class GetFriendList extends Component {
             signedInUser = signedInUser.userId;
         }
         // let signedInUser = JSON.parse(sessionStorage.getItem("credentials"))
-        let yourId = signedInUser.userId
+        let yourId = signedInUser
 
         APIHandler.getData(`friends?_expand=user&yourId=${yourId}`)
             .then(friends => this.setState({

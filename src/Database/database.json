@@ -10,161 +10,103 @@
       "name": "Second Person",
       "password": "passwords",
       "email": "person@gmail.com",
-      "id": 3
-    },
-    {
-      "name": "Jenn",
-      "email": "jenn@jenn.com",
-      "password": "123",
       "id": 2
     },
     {
-      "name": "sathvikreddy",
-      "email": "sathvik@gmail.com",
-      "password": "123",
+      "name": "Third Person",
+      "password": "pass",
+      "email": "other@gmail.com",
+      "id": 3
+    },
+    {
+      "name": "Person",
+      "password": "pass",
+      "email": "other@gmail.com",
       "id": 4
     },
     {
-      "name": "jennlawson",
-      "email": "jenn@yahoo.com",
-      "password": "123",
+      "name": "r",
+      "email": "r@r.com",
+      "password": "r",
       "id": 5
     },
     {
-      "name": "natashacox",
-      "email": "natasha@gmail.com",
-      "password": "poopy",
+      "name": "r",
+      "email": "r@r.com",
+      "password": "r",
       "id": 6
-    },
-    {
-      "name": "William Kimball",
-      "email": "wkkimball043@gmail.com",
-      "password": "password",
-      "id": 7
-    },
-    {
-      "name": "nc",
-      "email": "nc@gmail.com",
-      "password": "123",
-      "id": 8
     }
   ],
   "friends": [
     {
-      "userId": "1",
-      "yourId": "7",
-      "id": 26
+      "userId": 3,
+      "id": 2
     },
     {
-      "userId": "1",
-      "yourId": "2",
-      "id": 26
+      "userId": 1,
+      "id": 3
     },
     {
-      "userId": "4",
-      "yourId": "2",
-      "id": 27
+      "userId": 4,
+      "id": 4
     }
   ],
   "messages": [
     {
-      "message": "Hey this is Natasha",
-      "userId": 3,
+      "userId": "1",
+      "message": "Hey this is Evan",
       "id": 1
     },
     {
-      "message": "this stinks",
-      "userId": 1,
+      "message": "My slightly less important message.",
+      "userId": 5,
+      "id": 2
+    },
+    {
+      "userId": 5,
+      "message": "another cool message",
       "id": 3
-    },
-    {
-      "userId": 1,
-      "message": "and the field doesn't clear",
-      "id": 4
-    },
-    {
-      "userId": 1,
-      "message": "poop",
-      "id": 5
-    },
-    {
-      "userId": 1,
-      "message": "whhhyyyyy",
-      "id": 6
-    },
-    {
-      "userId": 1,
-      "message": "it works!!!!",
-      "id": 7
-    },
-    {
-      "message": "evannnnnnn",
-      "userId": 1,
-      "id": 8
-    },
-    {
-      "userId": 3,
-      "message": "works?",
-      "id": 9
-    },
-    {
-      "userId": 3,
-      "message": "bloops",
-      "id": 10
-    },
-    {
-      "userId": 8,
-      "message": "hello",
-      "id": 11
     }
   ],
   "news": [
     {
-      "userId": 1,
-      "title": "Bezos's News",
-      "url": "www.amazon.com",
-      "synopsis": "On this day in history, Blue Origin tested a New Shepherd Rocket succesfully",
-      "timeStamp": "2018-07-20 10:23:40 am",
+      "userId": "1",
+      "title": "Evan's News",
+      "url": "www.ewlusky.com",
+      "synopsis": "cubes",
+      "timestamp": "2018-07-09T01:24:19",
       "id": 1
     },
     {
-      "title": "Build DOM-Chat",
-      "url": "https://www.teslarati.com/spacex-falcon-9-block-5-fleet-dual-drone-ship-booster-recoveries/",
-      "userId": 7,
-      "synopsis": "some stuff happened in the space insustry",
-      "timeStamp": "2018-07-20 10:23:40 am",
+      "userId": "2",
+      "title": "Second's News",
+      "url": "www.sldkf.com",
+      "synopsis": "some stuff happend",
+      "timestamp": "2018-07-09T01:26:33",
       "id": 2
-    },
-    {
-      "title": "As the SpaceX steamroller surges, European rocket industry vows to resist",
-      "url": "https://www.teslarati.com/spacex-mr-steven-spotted-sea-trialing-net-fairing-catch-debut/",
-      "userId": 4,
-      "synopsis": "some stuff happened in the space insustry",
-      "timeStamp": "2018-07-23 10:59:43 am",
-      "id": 3
     }
   ],
   "events": [
     {
-      "name": "Hit with a Candle Stick",
-      "location": "The Library",
-      "date": "2018-07-24T19:20:31.000Z",
-      "userId": 1,
-      "id": 6
+      "userId": "1",
+      "name": "Evan's Event",
+      "location": "NSS",
+      "date": "2018-07-10T19:30",
+      "id": 1
     },
     {
-      "name": "dancing_cat",
-      "location": "whats up",
-      "date": "2018-07-23T20:26:03.726Z",
-      "userId": 2,
-      "id": 7
+      "userId": "1",
+      "name": "Go to bed at the correct time.",
+      "location": "Home",
+      "date": "2018-07-10T20:30",
+      "id": 11
     },
     {
-      "name": "aww yeah",
-      "location": "please",
-      "date": "2018-07-23T19:22:49.546Z",
-      "userId": 4,
-      "id": 8
+      "name": "event",
+      "location": "there",
+      "date": "2018-07-23T20:32:46.139Z",
+      "userId": 5,
+      "id": 12
     }
   ],
   "tasks": [

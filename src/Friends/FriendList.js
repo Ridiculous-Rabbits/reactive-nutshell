@@ -13,8 +13,15 @@ export default class GetFriendList extends Component {
     }
 
     componentDidMount() {
-        let signedInUser = JSON.parse(sessionStorage.getItem("credentials"))
-        let yourId = signedInUser.userId
+        let signedInUser = JSON.parse(localStorage.getItem("credentials"));
+        if (signedInUser === null) {
+            signedInUser = JSON.parse(sessionStorage.getItem("credentials"));
+            signedInUser = signedInUser.userId;
+        } else {
+            signedInUser = signedInUser.userId;
+        }
+        // let signedInUser = JSON.parse(sessionStorage.getItem("credentials"))
+        let yourId = signedInUser
 
         APIHandler.getData(`friends?_expand=user&yourId=${yourId}`)
             .then(friends => this.setState({

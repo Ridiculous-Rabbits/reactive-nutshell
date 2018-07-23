@@ -4,9 +4,9 @@ import APIHandler from "../APIHandler"
 export default class AddFriendForm extends Component {
 
     //Set initial state
-    state = {
-        userId: "1"
-    }
+    state = {}
+
+
 
     //Update state whenever and input field is changed
     handleInputChange = (e) => {
@@ -19,12 +19,15 @@ export default class AddFriendForm extends Component {
     handleAddFriend = (e) => {
         //function goes here
         e.preventDefault()
+        let signedInUser
+        let sessionUser = JSON.parse(sessionStorage.getItem("credentials"))
+
+        let yourId = signedInUser.userId
+
         APIHandler.getData("users")
             .then((userArray) => {
-                console.log(userArray)
-                userArray.forEach(userObject => {
-                    console.log(userObject.id)
 
+                userArray.forEach(userObject => {
                     if (userObject.name === this.state.newFriend) {
                         fetch(`http://localhost:5002/friends`, {
                             method: "POST",
@@ -33,10 +36,10 @@ export default class AddFriendForm extends Component {
                             },
                             body: JSON.stringify({
                                 userId: userObject.id,
-                                yourId: 1
+                                yourId: yourId
                             })
                         }).then(() => {
-                            return APIHandler.getData(`friends?_expand=user&yourId=1`)
+                            return APIHandler.getData(`friends?_expand=user&yourId=${yourId}`)
                         }).then(() => {
                             this.props.history.push("/friends")
                         })

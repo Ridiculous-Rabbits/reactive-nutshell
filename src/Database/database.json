@@ -29,6 +29,12 @@
       "email": "natasha@gmail.com",
       "password": "poopy",
       "id": 6
+    },
+    {
+      "username": "William Kimball",
+      "email": "wkkimball043@gmail.com",
+      "password": "password",
+      "id": 7
     }
   ],
   "friends": [

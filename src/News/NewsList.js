@@ -4,13 +4,12 @@ import React, { Component } from "react";
 import News from "./News";
 import NewsForm from "./NewNewsForm";
 import Moment from "moment";
-import APIHandler from "./../APIHandler"
+import APIHandler from "./../APIHandler";
 
 export default class NewsList extends Component {
   state = {
     news: [],
-    newsForm: "",
-    userId: "1"
+    newsForm: ""
   };
 
   // Update state whenever an input field is edited
@@ -27,7 +26,7 @@ export default class NewsList extends Component {
     })
       // When DELETE is finished, retrieve the new list of news
       .then(() => {
-        return fetch("http://localhost:5002/news");
+        return fetch("http://localhost:5002/news?_expand=user");
       })
       // Once the new array of news is retrieved, set the state
       .then(a => a.json())
@@ -41,17 +40,17 @@ export default class NewsList extends Component {
   addNewNews = event => {
     event.preventDefault();
     let timestamp = Moment().format("YYYY-MM-DD hh:mm:ss a");
-    // console.log(timestamp);
+
     // Add new news to the API
-    fetch(`http://localhost:5002/news`, {
+    fetch(`http://localhost:5002/news?_expand=user`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json; charset=utf-8"
       },
       body: JSON.stringify({
         title: this.state.title,
-        url:  this.state.url,
-        userId: this.state.userId,
+        url: this.state.url,
+        userId: this.state.user,
         synopsis: this.state.synopsis,
         timeStamp: timestamp
       })
@@ -62,8 +61,8 @@ export default class NewsList extends Component {
         this.setState({
           newsForm: ""
         });
-        alert("Added New Article Sucessfully")
-        return fetch("http://localhost:5002/news");
+        alert("Added New Article Sucessfully");
+        return fetch("http://localhost:5002/news?_expand=user");
       })
       // Once the new array of news is retrieved, set the state
       .then(a => a.json())
@@ -75,12 +74,27 @@ export default class NewsList extends Component {
   };
 
   componentDidMount() {
-    fetch("http://localhost:5002/news")
-      .then(e => e.json())
-      .then(news => this.setState({ news: news }));
-  }
+    let currentUser = JSON.parse(localStorage.getItem("credentials"));
+    if (currentUser === null) {
+      currentUser = JSON.parse(sessionStorage.getItem("credentials"));
+      currentUser = currentUser.userId;
+    } else {
+      currentUser = currentUser.userId;
+    }
 
-  //this function 
+    fetch("http://localhost:5002/news?_expand=user")
+      .then(e => e.json())
+      .then(news => this.setState({ news: news }))
+      .then(this.setState({ user: currentUser }))
+      .then(
+        APIHandler.myFriends().then(fList => {
+          this.setState({
+            friends: fList
+          });
+        })
+      );
+  }
+  //this function
   changePressed = () => {
     if (this.state.newsForm === "") {
       this.setState({
@@ -100,7 +114,6 @@ export default class NewsList extends Component {
 
   //renders the new news button, the form conditionally, and each news card sorted based on their timestamp
   render() {
-    console.log(APIHandler.allFriends())
     return (
       <React.Fragment>
         <button onClick={this.changePressed}>Add New News Article</button>
@@ -110,10 +123,15 @@ export default class NewsList extends Component {
             return Moment.utc(right.timeStamp).diff(Moment.utc(left.timeStamp));
           })
           .filter(itm => {
-            if (itm.userId === this.state.userId) {
+            let friends = []
+            if (itm.userId === this.state.user) {
               return itm;
             } else {
-              return "";
+              for (let key in this.state.friends) {
+                if (itm.userId == this.state.friends[key]) {
+                  friends.push(itm);
+                }  return friends
+              } 
             }
           })
           .map(news => (

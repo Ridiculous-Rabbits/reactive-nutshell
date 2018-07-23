@@ -13,25 +13,25 @@
       "id": 3
     },
     {
-      "username": "sathvikreddy",
+      "name": "sathvikreddy",
       "email": "sathvik@gmail.com",
       "password": "123",
       "id": 4
     },
     {
-      "username": "jennlawson",
+      "name": "jennlawson",
       "email": "jenn@yahoo.com",
       "password": "123",
       "id": 5
     },
     {
-      "username": "natashacox",
+      "name": "natashacox",
       "email": "natasha@gmail.com",
       "password": "poopy",
       "id": 6
     },
     {
-      "username": "William Kimball",
+      "name": "William Kimball",
       "email": "wkkimball043@gmail.com",
       "password": "password",
       "id": 7
@@ -39,22 +39,22 @@
   ],
   "friends": [
     {
-      "userId": "1",
-      "yourId": "2",
+      "userId": "3",
+      "yourId": "7",
       "id": 25
     },
     {
-      "userId": 3,
-      "yourId": 1,
+      "userId": "1",
+      "yourId": "7",
       "id": 26
+    },
+    {
+      "userId": "4",
+      "yourId": "7",
+      "id": 27
     }
   ],
   "messages": [
-    {
-      "message": "Hey this is Natasha",
-      "userId": "2",
-      "id": 1
-    },
     {
       "userId": 1,
       "message": "None of my classNames work",
@@ -86,16 +86,24 @@
       "title": "Bezos's News",
       "url": "www.amazon.com",
       "synopsis": "On this day in history, Blue Origin tested a New Shepherd Rocket succesfully",
-      "timestamp": "2018-07-09T01:24:19",
+      "timeStamp": "2018-07-20 10:23:40 am",
       "id": 1,
-      "userId": "1"
+      "userId": 1
     },
     {
       "title": "Build DOM-Chat",
       "url": "https://www.teslarati.com/spacex-falcon-9-block-5-fleet-dual-drone-ship-booster-recoveries/",
-      "userId": "1",
+      "userId": 7,
       "synopsis": "some stuff happened in the space insustry",
       "timeStamp": "2018-07-20 10:23:40 am",
+      "id": 2
+    },
+    {
+      "title": "As the SpaceX steamroller surges, European rocket industry vows to resist",
+      "url": "https://www.teslarati.com/spacex-mr-steven-spotted-sea-trialing-net-fairing-catch-debut/",
+      "userId": 7,
+      "synopsis": "some stuff happened in the space insustry",
+      "timeStamp": "2018-07-23 10:59:43 am",
       "id": 3
     }
   ],

@@ -37,13 +37,19 @@ export default class APIHandler {
         })
     }
 
-    static allFriends = () => {
+    static myFriends = () => {
         return fetch(`http://localhost:5002/friends`)
             .then(e => e.json())
             .then(friends => {
-                console.log(friends)
+                // console.log(friends)
                 const fList = [];
-                const User = sessionStorage.getItem("User");
+                let User = JSON.parse(localStorage.getItem("credentials"))
+                if (User === null) {
+                  User = JSON.parse(sessionStorage.getItem("credentials"))
+                  User = User.userId
+                } else {
+                  User = User.userId
+                }
                 friends.forEach(friend => {
                     if (friend.yourId == User){
                         fList.push(friend.userId);

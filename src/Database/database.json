@@ -10,151 +10,113 @@
       "name": "Second Person",
       "password": "passwords",
       "email": "person@gmail.com",
+      "id": 2
+    },
+    {
+      "name": "Third Person",
+      "password": "pass",
+      "email": "other@gmail.com",
       "id": 3
     },
     {
-      "username": "sathvikreddy",
-      "email": "sathvik@gmail.com",
-      "password": "123",
+      "name": "Person",
+      "password": "pass",
+      "email": "other@gmail.com",
       "id": 4
     },
     {
-      "username": "jennlawson",
-      "email": "jenn@yahoo.com",
-      "password": "123",
+      "name": "r",
+      "email": "r@r.com",
+      "password": "r",
       "id": 5
     },
     {
-      "username": "natashacox",
-      "email": "natasha@gmail.com",
-      "password": "poopy",
+      "name": "r",
+      "email": "r@r.com",
+      "password": "r",
       "id": 6
-    },
-    {
-      "username": "William Kimball",
-      "email": "wkkimball043@gmail.com",
-      "password": "password",
-      "id": 7
-    },
-    {
-      "name": "nc",
-      "email": "nc@gmail.com",
-      "password": "123",
-      "id": 8
     }
   ],
   "friends": [
     {
-      "userId": 3,
-      "yourId": 8,
+      "userId": 4,
+      "yourId": 5,
       "id": 1
     },
     {
-      "userId": 1,
-      "yourId": 8,
+      "userId": 3,
+      "yourId": 5,
       "id": 2
+    },
+    {
+      "userId": 1,
+      "yourId": 5,
+      "id": 3
+    },
+    {
+      "userId": 2,
+      "yourId": 5,
+      "id": 4
     }
   ],
   "messages": [
     {
-      "message": "Hey this is Natasha",
-      "userId": 3,
+      "userId": "1",
+      "message": "Hey this is Evan",
       "id": 1
     },
     {
-      "message": "this stinks",
-      "userId": 1,
+      "message": "My slightly less important message.",
+      "userId": 5,
+      "id": 2
+    },
+    {
+      "userId": 5,
+      "message": "another cool message",
       "id": 3
-    },
-    {
-      "userId": 1,
-      "message": "and the field doesn't clear",
-      "id": 4
-    },
-    {
-      "userId": 1,
-      "message": "poop",
-      "id": 5
-    },
-    {
-      "userId": 1,
-      "message": "whhhyyyyy",
-      "id": 6
-    },
-    {
-      "userId": 1,
-      "message": "it works!!!!",
-      "id": 7
-    },
-    {
-      "message": "evannnnnnn",
-      "userId": 1,
-      "id": 8
-    },
-    {
-      "userId": 3,
-      "message": "works?",
-      "id": 9
-    },
-    {
-      "userId": 3,
-      "message": "bloops",
-      "id": 10
-    },
-    {
-      "userId": 8,
-      "message": "hello",
-      "id": 11
     }
   ],
   "news": [
     {
-      "title": "Bezos's News",
-      "url": "www.amazon.com",
-      "synopsis": "On this day in history, Blue Origin tested a New Shepherd Rocket succesfully",
+      "userId": "1",
+      "title": "Evan's News",
+      "url": "www.ewlusky.com",
+      "synopsis": "cubes",
       "timestamp": "2018-07-09T01:24:19",
-      "id": 1,
-      "userId": "1"
+      "id": 1
     },
     {
-      "title": "Build DOM-Chat",
-      "url": "https://www.teslarati.com/spacex-falcon-9-block-5-fleet-dual-drone-ship-booster-recoveries/",
-      "userId": "1",
-      "synopsis": "some stuff happened in the space insustry",
-      "timeStamp": "2018-07-20 10:23:40 am",
-      "id": 3
+      "userId": "2",
+      "title": "Second's News",
+      "url": "www.sldkf.com",
+      "synopsis": "some stuff happend",
+      "timestamp": "2018-07-09T01:26:33",
+      "id": 2
     }
   ],
   "events": [
     {
-      "name": "Hit with a Candle Stick",
-      "location": "The Library",
-      "date": "2018-07-20T14:46:34.340Z",
-      "userId": 1,
-      "id": 6
+      "userId": "1",
+      "name": "Evan's Event",
+      "location": "NSS",
+      "date": "2018-07-10T19:30",
+      "id": 1
+    },
+    {
+      "userId": "1",
+      "name": "Go to bed at the correct time.",
+      "location": "Home",
+      "date": "2018-07-10T20:30",
+      "id": 11
     }
   ],
   "tasks": [
     {
-      "task": "Study",
-      "date": "2018-07-30",
-      "id": 3,
-      "completed": true
-    },
-    {
-      "task": "Study",
-      "date": "2018-07-26",
-      "id": 4
-    },
-    {
-      "task": "Project",
-      "date": "2018-08-21",
-      "id": 5
-    },
-    {
-      "task": "Homework",
-      "date": "2018-07-31",
-      "id": 6
+      "userId": "1",
+      "task": "Evan's task",
+      "date": "2018-07-16T01:23",
+      "completed": "false",
+      "id": 21
     }
   ]
 }

@@ -35,6 +35,12 @@
       "email": "wkkimball043@gmail.com",
       "password": "password",
       "id": 7
+    },
+    {
+      "name": "nc",
+      "email": "nc@gmail.com",
+      "password": "123",
+      "id": 8
     }
   ],
   "friends": [
@@ -56,13 +62,13 @@
   ],
   "messages": [
     {
-      "userId": 1,
-      "message": "None of my classNames work",
-      "id": 2
+      "message": "Hey this is Natasha",
+      "userId": 3,
+      "id": 1
     },
     {
+      "message": "this stinks",
       "userId": 1,
-      "message": "this is bullshit",
       "id": 3
     },
     {
@@ -79,6 +85,31 @@
       "userId": 1,
       "message": "whhhyyyyy",
       "id": 6
+    },
+    {
+      "userId": 1,
+      "message": "it works!!!!",
+      "id": 7
+    },
+    {
+      "message": "evannnnnnn",
+      "userId": 1,
+      "id": 8
+    },
+    {
+      "userId": 3,
+      "message": "works?",
+      "id": 9
+    },
+    {
+      "userId": 3,
+      "message": "bloops",
+      "id": 10
+    },
+    {
+      "userId": 8,
+      "message": "hello",
+      "id": 11
     }
   ],
   "news": [

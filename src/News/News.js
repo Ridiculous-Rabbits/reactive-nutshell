@@ -2,7 +2,6 @@
 //This file builds each news item card
 
 import React from "react";
-
 import "./News.css";
 
 

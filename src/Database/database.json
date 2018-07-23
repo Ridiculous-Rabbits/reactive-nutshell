@@ -40,23 +40,15 @@
   "friends": [
     {
       "userId": 4,
-      "yourId": 5,
       "id": 1
     },
     {
       "userId": 3,
-      "yourId": 5,
       "id": 2
     },
     {
       "userId": 1,
-      "yourId": 5,
       "id": 3
-    },
-    {
-      "userId": 2,
-      "yourId": 5,
-      "id": 4
     }
   ],
   "messages": [

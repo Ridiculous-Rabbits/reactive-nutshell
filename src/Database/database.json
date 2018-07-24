@@ -37,8 +37,8 @@
       "id": 2
     },
     {
-      "userId": 1,
-      "message": "boop",
+      "userId": 2,
+      "message": "This is a new messsage!",
       "id": 3
     }
   ],
@@ -82,6 +82,12 @@
       "userId": 1,
       "completed": true,
       "id": 2
+    },
+    {
+      "task": "o",
+      "userId": 2,
+      "completed": false,
+      "id": 3
     }
   ]
 }

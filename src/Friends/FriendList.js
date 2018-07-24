@@ -50,6 +50,7 @@ export default class GetFriendList extends Component {
         return (
             <React.Fragment>
                 {
+
                     <button type="submit" className="friend-button">
                         <Link type="card-link"
                             to={{

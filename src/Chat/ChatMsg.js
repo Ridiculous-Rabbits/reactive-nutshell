@@ -11,7 +11,6 @@ import AddFriendFunc from "../AddFriendFunc"
 export default props => {
     let message = {}
 
-
     // Check if the data is in `props.animal`
     if (props.hasOwnProperty("chatMsg")) {
         message = props.chatMsg

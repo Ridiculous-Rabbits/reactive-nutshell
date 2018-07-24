@@ -13,28 +13,17 @@
       "id": 2
     },
     {
-      "name": "Third Person",
-      "password": "pass",
-      "email": "other@gmail.com",
+      "name": "nc",
+      "email": "nc@gmail.com",
+      "password": "123",
       "id": 3
     },
     {
-      "name": "Person",
-      "password": "pass",
-      "email": "other@gmail.com",
-      "id": 4
-    },
-    {
-      "name": "r",
-      "email": "r@r.com",
-      "password": "r",
-      "id": 5
-    },
-    {
-      "name": "r",
-      "email": "r@r.com",
-      "password": "r",
-      "id": 6
+      "name": "William",
+      "email": "wkkimball043@gmail.com",
+      "password": "p",
+      "id": 7
+
     }
   ],
   "friends": [
@@ -47,8 +36,14 @@
       "id": 3
     },
     {
-      "userId": 4,
-      "id": 4
+      "userId": 2,
+      "yourId": 1,
+      "id": 2
+    },
+    {
+      "userId": 2,
+      "yourId": 7,
+      "id": 3
     }
   ],
   "messages": [
@@ -66,32 +61,37 @@
       "userId": 5,
       "message": "another cool message",
       "id": 3
+    },
+    {
+      "userId": 3,
+      "message": "WHOO",
+      "id": 4
     }
   ],
   "news": [
     {
-      "userId": "1",
-      "title": "Evan's News",
-      "url": "www.ewlusky.com",
-      "synopsis": "cubes",
-      "timestamp": "2018-07-09T01:24:19",
-      "id": 1
-    },
-    {
-      "userId": "2",
-      "title": "Second's News",
-      "url": "www.sldkf.com",
-      "synopsis": "some stuff happend",
-      "timestamp": "2018-07-09T01:26:33",
+      "title": "As the SpaceX steamroller surges, European rocket industry vows to resist",
+      "url": "https://www.teslarati.com/spacex-falcon-9-block-5-fleet-dual-drone-ship-booster-recoveries/",
+      "userId": 2,
+      "synopsis": "some stuff happened in the space insustry",
+      "timeStamp": "2018-07-24 11:03:06 am",
       "id": 2
     },
     {
-      "title": "test",
-      "url": "test",
-      "userId": 5,
-      "synopsis": "test",
-      "timeStamp": "2018-07-24 11:11:51 am",
+      "title": "asdf",
+      "url": "dd",
+      "userId": 7,
+      "synopsis": "asdf",
+      "timeStamp": "2018-07-24 11:14:16 am",
       "id": 3
+    },
+    {
+      "title": "asdf",
+      "url": "https://www.teslarati.com/spacex-mr-steven-spotted-sea-trialing-net-fairing-catch-debut/",
+      "userId": 7,
+      "synopsis": "asdfasdf",
+      "timeStamp": "2018-07-24 11:17:38 am",
+      "id": 4
     }
   ],
   "events": [

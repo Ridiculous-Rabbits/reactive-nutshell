@@ -9,3 +9,8 @@ a {
   max-width: 60%;
   align-content: center;
 }
+
+.theirNews {
+  font-style: italic;
+  background-color: cornsilk;
+}

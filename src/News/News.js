@@ -7,11 +7,17 @@ import "./News.css";
 
 
 const News = props => {
+  let thisNews = "";
+  if (props.news.user.id == props.user) {
+      thisNews = "yourNews news"
+  } else {
+      thisNews = "theirNews news"
+  }
 
   return (
-    <div className="card" >
+    <div className="card"  >
       {
-        <div className="card-body">
+        <div className="card-body" className={thisNews}>
           <h5 className="card-title">{props.news.title}</h5>
           <h6 className="card-text">{props.news.timeStamp}</h6>
           <p className="card-text">Added by: {props.news.user.name}</p>

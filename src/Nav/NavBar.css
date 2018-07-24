@@ -2,3 +2,16 @@ nav form {
     display: inline;
     margin-left: 3%;
 }
+
+nav {
+    border: 1px solid black;
+    background-color: #fe938c;
+}
+
+nav a {
+    color: linen;
+}
+
+nav a:hover {
+    color: #4281a4;
+}

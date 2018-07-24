@@ -4,9 +4,30 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background-color: #c1cad6 !important;
 }
 
 nav a {
   margin-left: 3%;
   font-size: 1.5em;
+}
+
+button {
+  background-color: #4281a4;
+  color: #c1cad6;
+}
+
+button > a {
+  color: #c1cad6;
+}
+
+button > a:hover {
+  color: #4281a4;
+  background-color: #9cafb7 !important;
+}
+
+.card {
+  margin: 10px auto;
+  text-align: center;
+  background-color:#fe938c !important
 }

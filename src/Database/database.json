@@ -1,140 +1,82 @@
 {
   "users": [
     {
-      "name": "Evan Lusky",
-      "password": "password",
-      "email": "ewlusky@gmail.com",
+      "name": "Jenn",
+      "email": "jenn@jenn.com",
+      "password": "123",
       "id": 1
     },
     {
-      "name": "Second Person",
-      "password": "passwords",
-      "email": "person@gmail.com",
+      "name": "Vik",
+      "email": "vik@poopybutt.com",
+      "password": "poopinmybutt",
       "id": 2
-    },
-    {
-      "name": "Third Person",
-      "password": "pass",
-      "email": "other@gmail.com",
-      "id": 3
-    },
-    {
-      "name": "Person",
-      "password": "pass",
-      "email": "other@gmail.com",
-      "id": 4
-    },
-    {
-      "name": "r",
-      "email": "r@r.com",
-      "password": "r",
-      "id": 5
-    },
-    {
-      "name": "r",
-      "email": "r@r.com",
-      "password": "r",
-      "id": 6
-    },
-    {
-      "name": "William Kimball",
-      "password": "p",
-      "email": "wkkimball043@gmail.com",
-      "id": 7
     }
   ],
   "friends": [
     {
-      "userId": 3,
-      "id": 2
-    },
-    {
       "userId": 1,
-      "id": 3
+      "yourId": 2,
+      "id": 1
     },
     {
-      "userId": 4,
-      "id": 4
-    },
-    {
-      "yourId": 7,
-      "userId": 3,
-      "id": 4
+      "userId": 2,
+      "yourId": 1,
+      "id": 2
     }
   ],
   "messages": [
     {
-      "userId": "1",
-      "message": "Hey this is Evan",
+      "message": "I'm the very first User!",
+      "userId": 1,
       "id": 1
     },
     {
-      "message": "My slightly less important message.",
-      "userId": 5,
+      "userId": 2,
+      "message": "I'm the second USER YESSSSSSSSSSS",
       "id": 2
-    },
-    {
-      "userId": 5,
-      "message": "another cool message",
-      "id": 3
     }
   ],
   "news": [
     {
-      "userId": "2",
-      "title": "Evan's News",
-      "url": "www.ewlusky.com",
-      "synopsis": "cubes",
-      "timestamp": "2018-07-09T01:24:19",
+      "title": "Record heat scorches West as heavy rainfall floods East",
+      "url": "https://www.usatoday.com/story/news/nation/2018/07/24/heavy-rainfall-causes-severe-northeast-flooding/825060002/",
+      "userId": 1,
+      "synopsis": "Heavy rains were slamming much of the Northeast for a fourth straight day Tuesday, swelling rivers and creeks, flooding roads and forcing emergency declarations.",
+      "timeStamp": "2018-07-24 09:38:29 am",
       "id": 1
-    },
-    {
-      "userId": "2",
-      "title": "Second's News",
-      "url": "www.sldkf.com",
-      "synopsis": "some stuff happend",
-      "timestamp": "2018-07-09T01:26:33",
-      "id": 2
-    },
-    {
-      "title": "asdf",
-      "url": "http:/www.space.com",
-      "userId": 7,
-      "synopsis": "asdf",
-      "timeStamp": "2018-07-24 10:17:34 am",
-      "id": 3
     }
   ],
   "events": [
     {
-      "userId": "1",
-      "name": "Evan's Event",
-      "location": "NSS",
-      "date": "2018-07-10T19:30",
+      "name": "Cookie Day",
+      "location": "NSS Snackery",
+      "date": "2018-07-24T14:39:08.821Z",
+      "userId": 1,
       "id": 1
     },
     {
-      "userId": "1",
-      "name": "Go to bed at the correct time.",
-      "location": "Home",
-      "date": "2018-07-10T20:30",
-      "id": 11
-    },
-    {
-      "name": "event",
-      "location": "there",
-      "date": "2018-07-23T20:32:46.139Z",
-      "userId": 5,
-      "id": 12
+      "name": "Party",
+      "location": "NSS",
+      "date": "2018-08-03T14:56:14.000Z",
+      "userId": 2,
+      "id": 2
     }
   ],
   "tasks": [
     {
-      "task": "pooop",
-      "date": "2018-08-09",
-      "userId": 4,
+      "task": "Grocery Shop for Cookie Ingredients",
+      "date": "2018-07-24",
+      "userId": 1,
       "completed": false,
-      "id": 6
+      "id": 1
+    },
+    {
+      "task": "wipe my ass",
+      "date": "2018-07-24",
+      "userId": 1,
+      "completed": true,
+      "id": 2
     }
   ]
 }

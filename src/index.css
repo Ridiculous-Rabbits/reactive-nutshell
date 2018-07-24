@@ -12,7 +12,7 @@ nav a {
   font-size: 1.5em;
 }
 
-button {
+button, #taskSubmitBtn {
   background-color: #4281a4;
   color: #c1cad6;
   margin-left: 44%;

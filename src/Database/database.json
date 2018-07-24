@@ -126,11 +126,30 @@
       "id": 21
     },
     {
-      "task": "blah",
-      "date": "2018-07-25",
-      "userId": 5,
+      "task": "wipe my ass",
+      "date": "2018-07-24",
+      "userId": 1,
+      "completed": true,
+      "id": 2
+    },
+    {
+      "task": "oh",
+      "userId": 2,
       "completed": false,
-      "id": 22
+      "id": 3
+    },
+    {
+      "task": "ohh hey",
+      "userId": 2,
+      "completed": true,
+      "id": 5
+    },
+    {
+      "task": "whoahs",
+      "date": "2018-07-31",
+      "userId": 2,
+      "completed": false,
+      "id": 6
     }
   ]
 }

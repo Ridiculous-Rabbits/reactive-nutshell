@@ -21,7 +21,7 @@ if (props.hasOwnProperty("chatMsg")) {
     message = props.location.state.chatMsg
 }
 let currentUser = JSON.parse(sessionStorage.getItem("credentials"))
-let yourId = currentUser.userId
+let yourId = currentUser
 let addNewFriend = () => {
     APIHandler.getData("users")
                 .then((userArray) => {

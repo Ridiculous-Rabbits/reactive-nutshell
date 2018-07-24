@@ -65,6 +65,26 @@
       "userId": 4,
       "yourId": 6,
       "id": 31
+    },
+    {
+      "userId": 1,
+      "yourId": 3,
+      "id": 32
+    },
+    {
+      "userId": 1,
+      "yourId": 2,
+      "id": 35
+    },
+    {
+      "userId": 5,
+      "yourId": 2,
+      "id": 36
+    },
+    {
+      "userId": 6,
+      "yourId": 2,
+      "id": 37
     }
   ],
   "messages": [
@@ -79,24 +99,19 @@
       "id": 2
     },
     {
-      "userId": 8,
-      "message": "hello",
-      "id": 11
-    },
-    {
       "userId": 6,
       "message": "WHAYYYYY",
       "id": 12
     },
     {
-      "userId": 8,
-      "message": "herrroo",
-      "id": 13
-    },
-    {
       "userId": 5,
       "message": "another cool message",
       "id": 3
+    },
+    {
+      "userId": 2,
+      "message": "hi luke",
+      "id": 13
     }
   ],
   "news": [

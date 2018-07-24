@@ -39,8 +39,6 @@ export default class APIHandler {
         return fetch(`http://localhost:5002/friends`)
             .then(e => e.json())
             .then(friends => {
-                // console.log(friends)
-                console.log(friends);
                 const fList = [];
                 let User = JSON.parse(localStorage.getItem("credentials"));
                 if (User === null) {

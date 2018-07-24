@@ -15,6 +15,7 @@ nav a {
 button, #taskSubmitBtn {
   background-color: #4281a4;
   color: #c1cad6;
+  margin-left: 44%;
 }
 
 button > a {
@@ -30,4 +31,14 @@ button > a:hover {
   margin: 10px auto;
   text-align: center;
   background-color:#fe938c !important
+}
+
+.pleaseCenter {
+  margin-left: 44%;
+  margin-top: 2%;
+}
+
+.pleaseCenterForm {
+  margin-left: 30%;
+  margin-top: 1%;
 }

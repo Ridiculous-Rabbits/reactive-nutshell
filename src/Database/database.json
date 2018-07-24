@@ -84,10 +84,23 @@
       "id": 2
     },
     {
-      "task": "o",
+      "task": "oh",
       "userId": 2,
       "completed": false,
       "id": 3
+    },
+    {
+      "task": "ohh hey",
+      "userId": 2,
+      "completed": true,
+      "id": 5
+    },
+    {
+      "task": "whoahs",
+      "date": "2018-07-31",
+      "userId": 2,
+      "completed": false,
+      "id": 6
     }
   ]
 }

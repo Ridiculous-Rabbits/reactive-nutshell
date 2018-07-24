@@ -59,6 +59,10 @@ export default class AddFriendForm extends Component {
             <React.Fragment>
                 {
                     <form onSubmit={this.handleAddFriend}>
+                        <button type="submit" className="friend-button">
+                            Save
+                        </button>
+
                         <input
                             onChange={this.handleInputChange}
                             type="text"
@@ -66,12 +70,11 @@ export default class AddFriendForm extends Component {
                             placeholder="Friend"
                             required="true"
                             autoFocus=""
+                            className="friend-input"
                         />
 
 
-                        <button type="submit">
-                            Save
-                        </button>
+
                     </form>
                 }
 

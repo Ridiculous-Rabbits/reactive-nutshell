@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import Friends from "./Friends"
 import APIHandler from "../APIHandler"
 import { Link } from "react-router-dom"
+import "./Friends.css"
 
 import "bootstrap/dist/css/bootstrap.min.css"
 
@@ -49,7 +50,8 @@ export default class GetFriendList extends Component {
         return (
             <React.Fragment>
                 {
-                    <button type="submit" className="pleaseCenter">
+
+                    <button type="submit" className="friend-button">
                         <Link type="card-link"
                             to={{
                                 pathname: "/friends/AddFriendForm",

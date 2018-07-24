@@ -5,7 +5,7 @@ import React from "react";
 
 const NewsForm = props => {
   return (
-    <form onSubmit={props.addNewNews}>
+    <form onSubmit={props.addNewNews} className="pleaseCenterForm">
       <input
         type="text"
         placeholder="Article Title"

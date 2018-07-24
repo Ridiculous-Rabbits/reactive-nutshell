@@ -17,6 +17,12 @@
       "email": "nc@gmail.com",
       "password": "123",
       "id": 3
+    },
+    {
+      "name": "William",
+      "email": "wkkimball043@gmail.com",
+      "password": "p",
+      "id": 7
     }
   ],
   "friends": [
@@ -29,6 +35,11 @@
       "userId": 2,
       "yourId": 1,
       "id": 2
+    },
+    {
+      "userId": 2,
+      "yourId": 7,
+      "id": 3
     }
   ],
   "messages": [
@@ -55,12 +66,28 @@
   ],
   "news": [
     {
-      "title": "Record heat scorches West as heavy rainfall floods East",
-      "url": "https://www.usatoday.com/story/news/nation/2018/07/24/heavy-rainfall-causes-severe-northeast-flooding/825060002/",
-      "userId": 1,
-      "synopsis": "Heavy rains were slamming much of the Northeast for a fourth straight day Tuesday, swelling rivers and creeks, flooding roads and forcing emergency declarations.",
-      "timeStamp": "2018-07-24 09:38:29 am",
-      "id": 1
+      "title": "As the SpaceX steamroller surges, European rocket industry vows to resist",
+      "url": "https://www.teslarati.com/spacex-falcon-9-block-5-fleet-dual-drone-ship-booster-recoveries/",
+      "userId": 2,
+      "synopsis": "some stuff happened in the space insustry",
+      "timeStamp": "2018-07-24 11:03:06 am",
+      "id": 2
+    },
+    {
+      "title": "asdf",
+      "url": "dd",
+      "userId": 7,
+      "synopsis": "asdf",
+      "timeStamp": "2018-07-24 11:14:16 am",
+      "id": 3
+    },
+    {
+      "title": "asdf",
+      "url": "https://www.teslarati.com/spacex-mr-steven-spotted-sea-trialing-net-fairing-catch-debut/",
+      "userId": 7,
+      "synopsis": "asdfasdf",
+      "timeStamp": "2018-07-24 11:17:38 am",
+      "id": 4
     }
   ],
   "events": [

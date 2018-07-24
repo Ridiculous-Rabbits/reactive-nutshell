@@ -35,6 +35,12 @@
       "email": "r@r.com",
       "password": "r",
       "id": 6
+    },
+    {
+      "name": "Sathvik Reddy",
+      "email": "sathvik@gmail.com",
+      "password": "123",
+      "id": 7
     }
   ],
   "friends": [
@@ -116,6 +122,40 @@
       "userId": 4,
       "completed": false,
       "id": 6
+    },
+    {
+      "task": "Homework",
+      "date": "2018-07-31",
+      "userId": 4,
+      "completed": false,
+      "id": 7
+    },
+    {
+      "task": "Project",
+      "date": "2018-07-31",
+      "completed": false,
+      "id": 8
+    },
+    {
+      "task": "Hi",
+      "date": "2018-07-31",
+      "userId": 7,
+      "completed": true,
+      "id": 9
+    },
+    {
+      "task": "hello",
+      "date": "2018-07-31",
+      "userId": 7,
+      "completed": false,
+      "id": 10
+    },
+    {
+      "task": "oh hi",
+      "date": "2018-07-26",
+      "userId": 3,
+      "completed": false,
+      "id": 11
     }
   ]
 }

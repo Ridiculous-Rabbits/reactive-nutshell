@@ -35,6 +35,12 @@
       "email": "r@r.com",
       "password": "r",
       "id": 6
+    },
+    {
+      "name": "William Kimball",
+      "password": "p",
+      "email": "wkkimball043@gmail.com",
+      "id": 7
     }
   ],
   "friends": [

@@ -12,5 +12,5 @@ a {
 
 .theirNews {
   font-style: italic;
-  background-color: cornsilk;
+  background-color: cornsilk !important;
 }

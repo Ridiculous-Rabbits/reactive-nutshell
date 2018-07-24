@@ -8,22 +8,35 @@ class Tasks extends Component {
     tasks: []
   };
 
-  archiveTaskAndReRenderDOM = (arr) => {
-      let updatedData = [];
-      arr.forEach(i => {
-        if (i.completed !== true) {
-          updatedData.push(i);
-          console.log(updatedData);
-        }
-      })
-      this.setState({ tasks: updatedData });
-  }
+  // archiveTaskAndReRenderDOM = arr => {
+  //   let updatedData = [];
+  //   arr.forEach(i => {
+  //     // if (i.completed !== true) {
+  //       updatedData.push(i);
+  //       console.log(updatedData);
+  //     // }
+  //   });
+  //   this.setState({ tasks: updatedData });
+  // };
+
+  getUserTasks = () => {
+    let sessionUser = JSON.parse(sessionStorage.getItem("credentials"));
+    let localUser = JSON.parse(localStorage.getItem("credentials"));
+
+    if (sessionUser !== null) {
+      APIHandler.getTaskUserId(sessionUser.userId).then(taskList => {
+        this.setState({ tasks: taskList });
+      });
+    } else if (localUser !== null) {
+      APIHandler.getTaskUserId(localUser.userId).then(taskList => {
+        this.setState({ tasks: taskList });
+      });
+    }
+  };
 
   // gets data from database
   componentDidMount = () => {
-    APIHandler.getData("tasks").then(taskList => {
-      this.archiveTaskAndReRenderDOM(taskList);
-    })
+   return this.getUserTasks();
   };
 
   // onChange - capture change in data user is entering in input fields
@@ -33,16 +46,29 @@ class Tasks extends Component {
     this.setState(stateToChange);
   };
 
+  getUserId = () => {
+    let sessionUser = JSON.parse(sessionStorage.getItem("credentials"));
+    let localUser = JSON.parse(localStorage.getItem("credentials"));
+
+    if (sessionUser !== null) {
+      return sessionUser.userId;
+    } else {
+      return localUser.userId;
+    }
+  };
+
   // onSubmit - add new task to Database and re-render DOM
   addNewTask = () => {
     let newTask = {
       task: this.state.taskNameVal,
-      date: this.state.taskDueDateVal
+      date: this.state.taskDueDateVal,
+      userId: this.getUserId(),
+      completed: false
     };
 
     APIHandler.addData("tasks", newTask)
       .then(() => {
-        return APIHandler.getData("tasks");
+        this.getUserTasks();
       })
 
       .then(taskList => {
@@ -54,30 +80,26 @@ class Tasks extends Component {
   deleteTask = id => {
     APIHandler.deleteData("tasks", id)
       .then(() => {
-        return APIHandler.getData("tasks");
+        this.getUserTasks();
       })
-      .then(taskList => {
-        console.log(taskList);
-        this.setState({ tasks: taskList });
-      });
+      // .then(taskList => {
+      //   console.log(taskList);
+      //   this.setState({ tasks: taskList });
+      // });
   };
 
   handleCheckBox = (e, id) => {
-
     let archiveTask = {
       completed: true
-    }
+    };
 
     let checkBox = e.target.checked;
 
     if (checkBox) {
       APIHandler.archiveTask(id, archiveTask)
-      .then(() => {
-        return APIHandler.getData("tasks");
-      })
-      .then(taskList => {
-        this.archiveTaskAndReRenderDOM(taskList);
-      });
+        .then(() => {
+          this.getUserTasks();
+        });
     }
   };
 
@@ -88,17 +110,16 @@ class Tasks extends Component {
           addNewTask={this.addNewTask}
           handleFieldChange={this.handleFieldChange}
         />
-        {
-          this.state.tasks.map(task => (
+        {this.state.tasks.map(task => (
           <TaskCard
-          key={task.id}
-          task={task}
-          deleteTask={this.deleteTask}
-          handleCheckBox={this.handleCheckBox}>
+            key={task.id}
+            task={task}
+            deleteTask={this.deleteTask}
+            handleCheckBox={this.handleCheckBox}
+          >
             {task.task}
           </TaskCard>
-        ))
-        }
+        ))}
       </React.Fragment>
     );
   }

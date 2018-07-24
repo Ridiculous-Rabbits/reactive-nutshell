@@ -9,6 +9,7 @@ class TaskForm extends Component {
           onSubmit={this.props.addNewTask}
         >
           <h1>Add Task: </h1>
+
           {/* Name Input Field */}
           <label htmlFor="taskNameVal">Name: </label>
           <input

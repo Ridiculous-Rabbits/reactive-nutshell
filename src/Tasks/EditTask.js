@@ -18,8 +18,11 @@ class EditTask extends Component {
 
     const updatedTask = {
       task: this.state.task,
-      date: this.state.date
+      date: this.state.date,
+      userId: this.props.task.userId,
+      completed: this.props.task.completed
     };
+
     APIHandler.editData("tasks", this.props.task.id, updatedTask).then(() => {
       this.props.history.push("/tasks");
     });

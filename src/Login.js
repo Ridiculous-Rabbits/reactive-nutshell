@@ -55,22 +55,6 @@ export default class Login extends Component {
           );
         }}
       });
-    // .then(()=> {return <Redirect to= {{
-    //     pathname: "/"
-    // }} />})
-    // }
-
-    // searchComplete = () => {
-    //     this.setState({
-    //         dashboard: false
-    //     })
-    // }
-
-    // componentDidUpdate() {
-    //     if (this.state.dashboard === true) {
-    //         this.searchComplete()
-
-    //     }
   };
   render() {
     return (

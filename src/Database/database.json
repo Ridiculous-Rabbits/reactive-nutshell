@@ -55,6 +55,11 @@
     {
       "userId": 4,
       "id": 4
+    },
+    {
+      "yourId": 7,
+      "userId": 3,
+      "id": 4
     }
   ],
   "messages": [
@@ -76,7 +81,7 @@
   ],
   "news": [
     {
-      "userId": "1",
+      "userId": "2",
       "title": "Evan's News",
       "url": "www.ewlusky.com",
       "synopsis": "cubes",
@@ -90,6 +95,14 @@
       "synopsis": "some stuff happend",
       "timestamp": "2018-07-09T01:26:33",
       "id": 2
+    },
+    {
+      "title": "asdf",
+      "url": "http:/www.space.com",
+      "userId": 7,
+      "synopsis": "asdf",
+      "timeStamp": "2018-07-24 10:17:34 am",
+      "id": 3
     }
   ],
   "events": [

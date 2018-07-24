@@ -135,7 +135,7 @@ export default class NewsList extends Component {
             }
           })
           .map(news => (
-            <News key={news.id} news={news} checkOutNews={this.checkOutNews} />
+            <News key={news.id} news={news} user={this.state.user} checkOutNews={this.checkOutNews} />
           ))}
       </React.Fragment>
     );

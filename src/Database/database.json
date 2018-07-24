@@ -1,93 +1,136 @@
 {
   "users": [
     {
-      "name": "Jenn",
-      "email": "jenn@jenn.com",
-      "password": "123",
+      "name": "Evan Lusky",
+      "password": "password",
+      "email": "ewlusky@gmail.com",
       "id": 1
     },
     {
-      "name": "Vik",
-      "email": "vik@poopybutt.com",
-      "password": "poopinmybutt",
+      "name": "Second Person",
+      "password": "passwords",
+      "email": "person@gmail.com",
       "id": 2
+    },
+    {
+      "name": "Third Person",
+      "password": "pass",
+      "email": "other@gmail.com",
+      "id": 3
+    },
+    {
+      "name": "Person",
+      "password": "pass",
+      "email": "other@gmail.com",
+      "id": 4
+    },
+    {
+      "name": "r",
+      "email": "r@r.com",
+      "password": "r",
+      "id": 5
+    },
+    {
+      "name": "r",
+      "email": "r@r.com",
+      "password": "r",
+      "id": 6
     }
   ],
   "friends": [
     {
-      "userId": 1,
-      "yourId": 2,
-      "id": 1
+      "userId": 3,
+      "id": 2
     },
     {
-      "userId": 2,
-      "yourId": 1,
-      "id": 2
+      "userId": 1,
+      "id": 3
+    },
+    {
+      "userId": 4,
+      "id": 4
     }
   ],
   "messages": [
     {
-      "message": "I'm the very first User!",
-      "userId": 1,
+      "userId": "1",
+      "message": "Hey this is Evan",
       "id": 1
     },
     {
-      "userId": 2,
-      "message": "I'm the second USER YESSSSSSSSSSS",
+      "message": "My slightly less important message.",
+      "userId": 5,
       "id": 2
     },
     {
-      "userId": 2,
-      "message": "This is a new messsage!",
+      "userId": 5,
+      "message": "another cool message",
       "id": 3
     }
   ],
   "news": [
     {
-      "title": "Record heat scorches West as heavy rainfall floods East",
-      "url": "https://www.usatoday.com/story/news/nation/2018/07/24/heavy-rainfall-causes-severe-northeast-flooding/825060002/",
-      "userId": 1,
-      "synopsis": "Heavy rains were slamming much of the Northeast for a fourth straight day Tuesday, swelling rivers and creeks, flooding roads and forcing emergency declarations.",
-      "timeStamp": "2018-07-24 09:38:29 am",
+      "userId": "1",
+      "title": "Evan's News",
+      "url": "www.ewlusky.com",
+      "synopsis": "cubes",
+      "timestamp": "2018-07-09T01:24:19",
       "id": 1
+    },
+    {
+      "userId": "2",
+      "title": "Second's News",
+      "url": "www.sldkf.com",
+      "synopsis": "some stuff happend",
+      "timestamp": "2018-07-09T01:26:33",
+      "id": 2
+    },
+    {
+      "title": "test",
+      "url": "test",
+      "userId": 5,
+      "synopsis": "test",
+      "timeStamp": "2018-07-24 11:11:51 am",
+      "id": 3
     }
   ],
   "events": [
     {
-      "name": "Cookie Day",
-      "location": "NSS Snackery",
-      "date": "2018-07-24T14:39:08.821Z",
-      "userId": 1,
+      "userId": "1",
+      "name": "Evan's Event",
+      "location": "NSS",
+      "date": "2018-07-10T19:30",
       "id": 1
     },
     {
-      "name": "Party",
-      "location": "NSS",
-      "date": "2018-08-03T14:56:14.000Z",
-      "userId": 2,
-      "id": 2
+      "userId": "1",
+      "name": "Go to bed at the correct time.",
+      "location": "Home",
+      "date": "2018-07-10T20:30",
+      "id": 11
+    },
+    {
+      "name": "event",
+      "location": "there",
+      "date": "2018-07-23T20:32:46.139Z",
+      "userId": 5,
+      "id": 12
     }
   ],
   "tasks": [
     {
-      "task": "Grocery Shop for Cookie Ingredients",
-      "date": "2018-07-24",
-      "userId": 1,
-      "completed": false,
-      "id": 1
+      "userId": "1",
+      "task": "Evan's task",
+      "date": "2018-07-16T01:23",
+      "completed": "false",
+      "id": 21
     },
     {
-      "task": "wipe my ass",
-      "date": "2018-07-24",
-      "userId": 1,
-      "completed": true,
-      "id": 2
-    },
-    {
-      "task": "o",
-      "userId": 2,
+      "task": "blah",
+      "date": "2018-07-25",
+      "userId": 5,
       "completed": false,
-      "id": 3
+      "id": 22
     }
   ]
 }

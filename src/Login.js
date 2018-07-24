@@ -34,6 +34,7 @@ export default class Login extends Component {
         const checkbox = document.getElementById("checkbox");
         console.log(checkbox);
         if (checkbox.checked) {
+          if (this.state.userId) {
           localStorage.setItem(
             "credentials",
             JSON.stringify({
@@ -42,7 +43,8 @@ export default class Login extends Component {
               userId: this.state.userId
             })
           );
-        } else {
+        }} else {
+          if (this.state.userId) {
           sessionStorage.setItem(
             "credentials",
             JSON.stringify({
@@ -51,7 +53,7 @@ export default class Login extends Component {
               userId: this.state.userId
             })
           );
-        }
+        }}
       });
     // .then(()=> {return <Redirect to= {{
     //     pathname: "/"

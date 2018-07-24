@@ -3,9 +3,15 @@
 import React from "react"
 import { Link } from "react-router-dom"
 
-const Event = ({event, children, deleteEvent, editEvent, fList}) => {
+const Event = ({event, children, deleteEvent, editEvent, fList, currentUser}) => {
+    let thisEvent
+    if (currentUser == event.userId) {
+        thisEvent = "yourEvent event"
+    } else {
+        thisEvent = "theirEvent event"
+    }
     return (
-        <div className="event" style={{width: `18rem`}}>
+        <div className={thisEvent} style={{width: `18rem`}}>
             <div className="card-body">
                 <h5 className="card-title">
                     {children.name}

@@ -1,4 +1,4 @@
-//Natasha Cox 
+//Natasha Cox
 import React, { Component } from 'react'
 import APIHandler from '../APIHandler';
 
@@ -15,39 +15,45 @@ export default class Chat extends Component {
     }
 
     handleChat = (event) => {
-       //Stops default action of form reloading
+        //Stops default action of form reloading
         event.preventDefault()
 
         let newMessage = document.getElementById("message").value
-        let signedInUser = JSON.parse(sessionStorage.getItem("credentials"))
+        let signedInUser = JSON.parse(localStorage.getItem("credentials"));
+        if (signedInUser === null) {
+            signedInUser = JSON.parse(sessionStorage.getItem("credentials"));
+            signedInUser = signedInUser.userId;
+        } else {
+            signedInUser = signedInUser.userId;
+        }
 
-       
+
         const newChatMsg = {
-            userId: signedInUser.userId,
+            userId: signedInUser,
             message: newMessage
         }
 
         APIHandler.addData("messages", newChatMsg)
-        .then(() => {
-            this.props.refresh()   
-          })
-        
+            .then(() => {
+                this.props.refresh()
+            })
+
     }
 
 
-        render() {
-            return(
-                <form onSubmit={this.handleChat}>
-                    <label htmlFor="type message">
-                    </label>
-                    <input onChange={this.handleFieldChange} type="text" id="message" 
-                    placeholder="Type Message" 
+    render() {
+        return (
+            <form onSubmit={this.handleChat}>
+                <label htmlFor="type message">
+                </label>
+                <input onChange={this.handleFieldChange} type="text" id="message"
+                    placeholder="Type Message"
                     required=""
-                    autoFocus=""/>
-                    <button type="submit">
+                    autoFocus="" />
+                <button type="submit">
                     Send
                     </button>
-                </form>
-            )
-        }
+            </form>
+        )
     }
+}

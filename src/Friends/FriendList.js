@@ -49,7 +49,7 @@ export default class GetFriendList extends Component {
         return (
             <React.Fragment>
                 {
-                    <button type="submit">
+                    <button type="submit" className="pleaseCenter">
                         <Link type="card-link"
                             to={{
                                 pathname: "/friends/AddFriendForm",

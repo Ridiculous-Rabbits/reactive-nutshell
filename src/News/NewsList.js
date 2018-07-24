@@ -116,7 +116,7 @@ export default class NewsList extends Component {
   render() {
     return (
       <React.Fragment>
-        <button onClick={this.changePressed}>Add New News Article</button>
+        <button onClick={this.changePressed} className="pleaseCenter">Add New News Article</button>
         {this.state.newsForm}
         {this.state.news
           .sort(function(left, right) {

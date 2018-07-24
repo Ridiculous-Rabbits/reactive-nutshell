@@ -31,3 +31,13 @@ button > a:hover {
   text-align: center;
   background-color:#fe938c !important
 }
+
+.pleaseCenter {
+  margin-left: 44%;
+  margin-top: 2%;
+}
+
+.pleaseCenterForm {
+  margin-left: 30%;
+  margin-top: 1%;
+}

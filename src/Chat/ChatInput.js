@@ -43,7 +43,7 @@ export default class Chat extends Component {
 
     render() {
         return (
-            <form onSubmit={this.handleChat}>
+            <form onSubmit={this.handleChat} className="centerMe">
                 <label htmlFor="type message">
                 </label>
                 <input onChange={this.handleFieldChange} type="text" id="message"

@@ -13,6 +13,12 @@
       "id": 2
     },
     {
+      "name": "nc",
+      "email": "nc@gmail.com",
+      "password": "123",
+      "id": 3
+    },
+    {
       "name": "William",
       "email": "wkkimball043@gmail.com",
       "password": "p",
@@ -51,6 +57,11 @@
       "userId": 2,
       "message": "This is a new messsage!",
       "id": 3
+    },
+    {
+      "userId": 3,
+      "message": "WHOO",
+      "id": 4
     }
   ],
   "news": [

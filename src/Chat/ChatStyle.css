@@ -1,9 +1,11 @@
 .message {
     color: red;
-    background-color: bisque;
 }
 
 .friendmessage {
     color: blue;
-    background-color: aliceblue;
+}
+
+.centerMe {
+    margin-left: 850px;
 }
